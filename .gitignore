@@ -1,0 +1,116 @@
+# WordPress #
+############
+wp-config-local.php
+wp-cli.local.yml
+wp-content/uploads
+wp-content/blogs.dir/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/updraft/
+wp-content/backupwordpress-*/
+wp-content/managewp/backups/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/db.php
+wp-content/debug.log
+sitemap.xml
+sitemap.xml.gz
+*.log
+
+# @TODO writable paths
+wp-content/cache/
+wp-content/backups/
+
+# Avoid accidental modification of pantheon.upstream.yml in sites
+# created from this upstream
+pantheon.upstream.yml
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+!wp-includes/**/*.gz
+
+# Logs and databases #
+######################
+*.log
+*.sql
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+
+# Vim generated files #
+######################
+*.un~
+
+# SASS #
+##########
+.sass-cache
+node_modules
+
+# ENVIRONMENT SPECIFIC #
+########################
+__pycache__
+.vscode
+.env
+yarn.lock
+*.code-workspace
+*.pyc
+.venv
+private/python/**/_results
+private/python/**/_creds
+private/python/**/_data
+private/python/**/_input
+
+
+# IGNORE BRRL GITLAB COMMITED FILES #
+#####################################
+
+wp-content/themes/**/logs
+wp-content/themes/**/assets/build
+wp-content/themes/**/assets/css/**
+wp-content/themes/**/assets/js/**
+wp-content/themes/**/assets/fonts/*.css
+wp-content/themes/**/assets/fonts/_icons.css
+wp-content/themes/**/assets/fonts/iconfont.*
+!wp-content/themes/**/assets/**/*.md
+wp-content/w3tc-config
+
+pantheon.upstream.yml
+pantheon.yml
+
+wp-content/plugins/barrel-popular-posts
+wp-content/plugins/kraken-image-optimizer
+wp-content/plugins/pantheon*
+wp-content/mu-plugins/pantheon*f
+
+tmp
+.htaccess
+nginx.conf
+
+
+# IGNORE THEME FILES #
+#####################################
+
+wp-content/themes/*
+!wp-content/themes/wellgood-2016
+wp-content/themes/**/assets/*.js
+wp-content/themes/**/assets/*.css
+wp-content/themes/**/assets/*.ini
+!wp-content/themes/**/assets/*critical.min.css
+# DEVELOPMENT #
+#####################################
+laradock
