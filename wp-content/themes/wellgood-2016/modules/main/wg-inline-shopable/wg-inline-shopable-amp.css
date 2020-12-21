@@ -1,0 +1,67 @@
+.wg-inline-shopable {
+  color: #333333;
+  border-bottom: 1px solid #EEE7E0;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+/* TITLE */
+h2.wg-inline-shopable__title {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+/* IMAGE */
+.wg-inline-shopable__figure {
+  margin-bottom: 20px;
+}
+
+.wg-inline-shopable__figure amp-img {
+  display: block;
+}
+
+.wg-inline-shopable__figure + .wg-inline-shopable__subtitle {
+
+}
+
+/* IMAGE CAPTION */
+.wg-inline-shopable__figure figcaption {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #696969;
+  text-align: center;
+}
+
+/* SUBTITLE */
+h3.wg-inline-shopable__subtitle {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* CONTENT */
+.wg-inline-shopable__content p:last-child {
+  margin-bottom: 0;
+}
+
+/* LINK */
+.wg-inline-shopable a.text-link.base-button {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 15px;
+}

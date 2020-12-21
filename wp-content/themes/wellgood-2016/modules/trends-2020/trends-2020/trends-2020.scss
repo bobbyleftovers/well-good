@@ -1,0 +1,37 @@
+body.page-template-page-2020-hub {
+  overflow-x: hidden;
+}
+
+body.page-template-page-2020-hub .header {
+  margin-bottom: 0;
+}
+
+.trends-2020 {
+  background: $maroon !important;
+  min-height: 0 !important;
+}
+
+.trends-2020 .trends-2020__content {
+  opacity:1 !important;
+  background: $bg_gradient;
+  overflow:hidden;
+  min-height: 2000px;
+  margin-top:0;
+  margin-bottom:0;
+  padding-top:80px;
+  @media (max-width: break($m)) {
+    padding-top:62px;
+  }
+  @media (max-width: break($s)) {
+    padding-top:42px;
+  }
+}
+
+.trends-2020 .trends-2020__content > .post_inner {
+  margin-top:0;
+  margin-bottom:0;
+}
+
+*[data-image-bg]:not(.image-bg-loaded) {
+  @extend %image-fallback;
+}

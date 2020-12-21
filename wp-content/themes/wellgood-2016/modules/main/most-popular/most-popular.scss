@@ -1,0 +1,75 @@
+.sidebar {
+	.relationship-stories--most-popular {
+		background-color: $white;
+		border: 1px solid $light-grey;
+		padding-top: 0;
+		padding-bottom: 0;
+		margin: 0 auto 20px;
+		max-width: 350px;
+
+		@media (min-width: break($m)) {
+			padding-bottom: 15px;
+		}
+
+		.relationship-stories__headline {
+			@extend .image-headline, .image-headline--circle;
+			&:after {
+				content: none;
+			}
+		}
+		.relationship-stories__headline-label {
+			@extend .image-headline__label;
+		}
+		.relationship-stories__container {
+			padding: 0;
+		}
+		.relationship-stories__list {
+			display: block;
+			margin: 0;
+			padding-left: 23px;
+			padding-right: 23px;
+		}
+		.relationship-stories__card {
+			padding: 20px 0;
+			margin: 0;
+			width: 100%;
+
+			& + .relationship-stories__card {
+				border-top: 1px solid $grey;
+			}
+		}
+		.relationship-stories__image-wrapper {
+			display: none;
+		}
+		.relationship-stories__ranking {
+			position: static;
+			transform: none;
+			display: inline-block;
+			float: left;
+			vertical-align: top;
+			width: 24px;
+			text-align: center;
+			height: auto;
+			line-height: 1em;
+			margin: 0;
+			width: 35px;
+		}
+		.relationship-stories__title {
+			display: block;
+			vertical-align: top;
+			margin: 0 0 0 40px;
+			padding: 0;
+			width: auto;
+			text-align: left;
+
+			@media (min-width: break($m)) {
+				margin-left: 45px;
+			}
+		}
+	}
+}
+
+.relationship-stories__headline-label {
+	@extend %page-title,
+		%page-title--large;
+}

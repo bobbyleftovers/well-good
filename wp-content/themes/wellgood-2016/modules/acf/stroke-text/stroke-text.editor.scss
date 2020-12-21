@@ -1,0 +1,31 @@
+@import './stroke-text.front.scss';
+
+.acf-stroke-text.is-editor {
+  display: block;
+}
+
+.acf-stroke-text.is-editor [data-type="core/paragraph"] {
+  color: $black;
+  padding-top: 1.8em !important;
+}
+
+
+[data-type="acf/text-editor"] .block-editor-block-toolbar__slot {
+  display: none !important;
+}
+
+.acf-stroke-text p,
+.acf-stroke-text .block-editor-block-list__block {
+  line-height: 1em;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.acf-stroke-text p {
+  @apply font-safe-display #{!important};
+  font-size: 4.6em !important;
+  font-variant-numeric: lining-nums;
+  display: block;
+  display: block;
+  height: 0.8em;
+}

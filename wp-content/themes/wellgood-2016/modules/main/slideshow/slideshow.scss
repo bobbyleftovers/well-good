@@ -1,0 +1,183 @@
+// Typography
+
+.slide__count,
+.slide__sponsor__label {
+  font-family: $sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+// Need both selectors to override general styles
+.post__featured-slideshow .slider,
+.post__main .slider {
+
+  width: 100%;
+
+	.flickity-viewport[style^="height:"] & {
+    height: 100%;
+  }
+
+  .flickity-prev-next-button {
+
+    &:disabled {
+      opacity: 0;
+    }
+
+    padding: 6px;
+
+    width: 34px;
+    height: 34px;
+
+    background-color: rgba($white, .5);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    // Vertically center
+    top: 28px;
+    bottom: 0;
+    margin: auto;
+
+    // Compensate for caption area
+    margin-top: 27%;
+
+    // Compensate for caption area
+    @media(min-width: break($s)) {
+      top: 48px;
+      padding: 12px;
+      width: 60px;
+      height: 60px;
+    }
+
+    &:hover {
+      background-color: $white;
+      // Note: nesting arrow hover style here instead of directly on arrow
+      // because the style should change on thes button hover, not the SVG
+      .arrow {
+        stroke: $seafoam;
+      }
+    }
+  }
+
+  .arrow {
+    stroke: #202020;
+  }
+}
+
+.slider__slide {
+  // height: auto;
+  width: 100%;
+  margin-left: 1px;
+
+  .post__main & {
+    margin: 0;
+  }
+}
+
+.slide__image-wrap {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 65%;
+
+  @extend %image-fallback;
+
+  .image-module {
+    background-size: contain;
+  }
+}
+
+.slide__title,
+.post__main .slide__title { // Necessary for general style override
+  @extend %h1;
+  margin-top: 0;
+}
+
+.slide__description {
+  max-width: 611px;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  > p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.slide__count {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: $grey;
+  line-height: 1;
+}
+
+
+// Slide Footer
+
+.slide__footer {
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: 1px solid $light-grey;
+  padding-bottom: 28px;
+  margin-bottom: 24px;
+
+
+  @media(min-width: break($s)) {
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 38px;
+    margin-bottom: 34px;
+
+    // Add gutter between child elements
+    .js-add-gutter {
+      margin-left: 25px;
+    }
+  }
+
+}
+
+.slide__cta__btn {
+  @extend .btn;
+  width: 100%;
+  @media(min-width: break($s)) {
+  }
+}
+
+.slide__sponsor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media(min-width: break($s)) {
+    flex-direction: row;
+  }
+}
+
+.slide__sponsor__label {
+  color: $grey;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  @media(min-width: break($s)) {
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.slide__sponsor__link {
+  @media(min-width: break($s)) {
+    order: 0;
+    margin-right: 15px;
+  }
+}
+
+// Necessary specificty to override
+img.slide__sponsor__logo {
+  height: 25px;
+  width: auto;
+  display: block;
+}

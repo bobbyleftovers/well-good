@@ -1,0 +1,28 @@
+.video {
+  max-height: 200px;
+  max-height: calc(100vh - #{$header-height});
+
+  @screen md {
+    max-height: calc(100vh - #{$header-height-tablet});
+  }
+
+  @screen header {
+    max-height: calc(100vh - #{$header-height-desktop});
+  }
+}
+
+.video iframe {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+.video__mask {
+  background: linear-gradient(35.88deg, rgba(0, 0, 0, 0.5) 12.34%, rgba(216, 216, 216, 0.0001) 98.73%);
+}
+
+.video__caption {
+  max-width: 345px;
+}

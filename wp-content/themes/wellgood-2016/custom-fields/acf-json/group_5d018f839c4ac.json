@@ -1,0 +1,124 @@
+{
+    "key": "group_5d018f839c4ac",
+    "title": "Custom Field Visibility",
+    "fields": [
+        {
+            "key": "field_5de97ee3f405f",
+            "label": "View Editorial Taxonomy",
+            "name": "user_custom_visibility_editorial_tax",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "SHOW",
+            "ui_off_text": "HIDE"
+        },
+        {
+            "key": "field_5d0191474799e",
+            "label": "View Ad Taxonomy",
+            "name": "user_custom_visibility_ad_tax",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "SHOW",
+            "ui_off_text": "HIDE"
+        },
+        {
+            "key": "field_5df3190c7213d",
+            "label": "View Dev Tags",
+            "name": "user_custom_visibility_dev_tags",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "SHOW",
+            "ui_off_text": "HIDE"
+        },
+        {
+            "key": "field_5e1be9a90278f",
+            "label": "View Legacy Tags",
+            "name": "user_custom_visibility_legacy_tags",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "SHOW",
+            "ui_off_text": "HIDE"
+        },
+        {
+            "key": "field_5e21a868ae78f",
+            "label": "View Assigned Categories",
+            "name": "user_custom_visibility_assigned_categories",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "SHOW",
+            "ui_off_text": "HIDE"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "user_form",
+                "operator": "==",
+                "value": "all"
+            },
+            {
+                "param": "current_user_role",
+                "operator": "==",
+                "value": "administrator"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1579264145
+}

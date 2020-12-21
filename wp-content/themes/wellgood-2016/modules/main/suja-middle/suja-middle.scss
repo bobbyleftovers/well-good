@@ -1,0 +1,18 @@
+.suja-middle {
+	margin-top: 45px;
+	margin-bottom: 50px;
+
+	@media (min-width: break($s)) {
+		margin-top: 50px;
+	}
+}
+.suja-middle__image {
+	@extend %image-hover;
+	overflow: hidden;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}

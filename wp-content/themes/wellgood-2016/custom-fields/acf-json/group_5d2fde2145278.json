@@ -1,0 +1,751 @@
+{
+    "key": "group_5d2fde2145278",
+    "title": "Options: Ads",
+    "fields": [
+        {
+            "key": "field_5d30db9c4c86f",
+            "label": "Desktop Units",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d31a8e2e7f32",
+            "label": "Desktop Units",
+            "name": "ads_desktop_units",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "ads-row",
+                "id": ""
+            },
+            "collapsed": "field_5d31a8e2e7f33",
+            "min": 1,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Type",
+            "sub_fields": [
+                {
+                    "key": "field_5d31a8e2e7f33",
+                    "label": "Type",
+                    "name": "type-name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "ads-type__label",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d31a8e2e7f34",
+                    "label": "Units",
+                    "name": "type",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "ads-type",
+                        "id": ""
+                    },
+                    "collapsed": "field_5d31a8e2e7f35",
+                    "min": 1,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Page",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d31a8e2e7f35",
+                            "label": "Page",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "ads-page__label",
+                                "id": ""
+                            },
+                            "message": "",
+                            "new_lines": "",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_5d31a8e2e7f36",
+                            "label": "",
+                            "name": "page",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "ads-page",
+                                "id": ""
+                            },
+                            "collapsed": "field_5d31a8e2e7f37",
+                            "min": 1,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Add Unit",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5d31a8e2e7f37",
+                                    "label": "Unit",
+                                    "name": "",
+                                    "type": "message",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "ads-unit__label",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "new_lines": "wpautop",
+                                    "esc_html": 0
+                                },
+                                {
+                                    "key": "field_5d31a8e2e7f38",
+                                    "label": "",
+                                    "name": "unit",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "ads-unit",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_5d30dbaa4c870",
+            "label": "Mobile Units",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d30dd212938a",
+            "label": "Mobile Units",
+            "name": "ads_mobile_units",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "ads-row",
+                "id": ""
+            },
+            "collapsed": "field_5d30dd332938b",
+            "min": 1,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Type",
+            "sub_fields": [
+                {
+                    "key": "field_5d30dd332938b",
+                    "label": "Type",
+                    "name": "type-name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "ads-type__label",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d30dd702938c",
+                    "label": "Units",
+                    "name": "type",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "ads-type",
+                        "id": ""
+                    },
+                    "collapsed": "field_5d30e30d77681",
+                    "min": 1,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Page",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d30e30d77681",
+                            "label": "Page",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "ads-page__label",
+                                "id": ""
+                            },
+                            "message": "",
+                            "new_lines": "",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_5d30dd882938d",
+                            "label": "",
+                            "name": "page",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "ads-page",
+                                "id": ""
+                            },
+                            "collapsed": "field_5d30ec2c86cda",
+                            "min": 1,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Add Unit",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5d30ec2c86cda",
+                                    "label": "Unit",
+                                    "name": "",
+                                    "type": "message",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "ads-unit__label",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "new_lines": "wpautop",
+                                    "esc_html": 0
+                                },
+                                {
+                                    "key": "field_5d30e1b06cc6b",
+                                    "label": "",
+                                    "name": "unit",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "ads-unit",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_5d7b91bb34cae",
+            "label": "AMP Units",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d7b91d134caf",
+            "label": "AMP Units",
+            "name": "ads_amp_units",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "ads-row",
+                "id": ""
+            },
+            "collapsed": "field_5d30dd332938b",
+            "min": 1,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Type",
+            "sub_fields": [
+                {
+                    "key": "field_5d7b91d134cb0",
+                    "label": "Type",
+                    "name": "type-name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "ads-type__label",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d7b91d134cb1",
+                    "label": "Units",
+                    "name": "type",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "ads-type",
+                        "id": ""
+                    },
+                    "collapsed": "field_5d30e30d77681",
+                    "min": 1,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Page",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d7b91d134cb2",
+                            "label": "Page",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "ads-page__label",
+                                "id": ""
+                            },
+                            "message": "",
+                            "new_lines": "",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_5d7b91d134cb3",
+                            "label": "",
+                            "name": "page",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "ads-page",
+                                "id": ""
+                            },
+                            "collapsed": "field_5d30ec2c86cda",
+                            "min": 1,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Add Unit",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5d7b91d134cb4",
+                                    "label": "Unit",
+                                    "name": "",
+                                    "type": "message",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "ads-unit__label",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "new_lines": "wpautop",
+                                    "esc_html": 0
+                                },
+                                {
+                                    "key": "field_5d7b91d134cb5",
+                                    "label": "",
+                                    "name": "unit",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "ads-unit",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": "",
+                                    "new_lines": ""
+                                },
+                                {
+                                    "key": "field_5d7b94c1cd78b",
+                                    "label": "Height",
+                                    "name": "height",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "min": "",
+                                    "max": "",
+                                    "step": ""
+                                },
+                                {
+                                    "key": "field_5d7b94d0cd78c",
+                                    "label": "Width",
+                                    "name": "width",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "min": "",
+                                    "max": "",
+                                    "step": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_5d2fde6a45feb",
+            "label": "Settings",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d31a96c39909",
+            "label": "Ad Assignments",
+            "name": "ads_assignments",
+            "type": "repeater",
+            "instructions": "Assign an ad type to each ad position",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Assignment",
+            "sub_fields": [
+                {
+                    "key": "field_5d31a9963990a",
+                    "label": "Ad Position",
+                    "name": "ads_position",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "horizontal": "Desktop Horizontal Article \/ Homepage Ad",
+                        "inline": "Desktop Inline Article Ad",
+                        "rightrail": "Desktop Right Rail Ad",
+                        "desktopnative": "Desktop Native Ad",
+                        "outstream": "Desktop OutStream",
+                        "adhesion": "Mobile Adhesion",
+                        "slot": "Mobile Article Ad Slot",
+                        "mobilenative": "Mobile Native Ad",
+                        "amp": "AMP Ad"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5d31ad783990b",
+                    "label": "Ad Assignment",
+                    "name": "ads_assignment",
+                    "type": "select",
+                    "instructions": "Ad assignments are drawn from Desktop Units and Mobile Units",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "horizontal": "horizontal",
+                        "rightrail": "rightrail",
+                        "inline": "inline",
+                        "desktopnative": "desktopnative",
+                        "adhesion": "adhesion",
+                        "slot": "slot",
+                        "mobilenative": "mobilenative",
+                        "amp": "amp"
+                    },
+                    "default_value": [],
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 1,
+                    "return_format": "label",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5d933e8039baf",
+            "label": "setTargeting Subpagetype",
+            "name": "ads_subpagetypes",
+            "type": "repeater",
+            "instructions": "Assign a \"subpagetype\" value to each page template",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Subpagetype",
+            "sub_fields": [
+                {
+                    "key": "field_5d934853276a9",
+                    "label": "Subpagetype Templates",
+                    "name": "subpagetype_template",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "templates\/page-2020-hub.php": "2020 Hub",
+                        "templates\/page-adtech-proxy.php": "AdTech IFrame Proxy",
+                        "templates\/page-all-topics.php": "All Topics",
+                        "templates\/page-ambassadors.php": "Ambassadors Newsletter Landing",
+                        "templates\/page-council-hub.php": "Council Hub",
+                        "templates\/page-experts.php": "All Experts",
+                        "templates\/page-fullscreen.php": "Fullscreen",
+                        "templates\/page-home.php": "Home Page",
+                        "templates\/page-location-hub.php": "Location Hub",
+                        "templates\/page-post-container.php": "Post container",
+                        "templates\/page-product-guide.php": "Product Guide",
+                        "templates\/page-suja.php": "Digital Destination",
+                        "templates\/page-summer.php": "99 Days of Summer",
+                        "templates\/page-trends.php": "Trends",
+                        "templates\/page-voting.php": "Nomination Voting Tool"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5d933ebc39bb0",
+                    "label": "Subpagetype Name",
+                    "name": "subpagetype_name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5f32baee81c22",
+            "label": "Email Capture",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f32bb8481c23",
+            "label": "Desktop Unit",
+            "name": "email_capture_desktop_unit",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5f32bbbb81c24",
+            "label": "Mobile Unit",
+            "name": "email_capture_mobile_unit",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-ad-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1599684105
+}

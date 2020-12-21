@@ -1,0 +1,68 @@
+$height: 24px;
+
+.post__content {
+  a.post__pin-link {
+    display: block;
+    border-bottom: none !important;
+    text-decoration: none !important;
+  }
+}
+.post__pin-label {
+  @extend %h3;
+
+  display: none;
+}
+@media (min-width: break($m)) {
+  .post__image-wrapper {
+    img {
+      vertical-align: middle;
+    }
+  }
+  .post__pin-link {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    overflow: hidden;
+    text-align: center;
+    &:hover {
+      opacity: 1;
+      background: rgba(0,0,0,0.3);
+      .post__pin-image, .post__pin-label {
+        margin-top: 0;
+      }
+    }
+    .post__pin-wrapper {
+      display: inline-block;
+      height: $height;
+      text-align: center;
+      top: 50%;
+      margin-top: -$height;
+      position: relative;
+      width: 100%;
+      vertical-align: middle;
+    }
+    .post__pin-image {
+      height: $height*2;
+      width: $height*2;
+      position: static;
+      transition: margin 250ms ease-in-out 50ms;
+      .icon-pinterest-p {
+        font-size: 26px;
+        line-height: $height*2;
+      }
+    }
+    .post__pin-label {
+      color: white;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+      transition: margin 250ms ease-in-out 100ms;
+    }
+    .post__pin-image, .post__pin-label {
+      margin-top: 50px;
+    }
+  }
+}

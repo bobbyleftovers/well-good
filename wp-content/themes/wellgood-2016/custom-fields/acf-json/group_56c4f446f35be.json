@@ -1,0 +1,146 @@
+{
+    "key": "group_56c4f446f35be",
+    "title": "User Fields",
+    "fields": [
+        {
+            "key": "field_56c4f613c75ce",
+            "label": "Short Bio",
+            "name": "short_bio",
+            "type": "textarea",
+            "instructions": "Short bio for Wellness Experts feature on home page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 50,
+            "rows": 3,
+            "new_lines": "br",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56c890a7sdfase",
+            "label": "Full Bio",
+            "name": "full_bio",
+            "type": "wysiwyg",
+            "instructions": "Full bio for author page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "default_value": "",
+            "delay": 0
+        },
+        {
+            "key": "field_56c4f4ecc75ca",
+            "label": "Instagram handle",
+            "name": "instagram",
+            "type": "text",
+            "instructions": "Publicly visible instagram account",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "instagram-handle",
+            "prepend": "@",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56c4f52fc75cb",
+            "label": "Twitter handle",
+            "name": "twitter",
+            "type": "text",
+            "instructions": "Publicly visible twitter account",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "twitter-handle",
+            "prepend": "@",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56c4f5c5c75cd",
+            "label": "Email",
+            "name": "email",
+            "type": "text",
+            "instructions": "Publicly visible email address",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "email address",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56c4f6d3266c543",
+            "label": "Show Author Page",
+            "name": "show_author",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Make this author's page visible",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "user_form",
+                "operator": "==",
+                "value": "edit"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1495817476
+}

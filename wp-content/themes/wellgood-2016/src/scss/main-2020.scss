@@ -1,0 +1,5 @@
+// Legacy bundle styles
+@import 'main-legacy.scss';
+
+// Breaks legacy (don't import this to legacy bundle)
+@import "main-2020/no-legacy";

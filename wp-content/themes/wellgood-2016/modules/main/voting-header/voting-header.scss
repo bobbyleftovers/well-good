@@ -1,0 +1,100 @@
+.voting-header {
+  position: relative;
+}
+.voting-header__hero {
+  @extend %bg-cover;
+  @include aspect_wrapper;
+  height: auto;
+
+  &:before {
+    content: '';
+    display: block;
+    @include aspect_ratio(320/260);
+  }
+
+  @media (min-width: break($s)) {
+    height: auto;
+    max-height: 500px;
+    &:before {
+      @include aspect_ratio(700/250);
+    }
+  }
+  @media (min-width: break($m)) {
+    &:before {
+      @include aspect_ratio(1440/506);
+    }
+  }
+}
+.voting-header__box {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $white;
+  padding: 35px 25px 75px;
+  position: relative;
+
+  @media (min-width: break($s)) {
+    padding-bottom: 135px;
+  }
+
+  @media (min-width: break($m)) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+.voting-header__container {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.voting-header__title {
+  margin-top: 0;
+}
+.voting-header__intro {
+  p {
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 22px;
+
+    @media (min-width: break($s)) {
+      font-size: 18px;
+      line-height: 31px;
+    }
+  }
+}
+.voting-header__ad {
+  display: block;
+  max-width: 730px;
+  margin-top: 25px;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  @media (min-width: break($s)) {
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+.voting__share {
+  @media (min-width: break($m)) {
+    padding: 12px 0 12px 10px;
+    width: 54px;
+    float: none;
+    position: fixed;
+    top: 325px;
+    right: 0;
+    margin-top: 0;
+  }
+
+  .post__share--inner {
+    @media (min-width: break($m)) {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}

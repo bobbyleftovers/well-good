@@ -1,0 +1,19 @@
+.drop-cap__first {
+  float: left;
+  margin-top: .04em;
+  margin-bottom: -0.1em;
+  padding-right: 0.17em;
+  padding-left: 0;
+  
+  @screen sm {
+    margin-top: 0.02em;
+  }
+  
+  @screen md {
+    margin-top: -0.05em;
+  }
+  
+  @screen lg {
+    margin-top: 0;
+  }
+}

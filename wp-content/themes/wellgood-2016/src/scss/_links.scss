@@ -1,0 +1,153 @@
+
+a {
+	color: $black;
+}
+%btn,
+.btn {
+	@include transition(all);
+
+	padding: 10px 35px;
+	border: 1px solid $black;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	font-family: $neuehaas;
+	text-transform: uppercase;
+	letter-spacing: 0.916667px;
+	font-size: 11px;
+	font-weight: 600;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	cursor: hand;
+
+	&:hover {
+		color: $hover;
+	}
+
+	&.alt {
+		border-color: $light-grey;
+
+		&:after {
+			border-color: $light-grey;
+			background-color: $light-grey;
+		}
+	}
+
+	&.filled {
+		background-color: black;
+		padding: 10px 15px;
+		color: white;
+		transition: background-color .25s ease;
+		/*max-width: 70px;*/
+
+		&:hover {
+			background-color: lighten(black, 25%);
+			border-color: lighten(black, 25%);
+     		box-shadow: inset 0px 0px 0px 1px black;
+		}
+
+	}
+
+	&.disabled {
+		animation:fade 2s infinite;
+      	pointer-events:none;
+	}
+
+	@media only screen and (max-width: $break-mobile-max) {
+		width: 100%;
+	}
+
+}
+@keyframes fade{
+  0%, 100%{
+    opacity:1;
+  }
+
+  50%{
+    opacity:.25;
+  }
+}
+.load-more {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+
+	@media (min-width: break($m)) {
+		margin-top: 35px;
+		margin-bottom: 35px;
+	}
+}
+%link-hover {
+	@include transition(color);
+
+	@media (min-width: break($m)) {
+		&:hover {
+			color: $hover;
+		}
+	}
+}
+%a {
+	@include transition(all);
+	position: relative;
+  text-decoration: underline;
+	text-underline-position: auto;
+	text-underline-offset: 2px;
+	color: $black;
+
+	&:hover {
+		color: $seafoam;
+	}
+}
+
+%image-hover {
+	position: relative;
+
+	&:hover {
+		@media (min-width: break($m)) {
+			&:before {
+				visibility: visible;
+				opacity: 0.3;
+			}
+		}
+	}
+
+	&:before {
+		@include transition(all);
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+		background-color: $white;
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+%image-fallback {
+	position: relative;
+	background-color: $light-grey;
+	@include icon("wellandgood-logo-plus", "after", false);
+	&:after {
+		display: inline-block;
+		text-align: center;
+		font-size: 70px;
+		color: $light-grey;
+		z-index: 0;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		margin-top: -35px;
+	}
+	img {
+		position: relative;
+		z-index: 1;
+	}
+}

@@ -1,0 +1,36 @@
+
+.outline-earmark {
+  &:before {
+    @apply absolute top-0 left-0 border-solid border-t border-l border-seafoam-dark h-e50 w-p80;
+
+    content: "";
+    max-height: 80%;
+    max-width: 50px;
+  }
+}
+
+.outline-shadow {
+  &:after {
+    @apply absolute border-solid border-seafoam-dark top-e20 left-e12 w-full h-p98;
+
+    content: "";
+    border-width: 0.5px;
+    z-index: -1;
+  }
+}
+
+.outlines-corners {
+  &:before,
+  &:after {
+    content: "";
+    max-width: 570px;
+  }
+
+  &:before {
+    @apply absolute h-e33 w-p80 top-0 left-0 border-solid border-t border-l border-seafoam;
+  }
+
+  &:after {
+    @apply absolute h-e33 w-p80 bottom-0 right-0 border-solid border-b border-r border-seafoam;
+  }
+}

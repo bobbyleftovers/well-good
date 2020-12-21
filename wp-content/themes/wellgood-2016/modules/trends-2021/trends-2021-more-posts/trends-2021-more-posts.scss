@@ -1,0 +1,75 @@
+.trends-2021-more-posts__grid__cell {
+  float: left;
+  width: 70vw;
+  min-width: 230px;
+
+  @screen xs {
+    width: 230px;
+  }
+
+  @screen sm {
+    width: 25vw;
+    min-width: 203px;
+  }
+
+  @screen md {
+    width: 19.79vw;
+  }
+
+  @screen md {
+    width: 19.7vw;
+  }
+
+  @screen xl {
+    width: 19.79vw;
+  }
+}
+
+.trends-2021-more-posts .trends-2021-post-card__wrapper {
+  padding: 25px;
+  margin-top: -25px;
+  margin-right: -25px;
+  margin-left: -25px;
+  margin-bottom: -25px;
+  width: calc(100% + 50px);
+}
+
+.trends-2021-more-posts__grid:not(.flickity-enabled) {
+  display:flex;
+}
+
+.trends-2021-more-posts__grid .flickity-viewport,
+.trends-2021-more-posts__grid .flickity-slider {
+  overflow: visible;
+}
+
+.trends-2021-more-posts__grid .flickity-page-dots {
+  .dot:first-child:nth-last-child(1) {
+    display: none;
+  }
+}
+
+.trends-2021-more-posts__grid .flickity-page-dots {
+  display: block;
+  padding-top: 26px;
+  bottom: auto;
+  position: relative;
+
+  @screen ml {
+    display: none;
+  }
+}
+
+.trends-2021-more-posts__grid .flickity-page-dots .dot {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  @apply border border-solid border-seafoam-dark;
+  opacity: 1;
+  margin-left: 4px;
+  margin-right: 5px;
+
+  &.is-selected {
+    @apply bg-seafoam-dark;
+  }
+}

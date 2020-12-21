@@ -1,0 +1,81 @@
+.post__content--winner-selected {
+  @extend .post__content--voting-open;
+}
+.meet-winner {
+  border-bottom: 1px solid rgba(#E8E8E8, 0.8);
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  @media (min-width: break($s)) {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: flex-start;
+  }
+
+  @media (min-width: break($m)) {
+
+  }
+}
+.meet-winner__image {
+  @extend .nominee__image;
+  display: none;
+
+  @media (min-width: break($s)) {
+    display: block;
+    width: 34.48%;
+  }
+  @media (min-width: break($m)) {
+    width: 22.95%;
+  }
+}
+.meet-winner__image--mobile {
+  display: block;
+  max-width: 150px;
+  margin: 25px auto;
+
+  @media (min-width: break($s)) {
+    display: none;
+  }
+}
+.meet-winner__content {
+  color: $black;
+
+  p {
+    @media (max-width: break($s, false)) {
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+
+  @media (min-width: break($s)) {
+    width: 65.52%;
+    padding-left: 30px;
+  }
+
+  @media (min-width: break($m)) {
+    width: 77.05%;
+    padding-left: 60px;
+  }
+}
+.meet-winner__sub-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+
+  @media (min-width: break($s)) {
+    text-align: left;
+  }
+}
+.meet-winner__heading {
+  @extend %h1.big;
+  margin-top: 0px;
+  text-align: center;
+
+  @media (min-width: break($s)) {
+    text-align: left;
+  }
+}

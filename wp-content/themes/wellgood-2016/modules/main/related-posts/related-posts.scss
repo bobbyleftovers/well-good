@@ -1,0 +1,134 @@
+.related-posts--header {
+  // @include transition(transform);
+  transition: transform $transition-duration $transition-timing-function, opacity 1ms linear $transition-duration;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: $white;
+	z-index: 1200;
+  transform: translateY(-100%);
+  opacity: 0;
+
+	&,
+	article,
+	.post-grid__image {
+		height: $header-height;
+		overflow: hidden;
+
+		@media (min-width: break($m)) {
+			height: ($header-height-desktop + 4px);
+		}
+	}
+
+	.js-related-posts-active & {
+    transition: opacity 1ms linear, transform $transition-duration $transition-timing-function;
+    transform: translateY(0);
+    opacity: 1;
+	}
+	.post-grid__headline-container {
+		position: relative;
+	}
+	.post-grid__container {
+		margin: 0;
+		padding: 0;
+
+		@media (min-width: break($m)) {
+			@include container;
+			padding-left: 0;
+			margin: 0 auto;
+		}
+	}
+	.post-grid__headline {
+		@extend %h6;
+		position: absolute;
+		top: 17px;
+		left: 105px;
+		border: none;
+		margin: 0;
+		z-index: 100;
+
+		@media (min-width: break($m)) {
+			left: 122px;
+		}
+	}
+	.post-grid__card {
+		@include transition(all);
+		@extend %clearfix;
+		display: block;
+		width: 100%;
+		margin: 0;
+		padding-right: 15px;
+		position: absolute;
+		top: 0;
+		background-color: $white;
+		z-index: 50;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+
+		&.js-card-active {
+			z-index: 51;
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+
+		&:hover {
+			.post-grid__title {
+				color: $hover;
+			}
+		}
+	}
+	.post-grid__title {
+		@extend %h2;
+		margin: 0;
+		padding-top: 32px;
+		text-align: left;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+
+		@media (min-width: break($m)) {
+			padding-top: 30px;
+		}
+	}
+	.post-grid__image {
+		display: inline-block;
+		width: 90px;
+		padding-bottom: 0;
+		float: left;
+		margin-right: 15px;
+		overflow: hidden;
+
+		.image-module {
+			display: none;
+			.js-related-posts-active & {
+				display: block;
+			}
+		}
+
+		@media (min-width: break($m)) {
+			width: 102px;
+			margin-right: 20px;
+		}
+	}
+	.related-posts__to-top {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 26px;
+		font-size: 18px;
+		text-decoration: none;
+		display: none;
+		z-index: 100;
+
+		@media (min-width: break($m)) {
+			display: block;
+		}
+	}
+}
+.js-related-posts-active .header__inner {
+	transform: translateY(-100%);
+}

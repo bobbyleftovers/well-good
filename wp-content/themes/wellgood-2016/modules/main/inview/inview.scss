@@ -1,0 +1,8 @@
+[data-inview-class] {
+	opacity: 0;
+	backface-visibility: hidden;
+	transition: opacity 0.75s ease-in-out;
+	&.inview {
+		opacity: 1;
+	}
+}

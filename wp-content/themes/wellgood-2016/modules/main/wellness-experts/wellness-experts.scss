@@ -1,0 +1,120 @@
+.wellness-experts__list {
+	margin-top: 20px;
+
+	@media (min-width: break($m)) {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+	}
+}
+.wellness-experts__card {
+	text-align: center;
+	width: calc(100% - #{$edge-gutter * 2});
+	margin: 0 $edge-gutter;
+	padding-top: 27px;
+
+	.flickity-viewport[style^="height:"] & {
+		height: 100%;
+	}
+
+	@media (min-width: break($m)) {
+		display: flex;
+		flex-direction: column;
+		
+		margin: 0 10px;
+
+		&.wellness-count-5 {
+			width: calc(20% - 20px);
+		}
+		&.wellness-count-4 {
+			width: calc(25% - 20px);
+		}
+		&.wellness-count-3 {
+			width: calc(33.333% - 20px);
+		}
+		&.wellness-count-2 {
+			width: calc(50% - 20px);
+		}
+		&.wellness-count-1 {
+			width: 100%;
+		}
+	}
+
+	@media (min-width: break($s)) and (max-width: break($m)) {
+		margin-bottom: 20px;
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+}
+.wellness-experts__inner {
+	background: $white;
+	position: relative;
+	padding: 0 15px 20px;
+	height: 100%;
+	@media (min-width: break($m)) {
+		flex: 1 0 auto;
+		-ms-flex: 1 0 auto;
+		-webkit-flex: 1;
+		-webkit-box-flex: 1 0 auto;
+	}
+}
+.wellness-experts__story-title {
+	@extend %link-hover;
+}.wellness-experts__author-name {
+	margin-bottom: 1.65em;
+}
+.wellness-experts__author-description {
+	margin-top: -1.85em;
+	line-height: 1.5em;
+	min-height: 1.5em;
+}
+.wellness-experts__avatar {
+	position: relative;
+	width: 95px;
+	height: 95px;
+	margin-top: -27px;
+}
+.wellness-experts__description {
+	@extend %h6
+}
+.wellness-experts__story-image {
+	@extend %bg-cover, %as, %image-hover, %image-fallback;
+	@include aspect_ratio(3/2);
+	overflow: hidden;
+}
+.wellness-experts__story + .wellness-experts__story  {
+	display: block;
+	margin-bottom: 50px;
+	&:before {
+		content: " ";
+		display: block;
+		width: 50px;
+		height: 1px;
+		margin: 0 auto;
+		background-color: $light-grey;
+	}
+	@media (min-width: break($m)) {
+		margin-bottom: 85px;
+	}
+}
+.wellness-experts__author-more {
+	@extend %h3;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	line-height: 1em;
+	padding: 15px 0;
+	border-top: 1px solid $light-grey;
+}
+.wellness-experts-container {
+	position: relative;
+	@media(max-width: break($m)){
+		padding-bottom: 52px;
+	}
+}

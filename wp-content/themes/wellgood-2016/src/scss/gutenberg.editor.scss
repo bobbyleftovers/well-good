@@ -1,0 +1,30 @@
+@import 'modules/main/signup-form/signup-form.scss';
+@import "modules/main-2020/base-button-play/base-button-play.scss";
+@import 'modules/main-2020/base-input-submit/base-input-submit.scss';
+@import 'modules/main-2020/text-input/text-input.scss';
+@import "./main-2020/_viewport.scss";
+
+.wp-block {
+  max-width: 660px;
+}
+
+.editor-post-title__block {
+  max-width: none;
+}
+
+.editor-post-title__input {
+  @apply font-safe-display #{!important};
+  @extend %text-h1;
+  font-weight: normal !important;
+  text-align: center;
+
+  @screen lg {
+    font-size: 75px !important;
+  }
+}
+
+
+.block-editor .wp-block[data-type="core/paragraph"] {
+  @extend %text-big;
+  font-weight: 400;
+}

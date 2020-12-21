@@ -1,0 +1,81 @@
+.post-grid {
+	position: relative;
+}
+.post-grid__headline-container {
+	@extend .container;
+	padding: 0;
+}
+.post-grid__container {
+	margin: 10px -5px 0;
+	font-size: 0.001px;
+
+	@media (min-width: break($m)) {
+		margin-top: 15px;
+		margin-left: -12px;
+		margin-right: -12px;
+	}
+}
+.post-grid__card {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	width: calc(50% - 10px);
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 20px;
+
+	@media (min-width: break($s)) and (max-width: break($m)) {
+		width: calc(33.33% - 24px);
+		margin-left: 12px;
+		margin-right: 12px;
+		margin-bottom: 30px;
+	}
+
+	@media (min-width: break($l)) {
+		width: calc(33.33% - 24px);
+		margin-left: 12px;
+		margin-right: 12px;
+		margin-bottom: 30px;
+	}
+}
+.post-grid__image {
+	@extend %bg-cover, %as, %image-hover;
+	@extend %image-fallback;
+	@include aspect_ratio(1.5);
+	overflow: hidden;
+	img {
+		width: 100%;
+    	height: auto;
+	}
+	&:after {
+		font-size: 50px;
+		margin-top: -25px;
+	}
+}
+.post-grid__title {
+	@extend %article-title,
+		%article-title--small,
+		%link-hover;
+	margin: 10px 0 0;
+}
+.post-grid__powered-by,
+.post-grid__site-name {
+	font-family: $sans-serif;
+	text-transform: uppercase;
+	font-size: 10px;
+	letter-spacing: 0.75px;
+	color: $grey;
+}
+.post-grid__powered-by {
+	position: absolute;
+	right: 0;
+	margin: 0;
+	top: 8px;
+
+	@media (min-width: break($m)) {
+		top: 19px;
+	}
+}
+.post-grid__site-name {
+	margin: 8px 0 0;
+}

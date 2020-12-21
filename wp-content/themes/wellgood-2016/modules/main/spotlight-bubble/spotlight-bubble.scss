@@ -1,0 +1,91 @@
+.theme-main-2020.spotlight-bubble {
+  .flickity-viewport {
+    // transition: height 0.2s;
+  }
+
+  .menu-drawer-container & {
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @media (min-width: break($ml)) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+.theme-main-2020.spotlight-bubble .spotlight-bubble__item {
+  @apply text-gray;
+
+  .menu-drawer-container & {
+    a {
+      display: block;
+      margin-top: 5px;
+    }
+  }
+}
+
+.spotlight-bubble__item-wrap {
+  max-width: 200px;
+
+  @media( min-width: break($s) ) {
+    max-width: none;
+  }
+
+  .menu-drawer-container & {
+    max-width: 180px;
+
+    @media( min-width: break($s) ) {
+      max-width: 215px;
+    }
+  }
+}
+
+.spotlight-bubble__nav {
+  font-size: 11px;
+
+  @media (min-width: break($s)) and (max-width: break($mxl)) {
+    .spotlight-bubble--home &.left {
+      margin-left: 5px;
+    }
+
+    .spotlight-bubble--home &.right {
+      margin-right: 5px;
+    }
+  }
+
+  .menu-drawer & {
+    @media (max-width: break($xs)) {
+      &.left {
+        margin-left: -5px;
+      }
+
+      &.right {
+        margin-right: -5px;
+      }
+    }
+  }
+}
+
+.spotlight-bubble-container + article.home {
+  padding-top: 5px;
+}
+
+.spotlight-bubble-container {
+  // padding: 0 25px;
+  // max-width: 1364px;
+
+  // @media( min-width: break($xs) ) {
+  //   padding: 0 40px;
+  // }
+
+  // @media (min-width: break($header-break)) {
+  //   padding: 0 43px;
+  // }
+
+  .menu-drawer &  {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

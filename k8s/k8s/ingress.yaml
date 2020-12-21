@@ -1,0 +1,19 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/client-body-buffer-size: 100m
+    nginx.ingress.kubernetes.io/proxy-body-size: 100m
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "200"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "200"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "200"
+  name: wellandgood
+spec:
+  rules:
+  - host: sre.stg.wellandgood.com
+    http:
+      paths:
+      - backend:
+          serviceName: wellandgood
+          servicePort: 80

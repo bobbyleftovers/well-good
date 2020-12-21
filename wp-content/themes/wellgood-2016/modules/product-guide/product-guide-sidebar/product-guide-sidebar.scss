@@ -1,0 +1,187 @@
+.product-guide-sidebar {
+  @include z('modal');
+  pointer-events: none;
+  visibility: hidden;
+  transition: visibility;
+  transition-delay: .5s;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &__menu {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    background-color: $product-guide-rose;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: $sidebar-width-small;
+    transform: translateX(100%);
+    transition: transform .333s;
+    @include break('width', $break-small) {
+      width: $sidebar-width-large;
+      transform: translateX(100%);
+      transition: transform .333s;
+    }
+  }
+  &__mask {
+    @include z('negative');
+    @include background('top', 'small');
+    background-color: $color-darken-darker;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    &:hover {
+        cursor: pointer;
+    }
+  }
+  &__close {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 15px;
+    left: -28px;
+    opacity: 0;
+    transition: opacity .333s;
+    &:hover {
+      cursor: pointer;
+    }
+    & svg {
+      fill: $product-guide-white;
+    }
+  }
+  &--social {
+    height: 47px;
+    color: $product-guide-white;
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    & > span {
+      @include text-h2;
+    }
+    & > ul {
+      list-style: none;
+      padding: 0;
+      display: inline-flex;
+      height: 9px;
+      margin-top: 5px;
+      @include break('width', $break-small) {
+        margin-top: 20px;
+      }
+      & > li {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+        & a {
+          text-decoration: none;
+          color: $product-guide-white;
+        }
+      }
+    }
+  }
+  &--quiz-callout {
+    @include z('content');
+    @include background('bottom');
+    position: relative;
+    margin-bottom: 80px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 240px;
+    @include break('width', $break-small) {
+      height: 290px;
+    }
+    &:before {
+      content: '';
+      @include z('negative');
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      bottom: 0;
+      left: 6px;
+    }
+    & svg {
+      position: absolute;
+      top: 0;
+      margin: 0 auto;
+      bottom: -25px;
+      right: 0;
+      left: 0;
+      margin-top: 50px;
+      fill: $product-guide-rose;
+      width: 245px;
+      @include break('width', $break-small) {
+        width: 300px;
+      }
+      & path:last-child {
+        stroke-width: .9;
+        stroke: $color-lighten;
+      }
+    }
+  }
+  &--quiz-copy {
+    @include z('content');
+    margin-top: 100px;
+    text-align: center;
+    color: $product-guide-white;
+  }
+  &--quiz-link {
+    & a {
+      color: $product-guide-white;
+    }
+  }
+  &--quiz-question {
+    margin-bottom: 20px;
+  }
+  &--quiz-launch {
+    text-decoration: underline;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &--back {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    & a {
+      color: $product-guide-white;
+    }
+  }
+  &.active {
+    position: fixed;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    transition: transform .333s;
+    & .product-guide-sidebar__menu {
+      transform: translateX(0);
+      transition: transform .333s;
+    }
+    & .product-guide-sidebar__mask {
+      opacity: 1;
+      transition: opacity .5s;
+    }
+    & .product-guide-sidebar__close {
+      opacity: 1;
+      transition: opacity .333s;
+    }
+  }
+  &.loading,
+  &.loading * {
+    transition: none !important;
+  }
+  @include orientation('landscape') {
+    display: none;
+  }
+}

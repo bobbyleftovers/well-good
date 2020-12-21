@@ -1,0 +1,78 @@
+.trends-2021-event {
+  background-color: rgba(#FE713B, 0.3);
+}
+
+.trends-2021-event__flex {
+  min-height: 367px;
+  @screen ml {
+    min-height: 478px;
+  }
+  @screen lg {
+    min-height: 636px;
+  }
+}
+
+.trends-2021-event__img {
+  margin-left: 0;
+  overflow: hidden;
+  min-height: 283px;
+  @screen xs {
+    max-height: 300px !important;
+  }
+  @screen sm {
+    max-height: none !important;
+    max-width: 50%;
+    min-width: 50%;
+  }
+}
+
+.trends-2021-event__img__padding {
+  padding-bottom: 88%;
+  @screen xs {
+    padding-bottom: 60%;
+  }
+  @screen sm {
+    padding-bottom: 88%;
+    overflow: hidden;
+  }
+}
+
+.trends-2021-event__content {
+  max-width: 350px;
+  @screen lg {
+    max-width: 491px;
+  }
+}
+
+.trends-2021-event__gradient {
+  background: #FFBBA0;
+  width: 80%;
+  border-radius: 50%;
+  transform: translate3d(-30%, 30%, 0);
+  filter: blur(100px);
+}
+
+.trends-2021-event__gradient__padding {
+  width: 100%;
+  height: auto;
+  padding-bottom: 100%;
+}
+
+.trends-2021-event__cta .wp-block-button {
+  display: block;
+  position: relative;
+}
+
+.trends-2021-event__cta .wp-block-button__link {
+  @extend %text-link;
+  @apply bg-white px-e20 text-center inline-flex items-center justify-center border border-white;
+  height: 46px;
+  min-width: 160px;
+  width: auto;
+  transition: 0.3s;
+
+  &:hover {
+    background: transparent;
+    @apply text-white;
+  }
+}

@@ -1,0 +1,79 @@
+.acf-expert-take {
+  color: inherit;
+}
+
+.acf-expert-take__img {
+ 
+  border-radius: 500px;
+  overflow: hidden;
+
+  max-width: 36.875vw;
+  min-width: 36.875vw;
+  
+  @screen sm {
+    margin-right: 30px;
+    max-width: 156px;
+    min-width: 156px;
+  }
+
+  @screen ml {
+    margin-right: 32px;
+    max-width: 184px;
+    min-width: 184px;
+  }
+
+  @screen lg {
+    margin-right: 37px;
+    max-width: 198px;
+    min-width: 198px;
+  }
+}
+
+.acf-expert-take__title {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.acf-expert-take__content {
+  max-width: 27em;
+}
+
+.acf-expert-take .text-label {
+  color: inherit !important;
+}
+
+.acf-expert-take__img__padding {
+  padding-bottom: 123.23%;
+  overflow: hidden;
+}
+
+.acf-expert-take__img__gradient {
+  bottom: -55%;
+  left: -15%;
+  width: 130%;
+  height: 70%;
+  filter: blur(30px);
+  border-radius: 30%;
+}
+
+.acf-expert-take__label .text-label {
+  color: inherit !important;
+}
+
+.acf-expert-take__label::after,
+.acf-expert-take__label::before {
+  content: '';
+  display: block;
+  border-bottom: 1px solid;
+  flex-grow: 1;
+}
+
+.acf-expert-take__label::after,
+.acf-expert-take__label::before,
+.acf-expert-take {
+  border-color: rgba(#333333, 0.4);
+
+  .text-white & {
+    border-color: $white;
+  }
+}

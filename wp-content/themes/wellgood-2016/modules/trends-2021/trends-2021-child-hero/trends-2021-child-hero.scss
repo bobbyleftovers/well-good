@@ -1,0 +1,97 @@
+.trends-2021-child-hero {
+  min-height: 48vw;
+  @screen ml {
+    height: 380px;
+  }
+  @screen ml {
+    height: 492px;
+  }
+  @screen lg {
+    height: 600px;
+    min-height: 41.6vw;
+  }
+}
+
+.trends-2021-child-hero__container {
+  width: 100%;
+
+  @screen sm {
+    max-width: 732px !important;
+  }
+
+  @screen md {
+    width: 86%;
+    max-width: 604px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  @screen ml {
+    max-width: 721px !important;
+  }
+
+  @screen lg {
+    max-width: 920px !important;
+  }
+
+  @screen xl {
+    max-width: 1060px !important;
+  }
+}
+
+.trends-2021-hero__content  {
+  max-width: 326px;
+  @screen lg {
+    max-width: 396px;
+  }
+}
+
+.trends-2021-hero__card-wrap  {
+  max-width: 307px;
+  width: 100%;
+  @screen md {
+    max-width: 37%;
+    margin-left: 72px;
+  }
+  @screen lg {
+    max-width: 368px;
+  }
+}
+
+.trends-2021-child-hero__social a {
+  transition: opacity 0.3s;
+  padding: 11px 3px !important;
+  @screen md {
+    padding: 5px 3px !important;
+  }
+  @screen ml {
+    padding: 7px 3px !important;
+  }
+  @screen lg {
+    padding: 23px 3px !important;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+  &:before {
+    color: inherit !important;
+  }
+}
+
+.trends-2021-hero__sponsor img {
+  height: 28px;
+  width: auto;
+}
+
+.trends-2021-hero__sponsor a {
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  font-size: inherit;
+  display: inline-flex;
+}
+
+.trends-2021-child-hero * {
+  color: inherit !important;
+}

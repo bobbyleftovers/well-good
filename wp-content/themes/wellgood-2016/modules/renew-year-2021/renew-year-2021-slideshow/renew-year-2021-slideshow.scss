@@ -1,0 +1,106 @@
+.renew-year-2021-slideshow {
+  width: 100%;
+  background: #EBE7E4;
+}
+
+.renew-year-2021-slideshow__flkty:focus,
+.renew-year-2021-slideshow .flickity-viewport:focus {
+  outline: none
+}
+
+.renew-year-2021-slideshow__cell {
+  @screen md {
+    border-left: 1px solid #D8D5D2;
+    min-height: 334px;
+  }
+
+  @screen ml {
+    border-left: 1px solid #D8D5D2;
+    min-height: 310px;
+  }
+
+  @screen xl {
+    border-left: 0;
+    min-height: 0;
+    height: auto;
+  }
+}
+
+.renew-year-2021-slideshow__cell-img-wrap {
+  height: 231px;
+
+  @screen md {
+    height: 228px;
+  }
+
+  @screen ml {
+    height: 208px;
+  }
+  
+  @screen xl {
+    border-left: 1px solid #D8D5D2;
+    height: 334px;
+  }
+}
+
+.renew-year-2021-slideshow__cell-img-wrap img{
+  transition: 300ms;
+  max-height: 100%;
+}
+
+.renew-year-2021-slideshow__cell-img-wrap:hover img{
+  transform: translateY(-10px);
+}
+
+.renew-year-2021-slideshow__flkty {
+  width: 100%;
+}
+
+.renew-year-2021-slideshow .flickity-prev-next-button {
+  position: absolute;
+  bottom: 48%;
+
+  .flickity-button-icon {
+    width: 20px;
+    height: 18px;
+    z-index: 100;
+
+    .arrow {
+      fill: #113e43;
+    }
+  }
+
+  &.previous {
+    left: 25px;
+  }
+  &.next {
+    right: 25px;
+  }
+
+  @screen md {
+    &.previous {
+      left: 30px;
+    }
+    &.next {
+      right: 30px;
+    } 
+  }
+
+  @screen ml {
+    &.previous {
+      left: 56px;
+    }
+    &.next {
+      right: 56px;
+    } 
+  }
+
+  @screen xl {
+    &.previous {
+      left: 70px;
+    }
+    &.next {
+      right: 70px;
+    } 
+  }
+}

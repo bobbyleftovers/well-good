@@ -1,0 +1,163 @@
+.social-share {
+	margin: 0 -4px;
+	font-size: 0;
+}
+.social-share__button {
+	@include transition(all);
+	display: inline-block;
+	font-family: $sans-serif-condensed;
+	text-decoration: none;
+	line-height: 1em;
+	padding: 11px 0;
+	font-size: 14px;
+	width: calc(33.333% - 8px);
+	margin: 0 4px;
+	text-align: center;
+	vertical-align: top;
+	border: 1px solid $light-grey;
+	color: $black;
+	background-color: $white;
+
+	@media (min-width: break($ml)) {
+		font-size: 16px;
+		width: 108px;
+	}
+
+	[class^="icon-"] {
+		margin-right: 5px;
+		font-size: 18px;
+		vertical-align: top;
+
+		&:before {
+			vertical-align: middle;
+		}
+
+		@media (min-width: break($m)) {
+			margin-right: 15px;
+			font-size: 16px;
+		}
+	}
+	&:hover {
+		background-color: $light-grey;
+	}
+}
+.social-share--circle {
+	text-align: justify;
+	height: 48px;
+	padding: 10px ($edge-gutter + 6px);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 101;
+	background-color: $white;
+
+	@media (min-width: break($m)) {
+		border-top: none;
+		padding: 0;
+		position: static;
+		float: left;
+		width: 40px;
+		height: auto;
+		margin-top: 20px;
+		bottom: auto;
+		left: auto;
+    right: auto;
+    display: initial;
+	}
+}
+
+.social-share--circle .social-share__button,
+.social-share__button--circle {
+	display: inline-block;
+	border-radius: 50%;
+	text-decoration: none;
+	text-align: center;
+	width: 28px;
+	height: 28px;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+
+	@media (min-width: break($m)) {
+		width: 40px;
+		height: 40px;
+	}
+	[class*="icon-"] {
+		margin-right: 0 !important;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		line-height: 26px;
+		font-size: 14px;
+		letter-spacing: 0;
+
+		@media (min-width: break($m)) {
+			font-size: 16px;
+			line-height: 38px;
+		}
+
+		&:before {
+			vertical-align: top;
+		}
+	}
+}
+.social-share__button--facebook,
+.social-share__button--twitter,
+.social-share__button--pinterest,
+.social-share__button--flipboard {
+	color: $white;
+}
+.social-share__button--facebook {
+	background: #3D5CA0;
+	border-color: #3D5CA0;
+	&:hover {
+		background-color: darken(#3D5CA0, 10%);
+		border-color: darken(#3D5CA0, 10%);
+	}
+}
+.social-share__button--twitter {
+	background: #00AAF3;
+	border-color: #00AAF3;
+	&:hover {
+		background-color: darken(#00AAF3, 10%);
+		border-color: darken(#00AAF3, 10%);
+	}
+}
+.social-share__button--pinterest {
+	background: #CD1928;
+	border-color: #CD1928;
+	&:hover {
+		background-color: darken(#CD1928, 10%);
+		border-color: darken(#CD1928, 10%);
+	}
+}
+.social-share__button--flipboard {
+	background: #E12828;
+	border-color: #E12828;
+	position: relative;
+	&:hover {
+		background-color: darken(#E12828, 10%);
+		border-color: darken(#E12828, 10%);
+	}
+	& span {
+		background-image: url('data:image/svg+xml,%3Csvg version=\'1.1\' id=\'Layer_1\' xmlns=\'http://www.w3.org/2000/svg\' xmlns:xlink=\'http://www.w3.org/1999/xlink\' x=\'0px\' y=\'0px\' viewBox=\'0 0 1000 1000\' style=\'enable-background:new 0 0 1000 1000;\' xml:space=\'preserve\'%3E%3Cstyle type=\'text/css\'%3E .st0%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Cg%3E%3Cg transform=\'translate%280.000000,250.000000%29 scale%280.100000,-0.100000%29\'%3E%3Cpath class=\'st0\' d=\'M100-2500v-4900h1632h1628.1v1628.1v1632l1628.1,11.9l1632,7.9l7.9,1632L6640-860l1632,11.9l1628.1,7.9v1620 V2400H5000H100V-2500z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    background-size: 16px 16px;
+	    height: 16px;
+	    width: 16px;
+	    transform: translate(-50%, -50%);
+	}
+}
+.social-share--circle .social-share__button {
+	@media (min-width: break($m)) {
+		margin-bottom: 5px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

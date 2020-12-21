@@ -1,0 +1,136 @@
+.post__content--voting-open {
+  max-width: none;
+  width: 100%;
+
+  .page-main {
+    margin-left: 0;
+  }
+}
+.voting-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: break($s)) {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  @media (min-width: break($m)) {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.voting-modal {
+  @include transition(all);
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($white, 0.9);
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.js-open {
+    visibility: visible;
+    opacity: 1;
+    z-index: 100;
+  }
+}
+.voting-modal__container {
+  background-color: $white;
+  max-width: 500px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.20);
+  text-align: center;
+  padding: 55px 50px;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+
+  .voting-modal__form {
+    background-color: $white;
+    text-align: center;
+    &:before {
+      content: none;
+    }
+    .signup-form__radio {
+      color: $grey;
+    }
+    .signup-form__email {
+      padding: 11px 13px;
+    }
+    .signup-form__submit {
+      height: auto;
+    }
+  }
+}
+.voting-modal__heading {
+  @extend .module-heading;
+  margin-top: 0;
+  border-bottom: 0;
+}
+.voting-modal__message {
+  @extend %p.excerpt;
+  color: $grey;
+  margin: 10px 0 15px;
+}
+.voting-modal__cancel {
+  position: absolute;
+  text-align: center;
+  bottom: 15px;
+  left: 50px;
+  right: 50px;
+
+  span {
+    @extend %p.excerpt;
+    color: $grey;
+    text-decoration: underline;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
+.voting-modal__thanks {
+  display: none;
+  padding-bottom: 30px;
+}
+.voting-modal__close {
+  @extend .modal-close;
+  cursor: pointer;
+
+  &:before {
+    color: $black;
+  }
+}
+.post__content--voting-open {
+  padding-bottom: 0;
+
+  @media (min-width: break($m)) {
+    margin-bottom: 0;
+  }
+}
+.voting-subscribe {
+  .signup-form--modal {
+    background-color: $white;
+
+    &:before {
+      content: none;
+    }
+  }
+  .signup-form__wrapper {
+    color: $black !important;
+  }
+}
+
+.g-recaptcha {
+
+  @media(max-width: break($break-mobile-min)){
+    transform: scale(0.75);
+    transform-origin: left;
+  }
+}

@@ -1,0 +1,66 @@
+.footer {
+  .container {
+    max-width: 1440px;
+
+    &.collapse {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .subtext {
+    @media (max-width: 868px) {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+
+  .title {
+    @media (max-width: 640px) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    @screen md {
+      @apply text-h1-mobile;
+    }
+  }
+
+  .made-in-ny-logo {
+    position: relative;
+    width: 45px;
+    height: 45px;
+  }
+
+  .menu-item-type-social a {
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: block;
+  }
+
+  .signup-form--footer > div {
+    max-width: 350px;
+
+    @screen lg {
+      max-width: 445px;
+    }
+  }
+
+  #menu-footer-menu {
+    .text-link {
+      font-weight: 400;
+    }
+  }
+}
+
+.footer-copyright {
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: $seafoam;
+    }
+  }
+}

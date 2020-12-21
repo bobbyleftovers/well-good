@@ -1,0 +1,220 @@
+.trends-2021-home-hero {
+  background-color: #FCFBF9;
+  min-height: 52.21vw;
+  @screen ml {
+    min-height: 46.7vw;
+  }
+  @screen lg {
+    min-height: 40.48vw;
+  }
+  @screen xl {
+    min-height: 40.2vw;
+  }
+}
+
+.trends-2021-home-hero__bg-wrapper {
+  position: absolute;
+  display: block;
+  height: auto;
+  transition: 0.3s;
+  top:0;
+  left: 0;
+  width:100%;
+  
+  @screen md-down {
+    height: 100%;
+  }
+
+  .trends-2021-home-hero.start & {
+    opacity: 1 !important;
+  }
+}
+
+.trends-2021-home-hero__bg-canvas {
+  -webkit-filter: blur(50px);
+    -moz-filter: blur(50px);
+    -o-filter: blur(50px);
+    -ms-filter: blur(50px);
+    filter: blur(50px);
+}
+
+@keyframes blur {
+  0% {
+    -webkit-filter: blur(50px);
+    -moz-filter: blur(50px);
+    -o-filter: blur(50px);
+    -ms-filter: blur(50px);
+    filter: blur(50px);
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+  }
+}
+
+.trends-2021-home-hero__bg + .trends-2021-home-hero__bg{
+  clip-path: ellipse(50% 50% at 100% 0%);
+}
+
+.trends-2021-home-hero__bg__default {
+  background: linear-gradient(102.25deg, #C57EDE 41.08%, #DA795B 88.08%);
+  opacity: 0.9;
+  height: calc(80% - 50px);
+  width: calc(100% + 100px);
+  top: -50px;
+  left: -50px;
+}
+
+.trends-2021-home-hero__bg__img {
+  background-position: center bottom;
+}
+
+.trends-2021-home-hero__content { 
+  padding-top: 71px;
+  padding-bottom: 58px;
+
+  @screen xs {
+    padding-top: 85px;
+  }
+
+  @screen sm {
+    padding-top: 94px;
+  }
+  
+  @screen md {
+    top:50%;
+    padding-top: 13.5vw;
+    padding-bottom: 9.11vw;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  @screen ml {
+    padding-top: 14.9vw;
+    padding-bottom: 11.43vw;
+  }
+
+  @screen lg {
+    padding-top: 15.42vw;
+    padding-bottom: 10.2vw;
+  }
+}
+
+.trends-2021-home-hero__intro {
+
+  max-width: 475px;
+  @screen ml {
+    max-width: 622px;
+  }
+  @screen lg {
+    max-width: 654px;
+  }
+}
+
+.trends-2021-home-hero__title-svg {
+  max-width: 243px;
+  width: 100%;
+  @screen md {
+    max-width: 202px;
+  }
+  @screen ml {
+    max-width: 620px;
+  }
+  @screen xl {
+    max-width: 100%;
+  }
+}
+
+.trends-2021-home-hero__title-svg svg {
+  max-width: 100%;
+  width: 100%;
+}
+
+.trends-2021-home-hero__title-svg svg > g {
+  width: 100%;
+} 
+
+.trends-2021-home-hero__title-svg {
+  opacity: 0;
+  transition: 1.5s;
+
+  .trends-2021-home-hero.show & {
+    opacity: 1 !important;
+  }
+}
+
+.trends-2021-home-hero__intro {
+  opacity: 0;
+  transition: 1.5s;
+  z-index: 99;
+
+  .trends-2021-home-hero.show & {
+    opacity: 1 !important;
+  }
+}
+
+.trends-2021-home-hero__bg-canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.trends-2021-home-hero__bg-img {
+  width: 100%;
+  display: block;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s;
+
+  @screen md-down {
+    height: 170%;
+    position: absolute;
+    width: 100%;
+  }
+
+  @screen sm-down {
+    height: 160%;
+  }
+
+  @screen md {
+    min-height: 78.9vw;
+  }
+
+  @screen ml {
+    min-height: 72.75vw;
+  }
+
+  @screen xl {
+    min-height: 60.20vw;
+  }
+
+
+  .show & {
+    opacity: 1 !important;
+  }
+}
+
+.trends-2021-home-hero__bg-content-blend {
+  background: rgb(250,247,246); 
+  background: linear-gradient(0deg, rgba(250,247,246,1) 0%, rgba(250,247,246,1) 18%, rgba(250,247,246,0) 100%);
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  height: 10%;
+
+  @screen md-down {
+    bottom: auto;
+    top: 160%;
+    position: absolute;
+  }
+
+  @screen sm-down {
+    top: 150%;
+  }
+}

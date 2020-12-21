@@ -1,0 +1,24 @@
+/*
+* Reset CSS
+*/
+// @import "tailwindcss/base";
+
+/*
+* Containers and others
+*/
+// @import "tailwindcss/components";
+
+/*
+*  Utilities (long building times)
+*/
+._hidden {
+  display:none;
+}
+
+@import "tailwindcss/utilities";
+
+/*
+*  Put this wherever you want the responsive mediaqueries to be placed
+*  (by default, tailwind will apply this to the end of the stylesheet)
+*/
+// @import "tailwindcss/screens";

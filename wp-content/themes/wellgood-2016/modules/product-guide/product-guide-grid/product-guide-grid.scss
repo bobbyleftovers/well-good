@@ -1,0 +1,560 @@
+.product-guide-grid {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  flex-grow: 1;
+  @include orientation('landscape') {
+    flex-direction: row;
+    height: 100%;
+    width: auto;
+  }
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include orientation('landscape') {
+      width: $product-grid-width-thin;
+    }
+    &--wide {
+      @include orientation('landscape') {
+        width: $product-grid-width-wide;
+      }
+      & li {
+        &:nth-child(1) {
+          @include orientation('portrait') {
+            order: 3;
+          }
+        }
+        &:nth-child(2) {
+          @include orientation('portrait') {
+            order: 1;
+          }
+        }
+        &:nth-child(3) {
+          @include orientation('portrait') {
+            order: 2;
+          }
+        }
+        &:nth-child(4) {
+          @include orientation('portrait') {
+            order: 4;
+          }
+        }
+        &:nth-child(5) {
+          @include orientation('portrait') {
+            order: 5;
+          }
+        }
+      }
+    }
+  }
+  & article {
+    display: none;
+  }
+  &__card {
+    border: solid 1px $color-grid-border;
+    background-color: $product-guide-white;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 40px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    @include orientation('landscape') {
+      justify-content: center;
+      padding-top: 0;
+      flex-direction: row;
+      padding: 0 20px;
+      @include break('height', $break-small) {
+        padding: 0 40px;
+      }
+    }
+    &::after {
+      content: "";
+      @include z('negative');
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    &:hover {
+      transform: none;
+      @include orientation('landscape') {
+        @include break('height', $break-small) {
+          @include z('content');
+          transform: scale(1.05, 1.05);
+          & .product-guide-grid__card--burst {
+            overflow: visible!important;
+            & > div:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &:hover::after {
+        opacity: 1;
+    }
+    &--image,
+    &--details {
+      backface-visibility: hidden;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &--title,
+    &--info,
+    &--category,
+    &--price,
+    &--sponsor {
+      backface-visibility: hidden;
+    }
+    &--image {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      flex-shrink: 0;
+      height: 140px;
+      width: 140px;
+      transform: none;
+      transition: transform .333s ease-in-out;
+      @include orientation('landscape') {
+        max-height: 100%;
+        width: 200px;
+        margin: 0 20px 0 0;
+        height: 145px;
+        @include break('height', $break-small) {
+          height: 200px;
+          width: 200px;
+        }
+      }
+    }
+    &--info {
+      backface-visibility: hidden;
+      width: 100%;
+      max-width: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 15px;
+      @include orientation('landscape') {
+        width: 270px;
+        max-width: none;
+        padding: 40px 0;
+      }
+    }
+    &--category {
+      backface-visibility: hidden;
+      position: relative;
+      @include orientation('landscape') {
+        margin-top: 0;
+      }
+      & a,
+      & span {
+        & > * {
+          backface-visibility: hidden;
+          opacity: 1;
+          transition: opacity .6s cubic-bezier(.165,.84,.44,1);
+        }
+      }
+      & a {
+        color: $product-guide-grey;
+        text-decoration: none;
+        &.load-products {
+          &:hover {
+            & > * {
+              opacity: .6;
+              transition: opacity .6s cubic-bezier(.165,.84,.44,1);
+            }
+          }
+        }
+      }
+      & span {
+        color: $product-guide-grey;
+      }
+    }
+    &--title {
+      max-width: 250px;
+      margin-top: 4px;
+      @include break('width', $break-small) {
+        margin-top: 6px;
+      }
+      @include orientation('landscape') {
+        margin-top: 4px;
+        @include break('height', $break-small) {
+          margin-top: 6px;
+        }
+      }
+    }
+    &--price {
+      margin-top: 4px;
+      @include break('width', $break-small) {
+        margin-top: 8px;
+      }
+      @include orientation('landscape') {
+        margin-top: 4px;
+        @include break('height', $break-small) {
+          margin-top: 8px;
+        }
+      }
+    }
+    &--sponsor {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &--sponsor_logo {
+      background-size: contain;
+      height: 45px;
+      width: 75px;
+      background-repeat: no-repeat;
+      background-position: left center;
+      margin-left: 6px;
+    }
+    &--burst {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 110px;
+      width: 110px;
+      overflow: hidden;
+      @include break('width', $break-small) {
+        height: 140px;
+        width: 140px;
+      }
+      @include orientation('landscape') {
+        height: 140px;
+        width: 140px;
+      }
+      & > div {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        bottom: -25px;
+        right: -20px;
+        @include orientation('landscape') {
+          right: -25px;
+        }
+        & svg {
+          animation: rotate 75s linear infinite;
+          height: 100%;
+          width: 100%;
+        }
+        &:after {
+          content: "";
+          @include z('zero');
+          height: 50px;
+          width: 50px;
+          background-color: $product-guide-rose;
+          position: absolute;
+          bottom: -2px;
+          right: -2px;
+        }
+        & > * {
+          padding-bottom: 5px;
+          @include orientation('landscape') {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+    &--burst-copy {
+      @include z('content');
+      position: absolute;
+      width: 70%;
+      color: $product-guide-white;
+      width: 50%;
+      text-align: center;
+    }
+  }
+  &__item {
+    position: relative;
+    height: auto;
+    width: 50%;
+    @include orientation('landscape') {
+      width: $product-grid-width-thin;
+      height: 30%;
+      height: 30vh;
+    }
+    &--sponsored {
+      width: 100%;
+      @include orientation('landscape') {
+        height: 40%;
+        height: 40vh;
+      }
+      & .product-guide-grid__item--info {
+        width: 50%;
+      }
+    }
+    &--article,
+    &--ad,
+    &--callout {
+      border: solid 1px $color-grid-border;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      flex-direction: column;
+      padding: 0 20px;
+      @include break('width', $break-small) {
+        padding: 0 75px;
+      }
+      @include orientation('landscape') {
+        flex-direction: row;
+        padding: 0 20px;
+        @include break('height', $break-small) {
+          padding: 0 40px;
+        }
+      }
+    }
+    &--ad {
+      height: 40%;
+      height: 40vh;
+      width: $product-grid-width-wide;
+      background-color: $color-grid-ad-background;
+    }
+    &--article {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      height: 40%;
+      height: 40vh;
+      width: 100%;
+      background-color: $product-guide-grey;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 20px;
+      @include break('width', $break-small) {
+        padding: 40px;
+      }
+      @include orientation('landscape') {
+        width: $product-grid-width-thin;
+        padding: 20px;
+        @include break('height', $break-small) {
+          padding: 40px;
+        }
+      }
+      &:before {
+        content: '';
+        @include z('zero');
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 45%, rgba(0, 0, 0, .225) 81%,rgba(0, 0, 0, .63) 100%);
+      }
+      &--content {
+        @include z('content');
+        color: $product-guide-white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        & a {
+          color: $product-guide-white;
+          text-decoration: none;
+        }
+      }
+      &--title {
+        &:hover {
+            text-decoration: underline;
+        }
+      }
+      &--author {
+        margin-top: 12px;
+      }
+      &--sponsor {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      &--sponsor_logo {
+        background-size: contain;
+        height: 30px;
+        width: 50px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        margin-left: 6px;
+      }
+      &--category {
+        position: relative;
+        & a,
+        & span {
+          color: $product-guide-white;
+          & > * {
+            margin-bottom: 6px;
+          }
+        }
+        & a {
+          text-decoration: none;
+          & > * {
+            backface-visibility: hidden;
+            opacity: 1;
+            transition: opacity .6s cubic-bezier(.165,.84,.44,1);
+          }
+          &.load-products {
+            &:hover {
+              & > * {
+                opacity: .6;
+                transition: opacity .6s cubic-bezier(.165,.84,.44,1);
+              }
+            }
+          }
+        }
+      }
+      & .product-guide-grid__article--category {
+        color: $product-guide-white;
+      }
+    }
+    &--callout {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 40%;
+      height: 40vh;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      @include orientation('landscape') {
+        width: $product-grid-width-thin;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      &--content {
+        color: $product-guide-white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 120px;
+        @include break('width', $break-small) {
+          width: 200px;
+        }
+        @include orientation('landscape') {
+          width: 200px;
+        }
+      }
+      &--sponsor {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      &--sponsor-logo {
+        background-size: contain;
+        height: 45px;
+        width: 75px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        margin-left: 6px;
+      }
+      &--action {
+        margin-top: 5px;
+        & > a {
+          @include text-h6;
+          color: $product-guide-white;
+          text-decoration: underline;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &--empty {
+      @include background($color:'dark');
+      background-color: $color-grid-empty-background;
+      box-shadow: none;
+      transition: none;
+      @include orientation('landscape') {
+        height: 30%;
+        height: 30vh;
+        width: $product-grid-width-thin;
+      }
+      &::after {
+        content: none;
+        @include z('negative');
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+        opacity: 0;
+        transition: none;
+      }
+      &:hover {
+        transform: none;
+      }
+    }
+    &.details-open {
+      transform: none;
+      &:hover {
+        transform: none;
+        transition: none;
+      }
+    }
+  }
+  &--order-1 {
+    @include orientation('landscape') {
+      order: 1;
+    }
+  }
+  &--order-2 {
+    @include orientation('landscape') {
+      order: 2;
+    }
+  }
+  &--order-3 {
+    @include orientation('landscape') {
+      order: 3;
+    }
+  }
+  &--order-4 {
+    @include orientation('landscape') {
+      order: 4;
+    }
+  }
+  &--order-5 {
+    @include orientation('landscape') {
+      order: 5;
+    }
+  }
+  &__no-products {
+    @include background($color:'dark');
+    background-color: $color-grid-empty-background;
+    min-height: 300px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    & > * {
+      max-width: 300px;
+      text-align: center;
+    }
+  }
+}

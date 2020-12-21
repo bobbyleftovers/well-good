@@ -1,0 +1,102 @@
+{
+  "signedUp": {
+    "dataFields": {
+      "referralSource": {
+        "type": "string",
+        "default": ""
+      },
+      "paid": {
+        "type": "boolean",
+        "default": false
+      },
+      "creationDate": {
+        "type": "date",
+        "default": ""
+      },
+      "widgetSource": {
+        "type": "string",
+        "default": ""
+      },
+      "_ga": {
+        "type": "string",
+        "default": ""
+      }
+    }
+  },
+  "viewedPage": {
+    "dataFields": {
+      "url": {
+        "type": "string",
+        "default": ""
+      },
+      "pageName": {
+        "type": "string",
+        "default": ""
+      },
+      "tagName": {
+        "type": "string",
+        "default": ""
+      },
+      "categoryName": {
+        "type": "string",
+        "default": ""
+      },
+      "_ga": {
+        "type": "string",
+        "default": ""
+      }
+    }
+  },
+  "referral": {
+    "dataFields": {
+      "referredSubcriber": {
+        "type": "string",
+        "default": ""
+      }
+    }
+  },
+  "sweepstakesEntry": {
+    "dataFields": {
+      "id": {
+        "type": "string",
+        "default": ""
+      },
+      "entryDate": {
+        "type": "date",
+        "default": ""
+      },
+      "IP": {
+        "type": "string",
+        "default": ""
+      },
+      "_ga": {
+        "type": "string",
+        "default": ""
+      }
+    }
+  },
+  "viewedVideo": {
+    "dataFields": {
+      "url": {
+        "type": "string",
+        "default": ""
+      },
+      "videoName": {
+        "type": "string",
+        "default": ""
+      },
+      "tagName": {
+        "type": "string",
+        "default": ""
+      },
+      "categoryName": {
+        "type": "string",
+        "default": ""
+      },
+      "_ga": {
+        "type": "string",
+        "default": ""
+      }
+    }
+  }
+}

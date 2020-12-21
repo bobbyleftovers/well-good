@@ -1,0 +1,73 @@
+.block-editor .wp-block {
+
+  h1, h2, h3, h4, h5, h6, 
+  .text-h1, .text-h1,
+  .text-h2,
+  .text-h3,
+  .text-h4,
+  .text-h5,
+  .text-h6 {
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+
+  .text-left {
+    h1, h2, h3, h4, h5, h6, 
+    .text-h1, .text-h1,
+    .text-h2,
+    .text-h3,
+    .text-h4,
+    .text-h5,
+    .text-h6 {
+      text-align: left;
+    }
+  }
+
+  h1 {
+    @apply font-safe-display #{!important};
+    @extend %text-h1;
+  }
+
+  h2 {
+    @apply font-safe-display #{!important};
+    @extend %text-h2;
+  }
+
+  h3 {
+    @apply font-safe-display #{!important};
+    @extend %text-h3;
+  }
+
+  h4 {
+    @extend %text-h4;
+  }
+
+  h5 {
+    @apply font-safe-display #{!important};
+    @extend %text-h5;
+  }
+
+  .text-h1 {
+    @apply font-safe-display #{!important};
+    @extend %text-h1;
+  }
+
+  .text-h2 {
+    @apply font-safe-display #{!important};
+    @extend %text-h2;
+  }
+
+  .text-h3 {
+    @apply font-safe-display #{!important};
+    @extend %text-h3;
+  }
+
+  .text-h4 {
+    @extend %text-h4;
+  }
+
+  .text-h5 {
+    @apply font-safe-display #{!important};
+    @extend %text-h5;
+  }
+}

@@ -1,0 +1,344 @@
+html.js-modal-maps-open,
+body.js-modal-maps-open {
+	overflow-y: hidden;
+	.modal-bg {
+		display: block;
+	}
+}
+
+.modal-maps {
+	backface-visibility: hidden;
+	display: none;
+	overflow: visible;
+	z-index: 1202;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	@include vertically-center('.modal-maps--outer');
+	text-align: center;
+	font-size: 0.001px;
+	.modal-bg {
+		position: fixed;
+		background: rgba($white, 0.9);
+	}
+
+	.modal-close {
+		z-index: 1020;
+        padding: 19px;
+        display: none;
+		&:before {
+			color: $grey;
+			font-size: 12px;
+        }
+        &:after {
+            content: "";
+            background-color: $white;
+            border: 1px solid $light-grey;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 120%;
+            height: 108%;
+            border-bottom-left-radius: 100%;
+            z-index: -1;
+        }
+		@media (min-width: break($m)) {
+            &:before {
+                color: $black;
+            }
+			&:hover {
+				&:before {
+					color: $seafoam;
+				}
+			}
+		}
+		@media (min-width: break($m)) {
+            padding: 20px 22px 25px 22px;
+            display: inline;
+			&:before {
+				font-size: 20px;
+			}
+        }
+        @media (max-width: break($m)){
+            display: block;
+            position: relative;
+            padding: 0;
+            margin-left: 8px;
+          
+            &:after {
+              content: none;
+            }
+            &:before {
+                font-size: 10px;
+            }
+        }
+    }
+    .modal-maps-close {
+        @media (max-width: break($m)){
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0.5em 1.65em;
+            border-bottom: 1px solid $light-grey;    
+            background-color: $white;
+            position: relative;
+            z-index: 9;
+        }
+    }
+    .modal-maps-close__note {
+        color: $grey;
+        margin: 0;
+
+        @media (min-width: break($m)){
+            display: none;
+        }
+    }
+
+	@media (min-width: break($m)) {
+		overflow-x: visible;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+}
+.modal-maps--outer {
+	z-index: 1010;
+	position: relative;
+	background-color: $white;
+	text-align: left;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.modal-maps-content__wrapper {
+	height: 100%;
+}
+.modal-maps-content__inner {
+	z-index: 1011;
+	font-size: 1rem;
+	height: 100%;
+}
+.js-modal-map-app {
+	width: 100%;
+	height: 100%;
+}
+
+// skeleton ui
+.skeleton-container {
+    display: flex;
+	align-items: center;
+    justify-content: space-between;
+    background-color: $light-grey;
+}
+.skeleton-cards { 
+    width: 100%;
+    height: 100vh;
+    background-color: $light-grey;
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: break($m)){
+        box-shadow: 3px 0px 6px -1px rgba(0,0,0,0.15);
+        width: 470px;
+        max-width: 100%;
+    }
+}
+.skeleton-header {
+    height: 95px;
+    background-color: $white;
+    border-bottom: 1px solid $light-grey;
+}
+.skeleton-cards__wrapper {
+    overflow-y: scroll;
+    padding: 48px 0 15px;
+    height: calc(100vh - 88px);
+}
+
+.skeleton-card {
+    width: calc(100% - 20px);
+    margin: 10px auto 0;
+    background-color: $white;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+
+    // &:after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 1px;
+    //     background-color: $seafoam;
+    //     z-index: 9;
+
+    //     transform-origin: left;
+    //     -webkit-transform-origin: left;        
+    //     transform: scaleX(0);
+
+    //     // align transitions
+    //     transition: 0.2s all ease-in-out;
+    // }
+
+    // &:hover:after {
+    //     transform: scaleX(1);
+    // }
+
+}
+.skeleton-content {
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $light-grey;
+    position: relative;
+    overflow: hidden;
+}
+.skeleton-row {
+    display: flex;
+    position: relative;
+}
+.skeleton-content__meta {
+    width: 62.7%;
+    z-index: 9;
+}
+.skeleton-content__pseudo {
+    height: 17px;
+    background-color: transparent;
+    width: 80%;
+    display: block;
+    flex-shrink: 0;
+}
+.skeleton-content__pseudo--short {
+    width: 42%;
+    flex-shrink: 0;
+}
+.skeleton-content__pseudo--white {
+    background-color: $white;
+    height: 10px;
+    width: 100%;
+    flex-shrink: 1;
+
+    &.tall {
+        height: 17px;
+    }
+    &.med {
+        height: 16px;
+    }
+    &.noheight {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        height: 250px;
+    }
+}
+.noheight-bottom {
+    bottom: 100%;
+}
+.noheight-top {
+    top: 100%;
+}
+.skeleton-content__icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+    transform: translate(50%,50%);
+}
+.skeleton-content__image {
+
+    background-color: transparent;
+    position: relative;
+    padding-bottom: calc(78.29% * 0.373); // use aspect_ratio() mixin here?
+    width: 37.3%;
+    flex-shrink: 0;
+    z-index: 9;
+
+    @extend %image-fallback;
+
+    &:after {
+        font-size: 40px;
+        margin-top: -22px;
+    }
+
+}
+.skeleton-animation {
+  
+        -webkit-animation-duration: 1.4s;
+        animation-duration: 1.4s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-name: skeletonAnimation;
+        animation-name: skeletonAnimation;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        background: #f6f7f8;
+        background: $light-grey;
+        background: -webkit-gradient(linear, left top, right top, color-stop(8%, $light-grey), color-stop(18%, $light-grey), color-stop(33%, $light-grey));
+        background: -webkit-linear-gradient(left, $light-grey 8%, $light-grey 18%, $light-grey 33%);
+        background: linear-gradient(to right, $light-grey 8%, $light-grey 18%, $light-grey 33%);
+        -webkit-background-size: 800px 104px;
+        background-size: 800px 104px;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+        opacity: 0.3;
+      
+}
+
+@-webkit-keyframes skeletonAnimation {
+    0% {
+      background-position: -468px 0
+    }
+    100% {
+      background-position: 468px 0
+    }
+  }
+  
+  @keyframes skeletonAnimation {
+    0% {
+      background-position: -468px 0
+    }
+    100% {
+      background-position: 468px 0
+    }
+  }
+
+.skeleton-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $light-grey;
+    height: 100%;
+    z-index: 5;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+
+    @extend %image-fallback;
+
+    &:after {
+        font-size: 89px;
+        margin-top: -49px;
+    }
+}
+
+

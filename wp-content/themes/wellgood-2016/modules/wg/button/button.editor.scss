@@ -1,0 +1,83 @@
+*[data-type="wg/button"] {
+  display: block;
+    float: none;
+    height: auto !important;
+    width: 100%;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width:100%;
+    float: none;
+    clear: both;
+  }
+}
+
+.wp-block[data-type="wg/button"] .base-button {
+  @apply border border-solid border-seafoam-dark;
+}
+
+.wp-block[data-type="wg/button"] .base-button--primary {
+  @apply border-seafoam-dark;
+}
+
+.wp-block[data-type="wg/button"] .base-button--white {
+  @apply border-white;
+}
+
+.wp-block[data-type="wg/button"] .base-button textarea {
+  @extend %text-link;
+  @apply text-center inline-block #{!important};
+  color: inherit !important;
+  background: transparent !important;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.wp-block[data-type="wg/button"] .wg-button__url {
+  align-items: center;
+  position: relative;
+  padding-top: 5px;
+}
+
+.wp-block[data-type="wg/button"] .wg-button__url .block-editor-url-input__button {
+  display: inline-block;
+  margin-right: 5px;
+  height: auto;
+  line-height: 0px;
+  
+  > button {
+    width: auto;
+    height: auto;
+    background: transparent !important;
+    display: inline-block;
+    padding-top: 4px;
+    padding-bottom: 0;
+  }
+
+  > button svg {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background: transparent !important;
+    color: inherit !important;
+  } 
+}
+
+.wp-block[data-type="wg/button"] .wg-button__url .block-editor-url-input__button-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  
+  .components-base-control__field {
+    margin-bottom: 0;
+  }
+}
+
+.wp-block[data-type="wg/button"] .wg-button__url .text-small {
+  @apply font-sans #{!important};
+}

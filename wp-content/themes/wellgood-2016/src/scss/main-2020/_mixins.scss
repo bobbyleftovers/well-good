@@ -1,0 +1,153 @@
+// Mixins typography
+
+@mixin font-display {
+  font-family: serif;
+
+  .unicoderange &,
+  .block-editor & {
+    @apply font-safe-display
+  }
+}
+
+@mixin font-serif {
+  @apply font-serif;
+  .unicoderange & {
+    @apply font-serif
+  }
+}
+
+@mixin font-sans {
+  @apply font-sans;
+  .unicoderange & {
+    @apply font-sans
+  }
+}
+
+@mixin font-family($family) {
+  @if $family == 'sans'{
+    @include font-sans();
+  } @else if $family == 'display'{
+    @include font-display();
+  } @else if $family == 'serif'{
+    @include font-serif();
+  }
+}
+
+@mixin font-size($fs, $lh, $ls: ''){
+  font-size: #{$fs};
+  line-height: #{$lh};
+  @if $ls != '' { letter-spacing: #{$ls};}
+}
+
+@mixin font-size-mq($mq, $fs, $lh, $ls: ''){
+  @if $mq != '' { 
+    @media(max-width: #{$mq}){
+      @include font-size($fs, $lh, $ls) 
+    }
+  } @else {
+    @include font-size($fs, $lh, $ls) 
+  }
+}
+
+@mixin generate-typography-extend-mq($mq: 'mobile', $utility: 'h1', $family: false, $weight: false, $apply: false, $breakpoints: 3){
+
+  @if $mq == 'mobile' or $mq == '' {
+    %text-#{$utility} {
+      @include font-family($family);
+      @if $weight { font-weight: $weight; }
+      @if $apply { @apply #{$apply}; }
+      @apply text-#{$utility}-mobile;
+
+      @if $breakpoints == 2 or $breakpoints == 3 {
+        @screen #{$tablet-mq} {
+          @apply text-#{$utility}-tablet;
+        }
+        @screen #{$tablet-landscape-mq} {
+          @apply text-#{$utility}-tablet;
+        }
+      }
+
+      @if $breakpoints == 3 {
+        @screen #{$desktop-mq} {
+          @apply text-#{$utility}-desktop;
+        }
+      }
+    }
+  }
+
+  @if $mq == 'tablet'  {
+    %#{$tablet-mq}\:text-#{$utility} {
+      
+      @screen #{$tablet-mq} {
+        @include font-family($family);
+        @if $weight { font-weight: $weight; }
+        @if $apply { @apply #{$apply}; }
+        @apply text-#{$utility}-tablet;
+      }
+
+      @screen #{$tablet-landscape-mq} {
+        @apply text-#{$utility}-tablet;
+      }
+
+      @if $breakpoints == 3 {
+        @screen #{$desktop-mq} {
+          @apply text-#{$utility}-desktop;
+        }
+      }
+    }
+  }
+
+  @if $mq == 'tablet-landscape'  {
+    %#{$tablet-landscape-mq}\:text-#{$utility} {
+      @screen #{$tablet-landscape-mq} {
+        @include font-family($family);
+        @if $weight { font-weight: $weight; }
+        @if $apply { @apply #{$apply}; }
+        @apply text-#{$utility}-tablet;
+      }
+
+      @if $breakpoints == 3 {
+        @screen #{$desktop-mq} {
+          @apply text-#{$utility}-desktop;
+        }
+      }
+    }
+  }
+
+
+  @if $mq == 'desktop' {
+    %#{$desktop-mq}\:text-#{$utility} { 
+      @screen #{$desktop-mq} {
+        @include font-family($family);
+        @if $weight { font-weight: $weight; }
+        @if $apply { @apply #{$apply}; }
+
+        @if $breakpoints == 1 {
+          @apply text-#{$utility}-mobile;
+        } @else if $breakpoints == 2 {
+          @apply text-#{$utility}-tablet;
+        } @else if $breakpoints == 3 {
+          @apply text-#{$utility}-desktop;
+        }
+      }
+    }
+  }
+}
+
+@mixin generate-typography-extend($utility: 'h1', $family: false, $weight: false, $apply: false, $breakpoints: 3){
+  @include generate-typography-extend-mq('mobile', $utility, $family, $weight, $apply, $breakpoints);
+}
+
+@mixin extend-utility($utility, $responsive: false){
+  /*! purgecss start ignore */
+  .#{$utility} { 
+    @extend %#{$utility};
+  }
+  /*! purgecss end ignore */
+
+  @if $responsive {
+    .#{$tablet-mq}\:#{$utility} { @extend %#{$tablet-mq}\:#{$utility}; }
+    .#{$tablet-landscape-mq}\:#{$utility} { @extend %#{$tablet-landscape-mq}\:#{$utility}; }
+    .#{$desktop-mq}\:#{$utility} { @extend %#{$desktop-mq}\:#{$utility}; }
+  }
+}

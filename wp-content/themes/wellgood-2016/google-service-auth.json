@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "lofty-sonar-248517",
+  "private_key_id": "4af97b3c201995627169e17fcec8472dea7c1959",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDDscY0LwbP/DKO\nmc8H5OdwAiuGyj4RSkm6zW9eHCelMPI7EchGdqY2yXgNRxcP8tpy9IXQiV2xzrjW\nQ9xmn5nqWhVOSGDKDddrModFbrQfi8ze7vykyafl8lBPyJd7SziK7NXCGWAmZ5gL\nu0VLHFunmmYoV4EpcQTB2Sclax/uJ5LkxaSdd76YhuhuVFExHgAv8tHLTV7bJ7cM\nRtYcobToQ7b+um8+lsZMACUjiKXXGzP6qaJ+wwHt4Q0/Q5PGsCBBtUlclKvuyO61\n+QXeBGOtLn1YxrboIZoy+Bo7o613STlbtk6ggnGwCKd9+RWz7TcN0iLERbAn9UN0\nSg7Q5kK1AgMBAAECggEADE1owG8UZo7cPsq8kSp6wjfgtKCSNlQNPokbrzbl5ySk\nlcIQbR2YZWlU+sC1WnNR+FgW8X0xPrRYOmAZwvnVmz3+iOVT8F/eYwbSKjNDb5hC\nUOGFUHa871/EXL+nhkC8VT9+UK13tfJdRJ+JQ6eMu4ShV3fozsokGmukYl3RrA8E\nid6pr95JhUVAsuqkjirIFs8TZUtvOkgh/DqoDfdny2n8y5IHmaByRAgEZH/0Ll+E\nAvoUPH/kRFRpf3lTw0Of7D2HNcCZVZ1RREC78qYLTSVUo6tC1dJkXrXBkQNdjA4u\nTpsDkt4tnmWAZtZlcW68UnXI7FdiE0hL19RPJJGvIQKBgQD4SwmgkXBl44Ed824p\nFW301M/k1rCZx+cghseDU92S7YOO8IAWr/xSHamg/p4m5TTKyZ3AYAFZEwoDOyje\nRgcA0AwPT5tcG7mmjQOj4P2HDK44PUtak1+ZyCiuOI5m4NUgEYKe0/IXVo+QMEWi\nQCfK0b5yEM56HgENH3CaP18UIwKBgQDJxMg41FtEmkGRTfQboXIETEaUM9Cu2SIA\nIUtcMLDirJjfoe+V9/ukHslRKR6l0lqUx8hUCp3SWQ7ZD1ye2S4k65sYC36WhZkL\navJjRPsPIbRaa4Tl9P4DVM5pGyJKGnJ18qHnmr8MhQXXaB8Nj1kyf4zE8xLl15nL\n8mqrMYnvRwKBgGfdQ+a2UFVe6Qk1ZrSq8TdEur6YjIGX3Ph/SQCH2Z1329u0gXB8\nJ8nV/LqLKG9O3FmkI2hxAL9ZNowJeFwa4R0W6qSRAYVzV6LzRD2OhZ+zz0FZaqc2\nFPzIfTP8Fp20mZLzoDd+o7vdiuqfNtHbkonGWatvml/9IyVxLHJp5gUPAoGAfIb3\nDBwEOFL8JLH39xWtSPnKla1lHoTkdzAVUtC6WywrLdrEA8sJhEF7/ptiTvWE8k5b\nVYM35JsSjuTsRR3FXQQMtMpjVoMd8e4PqzTnvm8O4L97RnHuVCADRNt6TkIEYsdd\nJZRcVV3EPS4F/Fh8tK4EM4nSIAjw4u665u2sNAECgYAd3a25y48M9cMMB+UIY/2y\nVBWtjFKIfKmujGFy7bMPkyBsrlcb7SKhNvI4uplSNqhJXKbMYAUWck3HBW0FH/gK\nZucossVpcup3LKdMsEiffb25CIAyy60ViIuLSGa/rAxItbVjXLJhbzz+dLffh857\nW4SdIk5YsBXC1IKBDcO9ug==\n-----END PRIVATE KEY-----\n",
+  "client_email": "youtube@lofty-sonar-248517.iam.gserviceaccount.com",
+  "client_id": "115732663451817079417",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/youtube%40lofty-sonar-248517.iam.gserviceaccount.com"
+}

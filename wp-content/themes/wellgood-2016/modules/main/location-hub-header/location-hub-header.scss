@@ -1,0 +1,20 @@
+$hub_yellow: #FBF9F4;
+
+.lochub-header__hero {
+    background-color: $hub_yellow;
+    margin-bottom: 35px;
+}
+
+.lochub-header__content {
+    margin: 40px 0;
+}
+.lochub-header__intro {
+    width: 100%;
+    max-width: none;
+    margin-top: 0px;
+}
+.paragraph_centered {
+    max-width: 740px;
+    margin: 40px auto;
+    display: block;
+}

@@ -1,0 +1,112 @@
+.franchises-slideshow {
+  background: rgb(242,243,245);
+  padding-top: 60px;
+  padding-bottom: 58px;
+
+  @include media-breakpoint-down(sm){
+    padding-top:67px;
+  }
+  @include media-breakpoint-down(xs){
+    padding-top:52px;
+  }
+
+  > div {
+    overflow: hidden;
+  }
+}
+
+.franchises-slideshow__flickity,
+.franchises-slideshow__slide {
+  max-height: 443px;
+  @include media-breakpoint-down(xs){
+    overflow: visible;
+  }
+}
+
+.franchises-slideshow__slide {
+  @include media-breakpoint-down(xs){
+    max-width: 225px;
+  }
+}
+
+.franchises-slideshow__slide__padding {
+  padding-bottom: 140%;
+}
+
+.franchises-slideshow__slide__content-wrapper {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+}
+.franchises-slideshow__slide__content {
+  overflow: hidden;
+  display:block;
+  background-size:cover;
+  width: 100%;
+}
+
+.franchises-slideshow__slide__content img {
+  width:73%;
+  height: auto;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate3d(-50%,-50%,0);
+}
+
+.franchises-slideshow__flickity {
+  .flickity-slider,
+  .flickity-viewport {
+      width: 100%;
+      @include media-breakpoint-down(xs){
+        overflow: visible;
+      }
+  }
+}
+
+.franchises-slideshow__flickity .flickity-button {
+  width:80px;
+  height: 80px;
+  border-radius: 50%;
+  background: $white;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyMHB4IiBoZWlnaHQ9IjE1cHgiIHZpZXdCb3g9IjAgMCAyMCAxNSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgPGcgaWQ9IjAxX0Rlc2lnbiIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSI+ICAgICAgICA8ZyBpZD0iMTQ0MHB4X1dlbGwrR29vZF9OZXdzbGV0dGVyLVNpZ24tVXBfdjIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzQ5LjAwMDAwMCwgLTE4ODYuMDAwMDAwKSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIiPiAgICAgICAgICAgIDxnIGlkPSJHcm91cC02MCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsIDE1MzguMDAwMDAwKSI+ICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cC03IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MC4wMDAwMDAsIDE0NS4wMDAwMDApIj4gICAgICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cC00MiI+ICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTI3Ij4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9IkxlZnQtQXJyb3ciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzMTkuMDAwMDAwLCAyMTEuMDAwMDAwKSBzY2FsZSgtMSwgMSkgcm90YXRlKC0xODAuMDAwMDAwKSB0cmFuc2xhdGUoLTEzMTkuMDAwMDAwLCAtMjExLjAwMDAwMCkgdHJhbnNsYXRlKDEyNzkuMDAwMDAwLCAxNzEuMDAwMDAwKSI+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZyBpZD0iQXJyb3ciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMxLjAwMDAwMCwgMzQuMDAwMDAwKSI+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwLTQ1Ij4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGxpbmUgeDE9IjAuNSIgeTE9IjYuNSIgeDI9IjE2LjUiIHkyPSI2LjUiIGlkPSJMaW5lLTIiPjwvbGluZT4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGxpbmUgeDE9IjE3LjUiIHkxPSI2LjUiIHgyPSIxMS41IiB5Mj0iMC41IiBpZD0iTGluZS0zIj48L2xpbmU+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsaW5lIHgxPSIxNy41IiB5MT0iMTIuNSIgeDI9IjExLjUiIHkyPSI2LjUiIGlkPSJMaW5lLTMtQ29weSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQuNTAwMDAwLCA5LjUwMDAwMCkgc2NhbGUoLTEsIDEpIHRyYW5zbGF0ZSgtMTQuNTAwMDAwLCAtOS41MDAwMDApICI+PC9saW5lPiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4gICAgICAgICAgICAgICAgICAgIDwvZz4gICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgIDwvZz4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position:center center;
+  top:50%;
+  box-shadow: 0px 4px 15px 0px rgba(209, 209, 209, 0.4);
+  transition: all 0.3s;
+  @include media-breakpoint-down(lg){
+    width: 66px;
+    height: 66px;
+  }
+  @include media-breakpoint-down(md){
+    width:60px;
+    height: 60px;
+  }
+  @include media-breakpoint-down(xs){
+    display:none;
+  }
+  svg {
+    display:none;
+  }
+  &.previous {
+    left: 12px;
+    transform: translate3d(-50%,-50%,0) rotate(-180deg);
+    &:not([disabled]):hover {
+      transform: translate3d(calc(-50% - 3px),-50%,0)  rotate(-180deg);
+    }
+  }
+  &.next {
+    right: 12px;
+    transform: translate3d(50%,-50%,0);
+    &:not([disabled]):hover {
+      transform: translate3d(calc(50% + 3px),-50%,0);
+    }
+  }
+}

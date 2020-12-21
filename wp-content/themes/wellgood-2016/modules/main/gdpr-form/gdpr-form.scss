@@ -1,0 +1,19 @@
+.gdpr-form {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    width: 100%;
+    padding: 6px 10px;
+    margin-top: 20px;
+  }
+}
+
+.gdpr-form__status {
+  display: none;
+  margin-top: 30px;
+}

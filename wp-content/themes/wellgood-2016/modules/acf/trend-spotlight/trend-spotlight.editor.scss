@@ -1,0 +1,61 @@
+.acf-trend-spotlight {
+  background: none;
+  margin-left: -10px;
+  margin-right: -10px;
+  width: calc(100% + 20px);
+  padding: 20px 20px;
+}
+
+[data-type="acf/trend-spotlight"] .block-editor-block-toolbar__slot {
+  display: none !important;
+}
+
+.acf-trend-spotlight__title {
+  margin: 0 !important;
+}
+
+.acf-trend-spotlight .text-label {
+  color: inherit !important;
+}
+
+.acf-trend-spotlight.color-overwrite--black,
+.acf-trend-spotlight.color-overwrite--black .acf-expert-take  { 
+  color:black; 
+  -webkit-text-stroke-color: black; 
+  border-color: black;
+}
+
+.acf-trend-spotlight.color-overwrite--black .acf-expert-take__label {
+  &:before,
+  &:after {
+    border-color: black;
+  }
+} 
+
+.acf-trend-spotlight.color-overwrite--white {
+  &,
+  .acf-expert-take, 
+  .acf-expert-take *,
+  .acf-stroke-text,
+  .acf-stroke-text *  { 
+    color:white; 
+    -webkit-text-stroke-color: white; 
+  }
+
+  .acf-stroke-text,
+  .acf-stroke-text *  { 
+    -webkit-text-stroke-color: white; 
+  }
+
+  .acf-expert-take, 
+  .acf-expert-take *  { 
+    border-color: white;
+  }
+
+  .acf-expert-take__label {
+    &:before,
+    &:after {
+      border-color: white;
+    }
+  } 
+}

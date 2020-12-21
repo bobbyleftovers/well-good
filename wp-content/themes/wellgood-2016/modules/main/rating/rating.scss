@@ -1,0 +1,39 @@
+
+.rating__stars {
+  width: 120px;
+  height: 40px;
+
+  @media(min-width: break($recipe-break)) {
+    width: 80px;
+    height: 20px;
+  }
+}
+
+.rating__star {
+	stroke: $seafoam;
+	stroke-width: 3;
+	padding: 2px;
+  fill: $white;
+  cursor: pointer;
+
+  &:hover {
+    fill: $seafoam;
+  }
+}
+
+.rating__status {
+  font-style: italic;
+  font-size: 12px;
+}
+
+@for $i from 1 through 5 {
+  // https://github.com/sass/libsass/issues/309#issuecomment-37826371
+  $x: "\"#{$i}\"";
+	.rating__stars#{"[data-rating=" + $x + "]"} {
+		@for $r from 1 through $i {
+			.rating__star:nth-child(#{$r}) {
+				fill: $seafoam;
+			}
+		}
+	}
+}

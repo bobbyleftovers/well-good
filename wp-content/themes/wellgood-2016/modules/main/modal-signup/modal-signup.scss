@@ -1,0 +1,185 @@
+.modal-signup {
+	z-index: 1009;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	transform: translateY(100%);
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, opacity 1ms linear 1s;
+
+  opacity: 0;
+
+
+	&.js-modal-active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 1ms linear, transform 1s ease-in-out;
+
+	}
+}
+.modal-bg {
+	display: none;
+	z-index: 1009;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(#000, 0.8);
+}
+.modal-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: $edge-gutter;
+	@include icon("x", "before", false);
+	text-decoration: none;
+	z-index: 10;
+	&:before {
+		font-size: 18px;
+		color: $white;
+	}
+}
+.signup-form--modal {
+	z-index: 1010;
+	position: relative;
+	display: block;
+	background-color: $grey;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba( $black, 0.35 );
+		z-index: 0;
+	}
+
+	.image-module {
+		z-index: -1;
+	}
+
+	.modal-signup-graphic {
+		position: relative;
+		display: none;
+		vertical-align: middle;
+		@include aspect_ratio( 3/2 );
+		@extend %bg-cover;
+	}
+	.signup-form__wrapper {
+		vertical-align: middle;
+		text-align: center;
+		width: 100%;
+		color: $white;
+		position: relative;
+		z-index: 1;
+	}
+	.signup-form__logo {
+		text-align: center;
+		margin-bottom: 70px;
+
+		img {
+			display: inline-block;
+			width: 229px;
+			height: 61px;
+		}
+	}
+	.signup-form__inner {
+		margin: 0 auto;
+		padding: 15px 0;
+		@media (min-width: break($m)) {
+			padding: 30px 0;
+			max-width: 442px;
+		}
+	}
+	.signup-form__intro {
+		text-transform: uppercase;
+		font-family: $sans-serif;
+		letter-spacing: 1.69px;
+		margin: 0;
+	}
+	.signup-form__tagline {
+		margin-bottom: 20px;
+	}
+	.signup-form__thanks,
+	.signup-form__fields {
+		max-width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.signup-form__thanks {
+		margin-top: 121px;
+		margin-bottom: 88px;
+
+		.signup-form__headline {
+			margin-bottom: 15px;
+		}
+	}
+	.signup-form__headline{
+		margin: 5px auto 10px;
+		border-bottom: 0;
+	}
+	.signup-form__email {
+		color: $black;
+		text-align: left;
+    border: 1px solid $seafoam;
+
+    @extend %unicode-fallback-serif;
+	}
+	.signup-form__radio {
+		color: $white;
+	}
+	.signup-form__submit {
+		flex: 0 0 110px;
+		width: 110px;
+		position: relative;
+		padding: 14px 10px;
+		font-family: $neuehaas;
+
+		&:disabled {
+			background-color: $light-grey;
+			border:none;
+			box-shadow: none;
+		}
+	}
+	.signup-form__location-headline {
+		display: none;
+	}
+	.link-bottom {
+		position: absolute;
+		bottom: 25px;
+		left: 20px;
+		right: 20px;
+		text-align: center;
+		a {
+			color: $white;
+			font-size: 14px;
+		}
+	}
+
+	.modal-close {
+		padding: 10px;
+		font-size: 15px;
+		@media (min-width: break($m)) {
+			padding: 15px;
+			font-size: 18px;
+		}
+	}
+
+	@media (min-width: break($m)) {
+		text-align: left;
+	}
+}
+.signup-disclaimer {
+	font-style: italic;
+	opacity: 0.6;
+}

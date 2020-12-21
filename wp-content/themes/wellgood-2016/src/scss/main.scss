@@ -1,0 +1,117 @@
+// Bootstrap (keep it at the beginning and reimport mixins after)
+@import '_bootstrap.scss';
+@import '_mixins.scss';
+
+// Shared legacy with 2020
+@import 'main-legacy.scss';
+
+/*! purgecss start ignore */
+
+// Base styles
+@import '_display.scss';
+@import '_align.scss';
+@import '_image-headline.scss';
+@import '_menus-cities.scss';
+@import '_menus-submenu.scss';
+@import '_home.scss';
+@import '_post.scss';
+@import '_post-grid.scss';
+@import '_article-card.scss';
+@import '_category.scss';
+@import '_search.scss';
+@import '_wordpress-base.scss';
+@import '_page.scss';
+@import '_author.scss';
+@import '_location-hub.scss';
+@import '_recipe.scss';
+@import '_new-article-card.scss';
+
+// Imports from module folders (Paths are expanded within Gulp task)
+@import '~@modules/main/social-share/social-share.scss';
+@import '~@modules/main/pinterest/pinterest.scss';
+@import '~@modules/main/relationship-stories/relationship-stories.scss';
+@import '~@modules/main/latest-stories/latest-stories.scss';
+@import '~@modules/main/wellness-experts/wellness-experts.scss';
+@import '~@modules/main/series-spotlight/series-spotlight.scss';
+@import '~@modules/main/instagram-feed/instagram-feed.scss';
+@import '~@modules/main/collection/collection.scss';
+@import '~@modules/main/flickity/flickity.scss';
+@import '~@modules/main/related-posts/related-posts.scss';
+@import '~@modules/main/comments/comments.scss';
+@import '~@modules/main/pubexchange/pubexchange.scss';
+@import '~@modules/main/more-reading/more-reading.scss';
+@import '~@modules/main/suja-header/suja-header.scss';
+@import '~@modules/main/suja-blocks/suja-blocks.scss';
+@import '~@modules/main/suja-middle/suja-middle.scss';
+@import '~@modules/main/most-popular/most-popular.scss';
+@import '~@modules/main/voting/voting.scss';
+@import '~@modules/main/voting-header/voting-header.scss';
+@import '~@modules/main/nominee/nominee.scss';
+@import '~@modules/main/voting-state-nominations/voting-state-nominations.scss';
+@import '~@modules/main/voting-state-voting-open/voting-state-voting-open.scss';
+@import '~@modules/main/voting-state-voting-closed/voting-state-voting-closed.scss';
+@import '~@modules/main/voting-state-winner-selected/voting-state-winner-selected.scss';
+@import '~@modules/main/modal-trends/modal-trends.scss';
+@import '~@modules/main/trends/trends.scss';
+@import '~@modules/main/shop-links/shop-links.scss';
+@import '~@modules/main/shop-features/shop-features.scss';
+@import '~@modules/main/modal-maps/modal-maps.scss';
+@import '~@modules/main/location-hub-header/location-hub-header.scss';
+@import '~@modules/main/location-hub-blocks/location-hub-blocks.scss';
+@import '~@modules/main/location-hub-middle/location-hub-middle.scss';
+@import '~@modules/main/council-hub-subnav/council-hub-subnav.scss';
+@import '~@modules/main/council-hub-header/council-hub-header.scss';
+@import '~@modules/main/council-hub-members/council-hub-members.scss';
+@import '~@modules/main/alternate-spotlight/alternate-spotlight.scss';
+@import '~@modules/main/spotlight-header/spotlight-header.scss';
+@import '~@modules/main/rating/rating.scss';
+@import '~@modules/main/recipe-card/recipe-card.scss';
+@import '~@modules/main/recipe-tip/recipe-tip.scss';
+@import '~@modules/main/recipe-header-image/recipe-header-image.scss';
+@import '~@modules/main/slideshow/slideshow.scss';
+@import '~@modules/main/imagelinks/imagelinks.scss';
+@import '~@modules/main/in-post-sidebar/in-post-sidebar.scss';
+@import '~@modules/main/gdpr-form/gdpr-form.scss';
+@import '~@modules/main/pre-loader/pre-loader.scss';
+@import '~@modules/main/update-ad-cats/update-ad-cats.scss';
+@import '~@modules/main/cta-button/cta-button.scss';
+@import '~@modules/main/disclaimer/disclaimer.scss';
+@import '~@modules/main/related-content/related-content.scss';
+@import '~@modules/main/editorialtag-hero/editorialtag-hero.scss';
+@import '~@modules/main/editorialtag-grid/editorialtag-grid.scss';
+@import '~@modules/main/editorialtag-module-full/editorialtag-module-full.scss';
+@import '~@modules/main/editorialtag-module-half/editorialtag-module-half.scss';
+@import '~@modules/main/editorialtag-module-post/editorialtag-module-post.scss';
+@import '~@modules/main/editorialtag-module-tag/editorialtag-module-tag.scss';
+@import '~@modules/main/editorialtag-module-videos/editorialtag-module-videos.scss';
+@import '~@modules/main/editorialtag-older/editorialtag-older.scss';
+@import '~@modules/main/editorialtag-share/editorialtag-share.scss';
+@import '~@modules/main/all-topics/all-topics.scss';
+@import '~@modules/main/core-heading/core-heading.scss';
+@import '~@modules/main/trending-articles/trending-articles.scss';
+@import '~@modules/main/post-card/post-card.scss';
+@import '~@modules/main/ambassador-newsletter-page/ambassador-newsletter-page.scss';
+@import '~@modules/main/franchises-slideshow/franchises-slideshow.scss';
+@import '~@modules/main/franchise-blurb/franchise-blurb.scss';
+@import '~@modules/main/post-content/post-content.scss';
+@import '~@modules/main/post-hero/post-hero.scss';
+@import '~@modules/main/all-experts/all-experts.scss';
+@import '~@modules/main/post-share/post-share.scss';
+@import '~@modules/main/wg-listacle/wg-listacle.scss';
+@import '~@modules/main/wg-inline-shopable/wg-inline-shopable.scss';
+/*! purgecss end ignore */
+
+
+// Tailwind + 2020 Theme
+@import "main-2020/theme";
+
+// non legacy breaking 2020 Modules
+@import "~@modules/main-2020/post-card-share/post-card-share.scss";
+@import "~@modules/main-2020/featured-content-promo/featured-content-promo.scss";
+@import "~@modules/main-2020/text-input/text-input.scss";
+
+// legacy breaking 2020 Modules
+.theme-main-2020 {
+  @import "~@modules/main-2020/drop-cap/drop-cap.scss";
+  @import "~@modules/main-2020/base-button/base-button.scss";
+}

@@ -1,0 +1,18 @@
+.trends-2021-sponsors {
+  background: #F9F6F4;
+}
+
+.trends-2021-sponsors__img {
+  vertical-align: middle !important;
+  mix-blend-mode: darken;
+
+  @screen xs-down {
+    max-width: 140px;
+  }
+}
+
+.trends-2021-sponsors__logos {
+  margin: 0 auto;
+  vertical-align: middle;
+  max-width: 1200px;
+}

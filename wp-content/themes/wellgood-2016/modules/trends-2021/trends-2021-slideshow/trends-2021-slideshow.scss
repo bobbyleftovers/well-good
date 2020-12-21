@@ -1,0 +1,164 @@
+.trends-2021-slideshow__cell {
+    width: 100%;
+    float: left;
+    
+    @screen sm {
+      &--1 {
+        width: 26.14%;
+      }
+
+      &--2 {
+        width: 26.14%;
+      }
+
+      &--3 {
+        width: 26.14%;
+      }
+    }
+  }
+
+.trends-2021-slideshow__figure {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.trends-2021-slideshow__caption {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+
+    a {
+      color: inherit;
+    }
+}
+
+// nested slider text
+.trends-2021-spotlight__wrapper.text-white .trends-2021-slideshow .text-white {
+    &,
+    p,
+    a,
+    span {
+      @apply text-white
+    }
+  }
+
+.trends-2021-spotlight__wrapper.text-gray-dark .trends-2021-slideshow .text-white {
+    &,
+    p,
+    a,
+    span {
+      @apply text-gray-dark
+    }
+  }
+  
+
+.trends-2021-slideshow .flickity-prev-next-button,
+.trends-2021-past-decade .flickity-prev-next-button {
+    background: #fff;
+    top: 41%;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #d8d8d8; //$grey_light, not defined
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+
+    &:active {
+      opacity: 1;
+    }
+
+    @screen ml {
+      width: 56px;
+      height: 56px;
+    }
+}
+
+.trends-2021-slideshow .flickity-button-icon,
+.trends-2021-past-decade .flickity-button-icon {
+  position: relative;
+  left: -2px;
+  top: -1px;
+  width: 14px;
+  height: auto;
+  fill: #333;
+}
+
+.trends-2021-slideshow .flickity-prev-next-button.previous,
+.trends-2021-past-decade .flickity-prev-next-button.previous {
+    left: 10px;
+
+    @screen sm {
+      left: 20px;
+    }
+
+    @screen ml {
+      left: 60px;
+    }
+
+    @screen lg {
+      left: 40px;
+    }
+  }
+
+.trends-2021-slideshow .flickity-prev-next-button.previous .flickity-button-icon,
+.trends-2021-past-decade .flickity-prev-next-button.previous .flickity-button-icon {
+    right: -2px;
+    left: auto;
+  }
+
+.trends-2021-slideshow .flickity-prev-next-button.next,
+.trends-2021-past-decade .flickity-prev-next-button.next {
+    right: 10px;
+
+    @screen sm {
+      right: 20px;
+    }
+
+    @screen ml {
+      right: 60px;
+    }
+
+    @screen lg {
+      right: 40px;
+    }
+  }
+
+.trends-2021-slideshow .svg-frame {
+    width: 100%;
+
+    &__clip-path {
+      width: 100%;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__accent--1 {
+      y: 84%;
+      x: 0;
+      width: 100%;
+      height: 220px;
+    }
+
+    &__accent--2 {
+      y: 92%;
+      x: -5%;
+      width: 110%;
+  
+      height: 20%;
+    }
+
+    &__accent--3 {
+      y: 86%;
+      x: 0;
+      width: 100%;
+      height: 26%;
+    }
+  }

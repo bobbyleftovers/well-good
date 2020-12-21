@@ -1,0 +1,450 @@
+.signup-form {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+
+	@media (min-width: break($m)) {
+		margin-bottom: 40px;
+	}
+	.menu-item-type-social a {
+		padding: 35px 2px 25px;
+  }
+}
+
+.signup-form__tagline {
+	max-width: 320px;
+	margin: 10px auto 20px;
+	font-family: $freight;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.43;
+	color: $grey;
+}
+
+.signup-form__form {
+	max-width: 350px;
+  margin: 0 auto;
+
+  .ambassador-newsletter-page & {
+    margin: 20px 0 0;
+    max-width: 410px;
+    @apply mb-e10;
+  }
+
+	&.loading {
+		opacity: 0.35;
+		input {
+			cursor: default;
+		}
+  }
+}
+
+
+.signup-form__tagline p {
+	font-size: 14px;
+}
+
+.signup-form__email {
+	text-align: left;
+
+  .footer & {
+    text-align: center;
+  }
+
+  @media (min-width: break($m)){
+    text-align: left;
+
+    .footer & {
+      text-align: left;
+    }
+	}
+
+  .ambassador-newsletter-page & {
+    @apply bg-white pr-e15 pl-e15 border-0;
+    width:100%;
+    height: 44px;
+    @screen sm {
+      height: 46px;
+    }
+  }
+
+  .signup-form--bordered &,
+  .email-capture__rect.dark-mode & {
+    border:none !important;
+    background: transparent;
+    height: 32px;
+
+    @media (min-width: break($s)) {
+      height: 43px;
+    }
+  }
+
+  .email-capture__circle &,
+  .email-capture__square.dark-mode &,
+  .email-capture__rect.dark-mode & {
+    label {
+      color: white !important;
+    }
+  }
+
+  .signup-form--white & {
+    border:none !important;
+    width: calc(100% - 100px);
+    @apply pr-e2;
+    @screen ml {
+      width: calc(100% - 70px);
+    }
+    @screen lg {
+      width: calc(100% - 100px);
+    }
+  }
+
+  .signup-form--white & {
+    border:none !important;
+  }
+}
+
+.signup-form__thanks {
+	@apply absolute top-e10 w-full text-center text-sm;
+	.drawer-signup & {
+		@apply text-left;
+  }
+}
+
+.signup-form__error,
+p.signup-form__error,
+.signup-form__result.error,
+p.signup-form__result.error {
+  @apply block absolute bottom-0 text-red transform translate-y-full pt-e5 text-sm text-center w-full;
+
+  margin: 0 !important;
+  left: 0;
+
+  @screen sm {
+    @apply text-left;
+    .drawer-signup & {
+      @apply text-center;
+    }
+  }
+
+  .drawer-signup & {
+    @apply text-center;
+    position: relative;
+    margin-top: 0;
+    top: 0;
+    bottom: 0;
+    transform: none;
+  }
+
+  .signup-form--white &,
+  .email-capture__square &,
+  .email-capture__rect & {
+    @apply text-left;
+  }
+
+  .email-capture__square {
+    left: 1px;
+    padding-top: 2px;
+  }
+
+  .email-capture__rect & {
+    left: 0;
+    padding-top: 2px;
+  }
+
+  .email-capture__square.dark-mode &,
+  .email-capture__rect.dark-mode & {
+    @apply text-white;
+  }
+}
+
+.signup-form__result {
+  font-size: 12px !important;
+  line-height: 17px !important;
+
+  @screen md {
+    font-size: 13px !important;
+    line-height: 20px !important;
+  }
+}
+
+.email-capture__square,
+.email-capture__rect {
+  .signup-form__result.error {
+    margin: 0 !important;
+    left: 0;
+  }
+
+  &:not(.dark-mode) .signup-form__result.error {
+    color: #f06767 !important;
+  }
+
+  .signup-form__result.error.success {
+    color: currentColor !important;
+  }
+}
+
+.signup-form__result.error.success {
+  color: currentColor;
+}
+
+.signup-form__group {
+	position: relative;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+
+	@media (min-width: break($m)) {
+		margin-top: 10px;
+		flex-direction: row;
+  }
+
+  .signup-form--white &{
+    margin-top: 0px;
+		flex-direction: row;
+  }
+
+  .email-capture__square &,
+  .email-capture__rect & {
+    margin-top: 0px;
+    flex-direction: row;
+  }
+
+  .drawer-signup &,
+  .header-top & {
+		flex-direction: column;
+	}
+
+	&.signup-form__location {
+		display: block;
+	}
+}
+
+.signup-form__email {
+  @apply border border-gray-10 outline-none p-e11 w-full appearance-none rounded-none h-e45 transition;
+
+  .signup-form--white & {
+    @apply border-transparent;
+  }
+
+  .ambassador-newsletter-page & {
+    font-size: 18px;
+    line-height: 29px;
+
+    @screen md {
+      @apply text-base-big;
+    }
+  }
+
+	@media (min-width: break($m)) {
+    @apply border-r-0;
+    .drawer-signup & {
+      @apply border-r-1;
+    }
+  }
+
+  .drawer-signup .signup-form__form.with-error & {
+    @apply border-red;
+  }
+
+  .email-capture__rect & {
+    @media (max-width: break($m)) {
+      height: 41px;
+    }
+  }
+
+  .email-capture__circle & {
+    border-right-width: 1px;
+  }
+}
+
+.signup-form__submit {
+  @apply opacity-80 mt-e10;
+  min-width: 0 !important;
+
+  &:focus:not(.disabled) {
+    @apply text-seafoam-dark #{!important};
+
+    .email-capture__square &,
+    .email-capture__rect.dark-mode & {
+      color: currentColor !important;
+    }
+  }
+
+  .signup-form__form--active & {
+    @apply opacity-100;
+  }
+
+	@media (min-width: break($m)) {
+    @apply w-e100 ml-auto mr-auto mt-0;
+    .signup-form--default & {
+      min-width: 120px !important;
+    }
+  }
+
+	.drawer-signup & {
+    width: 100%;
+    margin-top:10px !important;
+  }
+
+	&.loading {
+    background: rgba($seafoam, 0.8);
+
+		&:before {
+			content: "\E1A6";
+			width: 8px;
+			height: 8px;
+			border-radius: 100%;
+			animation: rotate 2s linear infinite;
+		}
+  }
+
+  .ambassador-newsletter-page & {
+    min-width: 150px !important;
+    height: 44px;
+    @screen sm {
+      height: 46px;
+    }
+  }
+
+  .email-capture__square &,
+  .email-capture__rect.dark-mode & {
+    margin-top: 0px;
+    min-width: 87px !important;
+    @apply opacity-100;
+
+    @screen md {
+      min-width: 95px !important;
+    }
+
+    @media (max-width: break($xs)) {
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+
+  .email-capture__rect & {
+    margin-top: 0px;
+    min-width: 100px !important;
+
+    @media (max-width: break($xs)) {
+      height: 41px;
+      line-height: 41px;
+    }
+
+    @media (min-width: break($m)) {
+      min-width: 120px !important;
+    }
+  }
+
+  .signup-form--bordered & {
+    height: 43px;
+    line-height: 43px;
+
+    @media (max-width: break($s)) {
+      height: 32px !important;
+      line-height: 32px !important;
+    }
+  }
+
+  .email-capture__square &,
+  .email-capture__rect.dark-mode & {
+    height: 43px;
+    line-height: 43px;
+
+    @media (max-width: break($s)) {
+      height: 32px !important;
+      line-height: 32px !important;
+    }
+  }
+
+  .email-capture__rect & {
+    @media (max-width: break($m)) {
+      height: 41px !important;
+    }
+  }
+
+  .signup-form--white & {
+    @apply opacity-100 text-gray mt-0 mx-auto w-e100 bg-white px-0;
+    @screen ml {
+      @apply w-e70;
+    }
+    @screen lg {
+      @apply w-e100;
+    }
+    &.disabled {
+      @apply opacity-100 text-gray-60;
+    }
+    &:focus:not(.disabled) {
+      @apply text-white #{!important};
+    }
+  }
+
+}
+
+.email-capture__rect.dark-mode .signup-form__email {
+  &::placeholder {
+    color: rgba(white, 0.5) !important;
+  }
+}
+
+.signup-form__location-headline {
+	margin-bottom: 0;
+	letter-spacing: 0.065em;
+}
+
+.signup-form__radio {
+	color: #A9A9A9;
+	text-align: left;
+	margin: 0 5px;
+
+	.radio {
+		display: inline-block;
+		vertical-align: middle;
+		border: 1px solid #DDDDDD;
+		background-color: $light-grey;
+		border-radius: 100%;
+		height: 12px;
+		width: 12px;
+		margin-right: 3px;
+	}
+
+	input[type=checkbox]:checked ~ .radio,
+	input[type=radio]:checked ~ .radio {
+		&:after {
+			content: '';
+			display: block;
+			background-color: black;
+			border-radius: 100%;
+			height: 6px;
+			width: 6px;
+			margin: 2px 0 0 2px;
+		}
+	}
+
+	input[type=checkbox],
+	input[type=radio] {
+		position: absolute;
+		visibility: hidden;
+		font-size: 12px;
+		margin-right: 3px;
+	}
+}
+
+.signup-form__form {
+  &.success .signup-form__fields {
+    visibility: hidden;
+  }
+}
+
+.signup-form__group__fields {
+  .signup-form--white & {
+    @apply border border-transparent;
+  }
+  .signup-form--white.focus & {
+    @apply border-seafoam-dark;
+  }
+  .signup-form--white.with-error & {
+    @apply border-red;
+  }
+}

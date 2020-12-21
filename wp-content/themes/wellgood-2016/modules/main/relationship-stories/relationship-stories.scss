@@ -1,0 +1,223 @@
+.relationship-stories__container {
+	overflow: hidden;
+}
+.relationship-stories__headline {
+	strong {
+		font-weight: normal;
+	}
+}
+.relationship-stories__headline-background {
+	z-index: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+	.image-module__icon--play {
+		display: none;
+	}
+}
+.relationship-stories__list {
+	@media (min-width: break($s)) {
+		margin: 10px -12px 0;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	@media (min-width: break($m)) {
+		margin-top: 15px;
+	}
+	.flickity-prev-next-button {
+		top: calc((100vw - 40px) / 3 - 11px);
+	}
+}
+.relationship-stories__card {
+	position: relative;
+	width: 100%;
+	font-size: 0;
+	padding-bottom: 10px;
+	text-align: center;
+
+	@media (min-width: break($s)) and (max-width: break($ml)) {
+		background-color: $white;
+		display: inline-block;
+		width: calc(33% - 17px);
+		margin-left: 10px;
+		margin-right: 10px;
+		padding-bottom: 30px;
+		height: auto;
+		&:nth-child(1),
+		&:nth-child(2) {
+			width: calc(50% - 20px);
+			margin-bottom: 20px;
+		}
+		&:nth-child(5) {
+			margin-right: 0px;
+		}
+	}
+
+	@media (min-width: break($ml)) {
+		background-color: $white;
+		display: inline-block;
+		width: calc(20% - 24px);
+		margin: 0 12px;
+		padding-bottom: 30px;
+	}
+
+	& + .relationship-stories__card {
+		padding-top: 10px;
+		border-top: 1px solid $grey;
+
+		@media (min-width: break($s)) {
+			padding-top: 0;
+			border-top: none;
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+.relationship-stories__category {
+	@extend %article-label;
+
+	display: block;
+	margin: 13px auto 6px;
+	min-height: 18px;
+
+	@media (min-width: break($s)) {
+		margin-top: 15px;
+	}
+
+	& a {
+		@extend %link-hover;
+		color: $seafoam;
+
+		&:hover {
+			color: $hover;
+		}
+	}
+}
+.relationship-stories__image-wrapper {
+	width: 33.333%;
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 10px;
+
+	@media (min-width: break($s)) {
+		width: 100%;
+		display: block;
+		padding-right: 0;
+	}
+}
+.relationship-stories__image {
+	@extend %as, %bg-cover, %image-fallback;
+	@include aspect_ratio( 3/2 );
+	@include transition(opacity);
+
+	width: 100%;
+	vertical-align: middle;
+	overflow: hidden;
+
+	@media (min-width: break($s)) {
+		@include aspect_ratio( 237/158 );
+		display: block;
+	}
+	.relationship-stories__card.hovering & {
+		@include transition(opacity);
+		
+		opacity: $image-hover-opacity;
+	}
+}
+.relationship-stories__ranking {
+	@extend %page-title,
+		%page-title--medium;
+	background-color: $white;
+	border-radius: 50%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+	width: 32px;
+	height: 32px;
+	line-height: 28px; 
+	top: 50%;
+	left: calc(16.66665% - 5px);
+	transform: translate(-50%, -50%);
+	margin: 0;
+
+	@media (min-width: break($s)) {
+		margin: -20px auto 0;
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 54px;
+		height: 54px;
+		line-height: 54px;
+		transform: none;
+	}
+}
+.relationship-stories__title {
+	@include transition(color);
+	@extend %article-title,
+		%article-title--small;
+	
+	margin-bottom: 5px;
+	display: inline-block;
+	width: 66.666%;
+	vertical-align: middle;
+	margin: 0;
+	padding-left: 10px;
+	text-align: left;
+
+	@media (min-width: break($s)) {
+		display: block;
+		padding: 0 20px;
+		margin: 5px 0;
+		width: auto;
+		text-align: center;
+	}
+
+	.relationship-stories__card.hovering & {
+		@include transition(color);
+
+		color: $hover;
+	}
+}
+.relationship-stories--featured-stories {
+	background: transparent;
+	padding-bottom: 0;
+	margin-bottom: 30px;
+	padding-top: 0;
+
+	.relationship-stories__container {
+		padding: 0;
+	}
+	.relationship-stories__list {
+		@media (min-width: break($s)) {
+			margin-left: -2%;
+			margin-right: -2%;
+		}
+	}
+	.relationship-stories__image-wrapper {
+		display: block;
+		width: 100%;
+		padding-right: 0;
+	}
+	.relationship-stories__card {
+		margin-left: 20px;
+		margin-right: 20px;
+		width: calc(100% - 40px);
+		border-top: none;
+		padding: 0;
+		@media (min-width: break($s)) {
+			width: calc(33.333% - 4%);
+			margin: 0 2%;
+		}
+	}
+	.relationship-stories__title {
+		display: block;
+		padding: 0 10px;
+		width: auto;
+		margin-top: 5px;
+		text-align: center;
+	}
+}

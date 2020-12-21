@@ -1,0 +1,23 @@
+.featured-content-promo {
+  height: 325px;
+
+  @screen md {
+    height: 405px;
+  }
+}
+
+.featured-content-promo__image {
+  width: 40%;
+
+  @screen sm {
+    width: 220px;
+  }
+  
+  @screen md {
+    width: 225px;
+  }
+  
+  @screen lg {
+    width: 345px;
+  }
+}

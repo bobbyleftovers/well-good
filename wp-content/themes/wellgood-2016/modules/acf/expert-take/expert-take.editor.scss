@@ -1,0 +1,26 @@
+@import '../../trends-2021/trends-2021-expert-take/trends-2021-expert-take.scss';
+
+
+.acf-expert-take__inner .block-editor-block-list__layout > div:first-child {
+  @extend %text-h5 #{!important};
+  line-height: 20px !important;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+.acf-expert-take__inner .block-editor-block-list__layout > div:nth-child(2) {
+  @extend %text-default #{!important};
+  @apply italic opacity-70 #{!important};
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+.acf-expert-take__inner .block-editor-block-list__layout > div:nth-child(3) {
+  @extend %text-default #{!important};
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+.acf-expert-take__inner .block-editor-block-list__layout > div:nth-child(3) > p {
+  margin-top: 0 !important;
+} 

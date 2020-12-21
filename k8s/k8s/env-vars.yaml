@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+data:
+  AUTH_KEY: {{ vaultLookup .context.config.misc.envs.AUTH_KEY | b64enc }}
+  SECURE_AUTH_KEY: {{ vaultLookup .context.config.misc.envs.SECURE_AUTH_KEY | b64enc }}
+  LOGGED_IN_KEY: {{ vaultLookup .context.config.misc.envs.LOGGED_IN_KEY | b64enc }}
+  NONCE_KEY: {{ vaultLookup .context.config.misc.envs.NONCE_KEY | b64enc }}
+  AUTH_SALT: {{ vaultLookup .context.config.misc.envs.AUTH_SALT | b64enc }}
+  SECURE_AUTH_SALT: {{ vaultLookup .context.config.misc.envs.SECURE_AUTH_SALT | b64enc }}
+  LOGGED_IN_SALT: {{ vaultLookup .context.config.misc.envs.LOGGED_IN_SALT | b64enc }}
+  NONCE_SALT: {{ vaultLookup .context.config.misc.envs.NONCE_SALT | b64enc }}
+  DB_USER: {{ vaultLookup .context.config.misc.envs.DB_USER | b64enc }}
+  DB_PASSWORD: {{ vaultLookup .context.config.misc.envs.DB_PASSWORD | b64enc }}
+kind: Secret
+metadata:
+    name: env-vars-secret
+type: Opaque

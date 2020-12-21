@@ -1,0 +1,43 @@
+.core-heading {
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.core-heading--h1,
+.page__main .core-heading--h1,
+.post__main .core-heading--h1 {
+  @extend %page-title,
+    %page-title--extra-large;
+
+  margin-bottom: 15px;
+}
+
+.core-heading--h2,
+.page__main .core-heading--h2,
+.post__main .core-heading--h2 {
+  @extend %page-title,
+    %page-title--large;
+
+  margin-bottom:20px;
+
+  @include media-breakpoint-down(xs){
+    font-size: 22px;
+    line-height: 25px;
+  }
+}
+
+.core-heading--h3 {
+  @extend %page-title,
+    %page-title--large;
+
+  margin-bottom: 15px;
+  line-height: 26px;
+}
+
+.core-heading--h4 {
+
+}
+
+.core-heading--h5 {
+  @extend %post-card__author;
+}

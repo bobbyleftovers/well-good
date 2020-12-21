@@ -1,0 +1,117 @@
+.series-spotlight__container {
+	margin: 10px 0 0;
+
+	@media (min-width: break($s)) {
+		margin-top: 15px;
+		margin-left: -10px;
+		margin-right: -10px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+.series-spotlight__card {
+	background: $white;
+	text-align: center;
+	display: block;
+	margin: 0 $edge-gutter;
+	width: calc(100% - #{$edge-gutter * 2});
+	transform: translateZ(0);
+	padding-bottom: 20px;
+
+	a {
+		display: block;
+		@include transition(color);
+		text-decoration: none;
+		&:hover {
+			@media (min-width: break($s)) {
+				color: $hover;
+			}
+		}
+	}
+
+	@media (min-width: break($s)) and (max-width: break($ml)) {
+		display: inline-block;
+		width: calc(33% - 17px);
+		margin-left: 10px;
+		margin-right: 10px;
+		padding-bottom: 30px;
+		height: auto;
+		&:nth-child(1),
+		&:nth-child(2) {
+			width: calc(50% - 20px);
+			margin-bottom: 20px;
+		}
+		&:nth-child(5) {
+			margin-right: 0px;
+		}
+		.series-count-4 & {
+			width: calc(50% - 20px);
+		}
+		.series-count-3 & {
+			width: calc(50% - 20px);
+			margin-bottom: 0px;
+
+			&:nth-child(1){
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	@media (min-width: break($ml)) {
+		display: inline-block;
+		width: calc(20% - 20px);
+		margin-left: 10px;
+		margin-right: 10px;
+		padding-bottom: 30px;
+		height: auto;
+
+		.series-count-4 & {
+			width: calc(25% - 20px);
+		}
+		.series-count-3 & {
+			width: calc(33.33% - 20px);
+		}
+		.series-count-2 & {
+			width: calc(50% - 20px);
+		}
+	}
+
+	.flickity-viewport[style^="height:"] & {
+		height: 100%;
+	}
+	article {
+		width: 100%;
+	}
+}
+.series-spotlight__title {
+	@extend %link-hover;
+	padding: 0 20px;
+}
+.series-spotlight__series {
+	position: relative;
+	z-index: 100;
+	background: $white;
+	margin: -10px 15px 0;
+	padding: 13px 15px;
+}
+.series-spotlight-heading {
+	display: flex;
+}
+.series-spotlight__headline {
+	@extend %h2;
+
+	font-size: 40px;
+	flex: 1 0 auto;
+}
+.series-spotlight {
+	@media(max-width: break($m)){
+		padding-bottom: 62px;
+	}
+	.series-spotlight__archive-link {
+		@media(max-width: break($m)){
+		   bottom: 15px;
+		}
+	}
+ }
+ 

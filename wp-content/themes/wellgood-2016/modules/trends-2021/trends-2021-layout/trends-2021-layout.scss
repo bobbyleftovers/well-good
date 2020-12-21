@@ -1,0 +1,32 @@
+.trends-2021-container {
+  padding-left: $edge-gutter;
+	padding-right: $edge-gutter;
+  max-width: 660px;
+  margin: 0 auto;
+
+  @media (min-width: break($xs)) {
+		padding-left: $edge-gutter-tablet;
+		padding-right: $edge-gutter-tablet;
+	}
+
+	@screen md {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.trends-2021-container--no-edges {
+  @extend .trends-2021-container;
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (min-width: break($xs)) {
+		padding-left: $edge-gutter-tablet;
+		padding-right: $edge-gutter-tablet;
+  }
+  
+  @screen md {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

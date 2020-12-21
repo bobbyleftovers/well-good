@@ -1,0 +1,17 @@
+.button__rich-tag-page {
+  display:block;
+  position: absolute;
+  top: -250px;
+  right: 8px;
+}
+
+@media only screen and (max-width: 782px) {
+  .button__rich-tag-page {
+    top: -260px;
+  }
+}
+
+/*.acf-field[data-key="field_5ed47015b69e7"] .filter.-taxonomy {
+  max-width: calc(50% - 162px + 42px);
+  margin-left: -50px;
+}*/

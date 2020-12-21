@@ -1,0 +1,111 @@
+@keyframes nudge {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(20px);
+  }
+}
+@keyframes navLandscapeOpen {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes navLandscapeClose {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes navPortraitOpen {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+// @keyframes sidebarOpen {
+//   from {
+//     transform: translateX(100%);
+//   }
+//   to {
+//     transform: translateX(0);
+//   }
+// }
+// @keyframes sidebarClose {
+//   from {
+//     transform: translateX(0);
+//   }
+//   to {
+//     transform: translateX(100%);
+//   }
+// }
+@keyframes navPortraitClose {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes popupOpen {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes popupClose {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes maskAdd {
+  from {background-color: transparent;}
+  to {background-color: $color-darken-darker;}
+}
+@keyframes maskRemove {
+  from {background-color: $color-darken-darker;}
+  to {background-color: transparent;}
+}
+@keyframes detailOpen {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes detailClose {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0%, 80%, 100% {
+    transform: scale(0);
+  } 40% {
+    transform: scale(1.0);
+  }
+}
+@keyframes calloutpopup {
+  from {
+    transform: translate3d(-50%, 100%, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

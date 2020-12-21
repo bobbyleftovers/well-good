@@ -1,0 +1,34 @@
+.rich-tag-hero.has-image {
+  padding-bottom: 0;
+  height: 200px;
+
+  @screen sm {
+    padding-bottom: 43.79%;
+    height:0;
+  }
+
+  @screen md {
+    padding-bottom: 39%;
+  }
+
+  @screen lg {
+    padding-bottom: 33.24%;
+  }
+}
+
+.rich-tag-hero.no-image {
+
+  padding: 38px 0 28px;
+
+  @screen sm {
+    padding: 52px 0 32px;
+  }
+
+  @screen md {
+    padding: 52px 0 32px;
+  }
+
+  @screen lg {
+    padding: 66px 0 42px;
+  }
+}

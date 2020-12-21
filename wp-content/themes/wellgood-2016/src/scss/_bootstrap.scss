@@ -1,0 +1,25 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+/*
+ * Bootstrap Config
+ */
+ $grid-columns: 12;
+ $grid-gutter-width: 25px;
+ $grid-breakpoints: (
+  xs: 481px,
+  sm: 641px,
+  md: 999px,
+  lg: 1140px,
+  xl: 1441px
+);
+
+/*! purgecss start ignore */
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~bootstrap/scss/mixins/grid-framework";
+@import "~bootstrap/scss/mixins/grid";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities/display";
+@import "~bootstrap/scss/utilities/flex";
+/*! purgecss end ignore */

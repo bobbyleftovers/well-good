@@ -1,0 +1,20 @@
+.newsletter-card__padding {
+  padding-bottom: 80%;
+}
+
+.newsletter-card .signup-form__form {
+  @apply block relative;
+}
+
+.newsletter-card .signup-form__error,
+.newsletter-card .signup-form__thanks {
+  @apply text-center;
+}
+
+.newsletter-card .signup-form__thanks {
+  @apply h-e45;
+}
+
+.newsletter-card .signup-form__error {
+  @apply absolute top-e45 pt-e1 left-0 text-sm;
+}

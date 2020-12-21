@@ -1,0 +1,64 @@
+.custom-auth-body {
+  .btn {
+    font-family: $sans-serif-condensed;
+    text-transform: uppercase;
+    background-color: $green !important;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    color: white;
+
+    &:hover {
+      opacity: 0.8;
+      color: white;
+    }
+  }
+}
+
+.btn-primary {
+  font-family: $sans-serif-condensed;
+  text-transform: uppercase;
+  background-color: $green !important;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  color: white;
+
+  &:hover {
+    opacity: 0.8;
+    color: white;
+  }
+}
+
+.custom-registration-row .register-portal .btn-login .btn {
+  font-family: $sans-serif-condensed;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+ga-form-field .checkbox-group .input-group-addon input:checked ~ label:before {
+  background-color: $green;
+}
+
+.btn-link {
+  color: $green;
+
+  &:hover {
+    color: $green;
+    opacity: 0.8;
+  }
+}
+
+.path {
+  stroke: $green;
+  border-color: $green;
+}
+
+.ga-stat-box-one i {
+  line-height: 47px;
+}
+
+.smart-table-container .pagination>li.active>a {
+  color: $green; 
+  border-color: $green; 
+}

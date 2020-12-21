@@ -1,0 +1,90 @@
+{
+    "key": "group_5dd223f9af413",
+    "title": "Articles List",
+    "fields": [
+        {
+            "key": "field_5dd223f9ba97c",
+            "label": "",
+            "name": "posts",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5dd223f9bd447",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "+ Add article",
+            "sub_fields": [
+                {
+                    "key": "field_5dd223f9bd447",
+                    "label": "Article",
+                    "name": "post",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "post"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                },
+                {
+                    "key": "field_5dd223f9bd455",
+                    "label": "Overwrite article",
+                    "name": "overwrite",
+                    "type": "clone",
+                    "instructions": "Empty fields will fallback to orginal post's values",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "field_5dd224712d4ee"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/page-2020-hub.php"
+            }
+        ]
+    ],
+    "menu_order": 3,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": false,
+    "description": "",
+    "modified": 1578515231
+}

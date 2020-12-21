@@ -1,0 +1,21 @@
+
+.in-post-sidebar {
+  background-color: $light-grey;
+  padding: 1em;
+  margin-bottom: 1em;
+
+  @media( min-width: break($ml) ) {
+    float: right;
+    display: inline;
+    margin-left: 1.5em;
+    width: 33%;
+  }
+}
+
+.post__main .next-to-sidebar,
+.next-to-sidebar + .post__pin-link {
+  @media( min-width: break($ml) ) {
+    width: 61%;
+    display: block;
+  }
+}

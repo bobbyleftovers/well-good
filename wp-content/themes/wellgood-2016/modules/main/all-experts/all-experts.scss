@@ -1,0 +1,301 @@
+.all-experts {
+  & main {
+    display: block;
+  }
+}
+
+.all-experts__grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (min-width: break($s)) {
+    margin-top: -78px;
+  }
+}
+
+.all-experts__header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 282px;
+  z-index: -1;
+
+  @media (min-width: break($s)) {
+    height: 304px;
+  }
+
+  @media (min-width: break($m)) {
+    height: 407px;
+  }
+
+  @media (min-width: break($l)) {
+    height: 573px;
+  }
+}
+
+.all-experts__header--overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.all-experts__title {
+  @extend %page-title,
+    %page-title--extra-large;
+
+  color: $white;
+  margin-bottom: 5px;
+  max-width: 462px;
+  z-index: 1;
+}
+
+.all-experts__description {
+  @include paragraph();
+
+  text-align: center;
+  z-index: 1;
+
+  @media (min-width: break($m)) {
+    max-width: 700px;
+  }
+
+  &--mobile {
+    color: $black;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+
+    @media (min-width: break($s)) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+    max-width: 462px;
+    color: $white;
+
+    @media (min-width: break($s)) {
+      margin-bottom: 60px;
+      display: inline-block;
+    }
+  }
+}
+
+.all-experts__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 25px;
+  background-color: $light-tan;
+  width: 100%;
+
+  @media (min-width: break($s)) {
+    padding: 30px 20px 30px;
+    width: 48.5%;
+  }
+
+  @media (min-width: break($l)) {
+    padding: 40px 30px 40px;
+    width: 31.7%;
+  }
+
+  &--blank {
+    padding: 0;
+    margin: 0;
+    height: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  &.expert {
+    margin-bottom: 20px;
+
+    @media (min-width: break($m)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .expert__info {
+    max-width: none;
+    text-align: center;
+    margin-top: 10px;
+  
+    & > a {
+      text-decoration: none;
+    }
+  }
+
+  .expert__image {
+    display: block;
+    position: relative;
+    height: 105px;
+    width: 105px;
+
+    @media (min-width: break($m)) {
+      height: 140px;
+      width: 140px;
+    }
+  
+    @media (min-width: break($m)) {
+      height: 175px;
+      width: 175px;
+    }
+  
+    & > .image-module {
+      border-radius: 100px;
+    }
+  }
+
+  .expert__name {
+    @extend %page-title,
+      %page-title--medium;
+
+    margin-top: 10px;
+
+    @media (min-width: break($s)) {
+      font-size: 18px;
+    }
+
+    @media (min-width: break($m)) {
+      font-size: 28px;
+    }
+
+  }
+
+  .expert__title {
+    @extend %post-card__author;
+    
+    margin-top: 10px;
+    margin-bottom: 11px;
+    color: $grey;
+    font-style: normal;
+  }
+
+  .expert__bio,
+  .expert__link {
+    @extend %article-excerpt;
+    
+    color: $black;
+    max-width: 350px;
+  }
+
+  .expert__bio {
+    margin-top: 0;
+  }
+}
+
+.expert__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.expert__link {
+  margin: 0 5px;
+}
+
+
+.all-experts__recent {
+  background-color: $light-tan;
+  padding-bottom: 30px;
+
+  @media (min-width: break($s)) {
+    margin-top: 60px;
+  }
+
+  & > .container {
+    @media (max-width: break($s, false)) {
+      padding-right: 0;
+    }
+  }
+}
+
+.all-experts__recent-title {
+  @extend %page-title,
+    %page-title--large;
+
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+  @media (min-width: break($s)) {
+    margin-top: 70px;
+    margin-bottom: 30px;
+  }
+}
+
+.all-experts__recent-posts {
+  display: block;
+  position: relative;
+  padding-bottom: 30px;
+
+  @media (min-width: break($s)) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &:after {
+    content: 'flickity';
+    display: none; /* hide :after */
+
+    @media (min-width: break($s)) {
+      /* disable Flickity for large devices */
+      content: '';
+    }
+  }
+  
+  & .flickity-page-dots {
+    bottom: 0;
+    left: -5px;
+  }
+
+  & .flickity-page-dots .dot {
+    border: 1px solid $seafoam;
+  }
+
+  & .flickity-page-dots .dot.is-selected {
+    background: $seafoam;
+  }
+}
+
+.all-experts__recent-card {
+  width: 90%;
+  margin-right: 10px;
+  margin-left: 10px;
+
+  @media (min-width: break($s)) {
+    width: calc(33.3333333333% - 20px);
+  }
+
+  @media (min-width: break($l)) {
+    width: calc(25% - 20px);
+  }
+}
+
+.all-experts__recent-card:nth-child(4) {
+  display: inherit;
+
+  @media (min-width: break($s)) {
+    display: none;
+  }
+
+  @media (min-width: break($l)) {
+    display: inherit;
+  }
+}

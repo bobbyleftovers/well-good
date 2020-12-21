@@ -1,0 +1,119 @@
+section.instagram-feed {
+	margin-top: 30px;
+	.instagram-feed-container {
+    background-color: $light-grey;
+    position: relative;
+    display: flex;
+		margin: 0 auto;
+    padding: 0;
+		font-size: 0.0001px;
+    flex-wrap: wrap;
+    @media (min-width: break($m)) {
+      flex-wrap: nowrap;
+    }
+    .instagram-feed-list {
+      position: relative;
+      display: flex;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+			@media (min-width: break($m)) {
+				flex-wrap: nowrap;
+      }
+      &:before {
+        content: "";
+        width: 50%;
+        @media (min-width: break($m)) {
+          width: 0;
+        }
+      }
+      li {
+        cursor:pointer
+      }
+    }
+    ul > li,
+    .instagram-feed-follow {
+			display: inline-block;
+			align-self: center;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			width: 50%;
+
+			@media (min-width: break($m)) {
+				width: 16.66666666%;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+			&:nth-child(n+4) {
+				display: none;
+
+				@media (min-width: break($m)) {
+					display: inline-block;
+				}
+			}
+		}
+    .instagram-feed-follow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50%;
+      width: 50%;
+      z-index: 1;
+      align-self: center;
+      display: flex;
+      align-items: center;
+      @media (min-width: break($m)) {
+        position: relative;
+				width: 16.66666666%;
+      }
+    }
+		a {
+			text-decoration: none;
+			display: inline-block;
+			position: relative;
+      width: 100%;
+      margin-bottom: 0;
+		}
+	}
+	.instagram-feed-image-wrapper {
+		@extend %bg-cover, %as, %image-hover, %image-fallback;
+		@include aspect_ratio(1/1);
+		overflow: hidden;
+		width: 100%;
+
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+
+		img {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+	.instagram-feed-image {
+		width: 100%;
+		height: auto;
+	}
+	.instagram-feed-follow-link {
+		@extend %p, %link-hover;
+		color: $grey;
+		display: block;
+	}
+	.instagram-feed-follow-icon {
+		margin: 0;
+		font-size: 24px;
+	}
+	.instagram-feed-follow-label {
+		margin: 0;
+	}
+	.instagram-feed-follow-handle {
+		margin: 0;
+		font-size: 13px;
+	}
+}

@@ -1,0 +1,96 @@
+{
+    "key": "group_5f21da3e97603",
+    "title": "Story Section",
+    "fields": [
+        {
+            "key": "field_5f21db03faa00",
+            "label": "Story Label",
+            "name": "story_label",
+            "type": "text",
+            "instructions": "Category label visible on the Story Cards on the homepage",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f29e734dc34f",
+            "label": "Story Label Link",
+            "name": "story_label_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f2b5131d8d93",
+            "label": "Open in New Tab",
+            "name": "story_link_new_tab",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/page-trends-2021.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/page-changemakers.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/page-renew-year-2021.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1604572134
+}

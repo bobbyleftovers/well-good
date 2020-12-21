@@ -1,0 +1,24 @@
+.pubexchange {
+
+	min-height: 580px;
+
+	.pubexchange_embed .pe-wrapper ul.pe-row li.pe-partner {
+		width: 100% !important;
+		padding: 0 10px 0 10px;
+		border-right: none !important;
+		margin: 0;
+		display: block !important;
+		vertical-align: top;
+		font-size: 0;
+	}
+	#pubexchange_below_content_5 .pe-wrapper {
+		padding-top: 0;
+	}
+	#pubexchange_below_content_5 .pe-title {
+		display: none;
+	}
+	#pubexchange_below_content_5 a.pe-headline {
+		@extend %h4;
+		text-decoration: none;
+	}
+}

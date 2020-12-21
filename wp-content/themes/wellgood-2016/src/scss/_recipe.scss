@@ -1,0 +1,103 @@
+.recipe--sponsored {
+
+  .post__header--recipe {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    max-width: 466px;
+
+    @media(min-width: break($new-md)){
+      max-width: 622px;
+    }
+
+    @media(min-width: break($m)){
+      z-index: 14;
+      position: relative;
+    }
+
+    @media (min-width: break($l)) {
+      max-width: 730px;
+      padding-left: 0;
+    }
+
+    background-color: $white;
+    position: relative;
+    z-index: 2; // Necessary for overlay on video/image
+  }
+
+  .post__content {
+    @media( min-width: break($recipe-break) ) {
+      margin-top: -$recipe-spacer-lg;
+    }
+  }
+
+  .post__header--recipe .hr__under-info {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    @media( max-width: break($recipe-break, false )) {
+      display: none;
+    }
+  }
+
+  .social-share--circle {
+    margin-top: 0;
+  }
+}
+
+.recipe--standard {
+  // Prevent overlap from absolutely positioned tip bubble
+  @media (min-width: break($recipe-break)) {
+    .post__main {
+      padding-top: 15px;
+    }
+  }
+
+  .social-share--circle {
+    padding-top: 30px;
+  }
+}
+
+// Recipe Sponsor
+
+.recipe-sponsor {
+  display: block;
+  margin-top: $recipe-spacer-md;
+  margin-bottom: $recipe-spacer-md;
+  text-decoration: none;
+
+  @media (min-width: break($recipe-break)) {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.recipe-sponsor__logo {
+  max-height: 54px;
+  margin-right: 15px;
+  @media (min-width: break($recipe-break)) {
+    max-height: 80px;
+  }
+}
+
+.recipe-sponsor__name {
+  text-transform: uppercase;
+  font-family: $neuehaas;
+  font-size: 11px;
+  letter-spacing: 1.7px;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (min-width: break($recipe-break)) {
+    line-height: 11px;
+  }
+
+  &:hover {
+    color: $seafoam;
+  }
+}
+
+.recipe__main {
+  @extend .post__main;
+}
+

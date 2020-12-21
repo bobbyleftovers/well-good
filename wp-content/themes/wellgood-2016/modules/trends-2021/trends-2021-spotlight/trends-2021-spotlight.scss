@@ -1,0 +1,128 @@
+.trends-2021-spotlight__wrapper {
+  display: block;
+  float: none;
+  clear: both;
+  opacity: 0;
+}
+
+.trends-2021-spotlight__wrapper.show {
+  opacity: 1 !important;
+}
+
+.trends-2021-spotlight__wrapper.next-acf\/trends-video {
+  margin-bottom: 0 !important;
+}
+
+.trends-2021-spotlight__content {
+  padding-top: 48.5vh;
+
+  .trends-2021-spotlight--no-image & {
+    padding-top: 100px !important;
+  }
+
+  .trends-2021-spotlight__wrapper.last-trends-2021\/trends-2021-slideshow & {
+    padding-bottom: 1px !important;
+  }
+}
+
+.trends-2021-spotlight__content__hidden {
+  opacity: 0;
+  transform: translate3d(0, 1rem, 0);
+  transition: 0.6s;
+
+  .show-content &,
+  .trends-2021-spotlight--no-image & {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.trends-2021-spotlight .text-label {
+  color: inherit !important;
+}
+
+.trends-2021-spotlight__title {
+  max-width: 844px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+
+  @screen sm {
+    width: 11.2em;
+  }
+
+  @screen lg {
+    font-size: 70px;
+  }
+}
+
+.trends-2021-spotlight__img-wrapper {
+  transition: opacity 1.2s;
+  .trends-2021-spotlight__wrapper.show-content & {
+    opacity: 0;
+  }
+}
+
+.trends-2021-spotlight__img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.trends-2021-spotlight__img__accent {
+  width: calc(100% + 100px);
+  height: 60vh;
+  left: -50px;
+  top: calc(100vh + 50px);
+  border-radius: 100px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  filter: blur(50px);
+  transform: translateY(-100%);
+}
+
+.trends-2021-spotlight__heading * {
+  color: inherit;
+}
+
+.trends-2021-spotlight__hash {
+  position:absolute;
+  top: -$header-height;
+
+  @media( min-width: break($ml) ) {
+      top: -$header-height-tablet;
+    }
+
+  @media (min-width: break($header-break)) {
+      top: -$header-height-desktop;
+    }
+}
+
+.last-acf\/video .acf-video:last-child .video {
+  margin-bottom: 0;
+}
+
+.trends-2021-spotlight__img__mask {
+  z-index: 99;
+
+  .trends-2021-spotlight__wrapper.text-white & {
+    background: linear-gradient(180deg, rgba(51, 51, 51, 0.1) 0%, rgba(51, 51, 51, 0.4) 20.31%, rgba(51, 51, 51, 0.4) 80.21%, rgba(51, 51, 51, 0.1) 100%);
+    
+    @screen sm {
+      background: linear-gradient(269.58deg, rgba(51, 51, 51, 0.5) 36%, rgba(51, 51, 51, 0.1) 100%);
+    }
+  }
+
+  .trends-2021-spotlight__wrapper.text-gray-dark & {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 20.31%, rgba(255, 255, 255, 0.4) 80.21%, rgba(51, 51, 51, 0.1) 100%, rgba(255, 255, 255, 0.1) 100%);
+
+    @screen sm  {
+      background: linear-gradient(269.58deg, rgba(255, 255, 255, 0.5) 36%, rgba(255, 255, 255, 0.1) 100%);
+    }
+  }
+
+  .trends-2021-spotlight__img__bg.bg-white & {
+    display: none;
+  }
+}

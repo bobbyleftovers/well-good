@@ -1,0 +1,425 @@
+{
+    "key": "group_5e8ef5f91449a",
+    "title": "Options: Third Party Integrations",
+    "fields": [
+        {
+            "key": "field_5e8ef8f813e92",
+            "label": "Iterable",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5dfce189a906f",
+            "label": "Iterable API Key",
+            "name": "signup_iterable_key",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59b9afa441ecd",
+            "label": "Reebok API",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59b9afe641ecf",
+            "label": "Public Key",
+            "name": "reebok_public_key",
+            "type": "text",
+            "instructions": "Public key for Reebok's R1 API",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59b9afb041ece",
+            "label": "Secret Key",
+            "name": "reebok_secret_key",
+            "type": "text",
+            "instructions": "Secret key for Reebok's R1 API",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59b9aff741ed0",
+            "label": "Source ID",
+            "name": "reebok_source_id",
+            "type": "text",
+            "instructions": "Source ID for Reebok's R1 API",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59cc29749b159",
+            "label": "Response Monitoring Toggle",
+            "name": "response_monitoring_toggle",
+            "type": "select",
+            "instructions": "Choose whether or not you'd like to enable response monitoring (responses will be sent to a specified request bin from <a href=\"https:\/\/requestb.in\/\">https:\/\/requestb.in\/<\/a>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "enabled": "Enable",
+                "disabled": "Disabled"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59cc28ee9b158",
+            "label": "Response Monitoring URL",
+            "name": "response_monitoring_url",
+            "type": "text",
+            "instructions": "An endpoint url for a bin from <a href=\"https:\/\/requestb.in\/\">requestb.in<\/a> where, if enabled, the responses from the Reebok API will be sent for temporary monitoring. <br><br> Keep in mind that these bins are deleted 48 hours after their inception, you may need to create a new one!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/requestb.in\/1fxkcit1",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a0b53d610e41",
+            "label": "SimpleReach",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5a0b53f410e42",
+            "label": "SimpleReach PID Code",
+            "name": "simplereach_pid_code",
+            "type": "text",
+            "instructions": "The string used (and provided) by SimpleReach to identify your site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e996aaa3af9b",
+            "label": "YouTube",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e996ab93af9c",
+            "label": "YouTube API Key",
+            "name": "youtube_api_key",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e996acc3af9d",
+            "label": "YouTube Channel ID",
+            "name": "youtube_channel_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ea8ff805c204",
+            "label": "JW Player",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ea900935c205",
+            "label": "JW Player API Key",
+            "name": "jwplayer_api_key",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ea900bc5c206",
+            "label": "JW Player Secret Key",
+            "name": "jwplayer_secret_key",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ea900ce5c207",
+            "label": "JW Player Default Player",
+            "name": "jwplayer_default_player",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "UExdBX3E": "TEST_Sephora_kendall",
+                "fJjd4r1A": "Testing-Well+Good_default",
+                "CRIy7QYG": "Testing2-Well+Good_Airtory-VPAID",
+                "17rgAvfs": "Well+Good_Animated Infographic Test",
+                "ywL31j0P": "Well+Good_Cookbook",
+                "05dicDBi": "Well+Good_default",
+                "dUl83MEz": "Well+Good_gif",
+                "AjgxWzQ7": "Well+Good_No Ads",
+                "UVI7SuXN": "Well+Good_No Ads_Citibank",
+                "zEl59zB5": "Well+Good_Previous Channel"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5fbb9be168e96",
+            "label": "Recaptcha",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5fbba849a4cfd",
+            "label": "Enable Recaptcha",
+            "name": "enable_recaptcha",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5fbb9bed68e97",
+            "label": "Recaptcha Site Key",
+            "name": "recaptcha_site_key",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "6LdIAOoZAAAAAOPMtao4ZrMz9xxziYulqAYyVg9z",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fbb9c0968e98",
+            "label": "Recaptcha Site Secret",
+            "name": "recaptcha_site_secret",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "6LdIAOoZAAAAAMW1IHXpy_xzw39BmHMeWsQeGTKL",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-third-party-integrations"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1606133853
+}

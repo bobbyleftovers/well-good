@@ -1,0 +1,55 @@
+.council-grid {
+    display: block;
+}
+
+.council-member {
+    text-align: center;
+    padding: 0px 15px;
+    margin: 25px 0;
+
+    &:nth-child(odd){
+        @media( min-width: break($m) ){
+            margin-right: 25px;
+        }
+    }
+
+    @media (min-width: break($s)){
+        width: calc(50% - 25px);
+        display: inline-block;
+       vertical-align: top;
+    }
+}
+
+.council-member__image {
+    border-radius: 50%;
+    width: calc(100% - 55px);
+    padding-bottom: calc(100% - 55px);
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+
+    @extend %image-fallback;
+
+    .image-module {
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}
+
+.council-member__read-more {
+    @extend %a;
+}
+
+.council-member__name {
+    margin: 16px 0;
+
+    @media (max-width: break( $m )){
+        font-size: 18px;
+    }
+}
+
+.council-member__bio {
+    @media(max-width: break($m)){
+        font-size: 14px;
+    }    
+}

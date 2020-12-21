@@ -1,0 +1,147 @@
+/*
+ * Breakpoints
+ */
+$break-max: 1440px;
+$break-mobile-min: 450px;
+$break-mobile-max: ($break-mobile-min - 1);
+
+// Breakpoint variable
+$xs: 481;
+$s: 641;
+$m: 869;
+$ml: 999;
+$mxl: 1140;
+$l: 1281;
+$xl: 1441;
+$xxl: 1921;
+$header-break: 1331;
+$ad-break: 655;
+$header-social-break: 1330;
+$breakpoints: $xs $s $m $ml $header-break $l $header-social-break $xl $xxl;
+
+// Devices screens tailwind
+$tablet-mq: 'md';
+$tablet-landscape-mq: 'ml';
+$desktop-mq: 'lg';
+
+// NEW breakpoints
+$new-xs: 480;
+$new-sm: 640;
+$new-md: 868;
+$new-ml: 1023;
+$new-lg: 1140;
+$new-xl: 1441;
+
+/*
+ * Colors
+ * @WORK
+ */
+$seafoam: #42676b;
+$black: #333333;
+$white: #ffffff;
+$tan: #e7dfd7;
+$dark-tan: #81756a;
+$light-tan: #f9f5f2;
+$grey: #707070;
+$red: #f06767;
+$light-grey: rgba(102, 102, 102, .1);
+$hover: #666666;
+// $grey1: #E8E8E8;
+// $grey2: #888888;
+// $grey3: #F5F5F5;
+// $grey4: #393939;
+// $grey5: #d1d1d1;
+// $grey6: #F0F0F0;
+// $c-black: #000000;
+// $c-dark: #333333;
+// $c-white: #FFFFFF;
+// $c-red: #E06758;
+// $c-red2: #C53836;
+// $c-red3: #F37877;
+// $error-red: #d1302d;
+// $c-red-light: #e8a39b;
+// $c-search-placeholder: #CCCCCC;
+// $c-instagram-bg: $light-grey;
+// $c-hover: $c-red;
+// $c-nav-hover: $c-red2;
+
+
+/*
+ * Typeography
+ */
+$serif: 'PT Serif', serif;
+$sans-serif: 'acumin-pro', 'Acumin Pro', sans-serif;
+$sans-serif-condensed: 'acumin-pro-condensed', 'Acumin Pro Condensed', sans-serif;
+$sans-serif-extra-condensed: 'acumin-pro-extra-condensed', 'Acumin Pro ExtraCondensed', sans-serif;
+
+$orpheus: 'orpheuspro', serif;
+$freight: 'freight-text-pro', serif;
+$neuehaas: 'neue-haas-unica', sans-serif;
+
+/**
+ * Transitions
+ */
+$image-hover-opacity: 0.85;
+$transition-duration: 0.2s;
+$transition-timing-function: ease-in-out;
+
+/*
+ * Header
+ */
+$header-height: 45px;
+$header-height-tablet: 60px;
+$header-height-desktop: 67px;
+$header-logo-height-desktop: 136px;
+$nav-trigger-height: $header-height;
+$search-height: 49px;
+
+/**
+ * Nav
+ */
+$nav-width-mobile: 264px;
+$nav-cities-item-width: 400px;
+$nav-cities-item-width-mobile: 100%;
+$nav-cities-item-height: 150px;
+
+/*
+ * Container
+ */
+$edge-gutter: 25px;
+$edge-gutter-tablet: 40px;
+$edge-gutter-desktop: 50px;
+
+/*
+ * Recipe Specific
+ */
+// TODO: $recipe-break is defined in recipe-card.scss, remove it and add recipe variables here
+$recipe-break: $ml;
+$recipe-border-grey: 1px solid $light-grey;
+$recipe-spacer-lg: 40px;
+$recipe-spacer-md: 25px;
+$recipe-spacer-smd: 15px;
+$recipe-spacer-sm: 10px;
+
+/*
+ * Gift specific
+ */
+$product-guide-white: #fff;
+$product-guide-black: #000;
+$product-guide-offwhite: #f9f8e4;
+$product-guide-grey: #7f7f7f;
+$product-guide-pink: #e97d77;
+$product-guide-rose: #e45d55;
+$product-guide-red: #df4b42;
+$product-guide-tan: #f3b69a;
+
+/*
+ * Email capture form specific
+ */
+$email-capture-purple: #756484;
+
+%unicode-fallback-serif {
+  font-family: serif;
+
+  .unicoderange & {
+    font-family: $orpheus;
+  }
+}

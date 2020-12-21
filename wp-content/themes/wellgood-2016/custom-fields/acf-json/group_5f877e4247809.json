@@ -1,0 +1,48 @@
+{
+    "key": "group_5f877e4247809",
+    "title": "Gutenberg: ACF\/Text And Image\/Footnote",
+    "fields": [
+        {
+            "key": "field_5f877e4b13be2",
+            "label": "Footnote",
+            "name": "footnote",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/text-and-image"
+            },
+            {
+                "param": "block_page_template",
+                "operator": "==",
+                "value": "templates\/page-changemakers.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1602715248
+}

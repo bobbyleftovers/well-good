@@ -1,0 +1,32 @@
+/*! purgecss start ignore */
+// Imports from src directory
+@import "mixins";
+@import "_normalize.scss";
+@import "variables";
+@import "breakpoint";
+@import "typography";
+@import "icons";
+@import "links";
+
+// Imports from subtheme folder
+@import "trends-2020/variables";
+@import "trends-2020/typography";
+@import "trends-2020/grid";
+@import "trends-2020/buttons";
+
+// Imports from module folders (Paths are expanded within Gulp task)
+@import '@modules/trends-2020/trends-2020/trends-2020.scss';
+@import '@modules/trends-2020/trends-2020-bg-texture/trends-2020-bg-texture.scss';
+@import '@modules/trends-2020/trends-2020-advertisement/trends-2020-advertisement.scss';
+@import '@modules/trends-2020/trends-2020-article-2020/trends-2020-article-2020.scss';
+@import '@modules/trends-2020/trends-2020-article-lookback/trends-2020-article-lookback.scss';
+@import '@modules/trends-2020/trends-2020-game-changers/trends-2020-game-changers.scss';
+@import '@modules/trends-2020/trends-2020-hero/trends-2020-hero.scss';
+@import '@modules/trends-2020/trends-2020-headline/trends-2020-headline.scss';
+@import '@modules/trends-2020/trends-2020-sections/trends-2020-sections.scss';
+@import '@modules/trends-2020/trends-2020-sponsored-article/trends-2020-sponsored-article.scss';
+@import '@modules/trends-2020/trends-2020-trends-2020/trends-2020-trends-2020.scss';
+@import '@modules/trends-2020/trends-2020-trends-lookback/trends-2020-trends-lookback.scss';
+@import '@modules/trends-2020/trends-2020-trends-past-decade/trends-2020-trends-past-decade.scss';
+@import '@modules/trends-2020/trends-2020-social-share/trends-2020-social-share.scss';
+/*! purgecss end ignore */

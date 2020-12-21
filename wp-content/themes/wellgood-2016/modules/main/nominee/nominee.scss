@@ -1,0 +1,202 @@
+.nominee {
+  display: block;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 50%;
+  margin-bottom: 40px;
+
+  @media (min-width: break($s)) {
+    width: 33.333%;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: break($m)) {
+    margin-bottom: 60px;
+    padding-left: 35px;
+    padding-right: 35px;
+    width: 25%;
+  }
+
+  a {
+    text-decoration: none;
+    position: relative;
+
+    &:hover {
+      .nominee__plus,
+      .nominee__learn-more {
+        visibility: visible;
+        opacity: 1;
+      }
+      .image-module {
+        transform: none;
+        opacity: 0.45 !important;
+      }
+    }
+  }
+}
+.nominee__image {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  margin: 0 0 18px;
+
+  @media (min-width: break($s)) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: break($m)) {
+    margin-bottom: 33px;
+  }
+
+  &:before {
+    content: '';
+    padding-top: 100%;
+    display: block;
+  }
+}
+.nominee__learn-more,
+.nominee__plus {
+  @include transition(all);
+  visibility: hidden;
+  opacity: 0;
+}
+.nominee__learn-more {
+  @extend %h4;
+
+  text-transform: uppercase;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 100;
+}
+.nominee__plus {
+  display: block;
+  width: 124px;
+  height: 42px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -21px;
+  margin-left: -62px;
+  z-index: 1;
+
+  &:last-child {
+    transform-origin: center;
+    transform: rotate(90deg);
+  }
+}
+
+.nominee__heading {
+  @extend %h2;
+  margin-bottom: 0;
+  margin-top: 5px;
+
+  @media (min-width: break($s)) {
+    margin-top: 15px;
+  }
+}
+.nominee__votes {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 40px;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: break($m)) {
+    width: 170px;
+  }
+}
+.nominee__bar {
+  display: block;
+  height: 5px;
+  background-color: #EEEEEE;
+  position: relative;
+}
+[class^="nominee__count"] {
+  @extend %h5, %smaller;
+  position: absolute;
+  right: 0;
+  width: 30px;
+  top: -4px;
+  text-align: left;
+}
+[class*="nominee__bar-ratio--"] {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.nominee__button {
+  @extend %btn;
+  @include transition(all);
+  background-color: $white;
+  outline: none;
+  margin-top: 13px;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (min-width: break($s)) {
+    width: auto;
+    min-width: 125px;
+  }
+
+  @media (min-width: break($m)) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &[disabled] {
+    opacity: 0.3;
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+      border-color: $black;
+      box-shadow: none;
+    }
+  }
+}
+.nominee__button--voted[disabled] {
+  opacity: 1;
+
+  &,
+  &:hover {
+    background: $black;
+    color: $white;
+  }
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 7px;
+    border: solid #fff;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+  }
+}
+.nominee__description {
+  @extend .contest-rules__copy;
+  margin-top: 15px;
+
+  p {
+    margin-top: 0;
+  }
+}
+.nominee__vote-count {
+  margin-top: 5px;
+  font-family: $sans-serif;
+  text-align: center;
+  font-size: 12px;
+}

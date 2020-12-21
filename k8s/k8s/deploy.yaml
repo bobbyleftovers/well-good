@@ -1,0 +1,119 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: wellandgood
+  labels:
+    app: wellandgood
+    env: test
+spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 100%
+      maxUnavailable: 10%
+    type: RollingUpdate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wellandgood
+  template:
+    metadata:
+      labels:
+        app: wellandgood
+        env: test
+    spec:
+      volumes:
+        - name: ugc
+          nfs:
+            server: nfs1.lv7.leaf.io
+            path: "/wellngood_web_ugc"
+        - name: wp-webroot
+          emptyDir: {}
+        - name: nginx-conf
+          configMap:
+            name: nginx-conf
+        - name: php-ini
+          configMap:
+            name: php-ini
+      containers:
+        - name: nginx
+          image: nginx:1.13.7-alpine
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: nginx-conf
+              mountPath: /etc/nginx/nginx.conf
+              subPath: nginx.conf
+            - name: wp-webroot
+              mountPath: /var/www/html
+            - name: ugc
+              mountPath: "/var/www/html/wp-content/uploads"
+        - name: wellandgood
+          image: docker-registry.dmdmedia.net:443/sre/wellandgood:1
+          env:
+          - name: AUTH_KEY
+            valueFrom:
+              secretKeyRef:
+                name: env-vars-secret
+                key: AUTH_KEY
+          - name: SECURE_AUTH_KEY
+            valueFrom:
+              secretKeyRef:
+                name: env-vars-secret
+                key: SECURE_AUTH_KEY
+          - name: LOGGED_IN_KEY
+            valueFrom:
+              secretKeyRef:
+                name: env-vars-secret
+                key: LOGGED_IN_KEY
+          - name: NONCE_KEY
+            valueFrom:
+              secretKeyRef:
+                name: env-vars-secret
+                key: NONCE_KEY
+          - name: AUTH_SALT
+            valueFrom:
+              secretKeyRef:
+                name: env-vars-secret
+                key: AUTH_SALT
+          - name: SECURE_AUTH_SALT
+            valueFrom:
+              secretKeyRef:
+                name: env-vars-secret
+                key: SECURE_AUTH_SALT
+          - name: LOGGED_IN_SALT
+            valueFrom:
+              secretKeyRef:
+                name: env-vars-secret
+                key: LOGGED_IN_SALT
+          - name: NONCE_SALT
+            valueFrom:
+              secretKeyRef:
+                name: env-vars-secret
+                key: NONCE_SALT
+          - name: DB_NAME
+            value: pantheon
+          - name: DB_USER
+            valueFrom:
+              secretKeyRef:
+                name: env-vars-secret
+                key: DB_USER
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: env-vars-secret
+                key: DB_PASSWORD
+          - name: DB_HOST
+            value: wellngood-mysql01-dev.lv7.leaf.io
+          volumeMounts:
+            - name: wp-webroot
+              mountPath: /var/www/html
+            - name: ugc
+              mountPath: "/var/www/html/wp-content/uploads"
+            - name: php-ini
+              mountPath: /usr/local/etc/php/php.ini
+              subPath: php.ini
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9000
+              name: insecure

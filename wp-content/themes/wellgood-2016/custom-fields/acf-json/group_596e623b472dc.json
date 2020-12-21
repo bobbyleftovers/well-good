@@ -1,0 +1,107 @@
+{
+    "key": "group_596e623b472dc",
+    "title": "Hub Location Types",
+    "fields": [
+        {
+            "key": "field_596fa59875ca7",
+            "label": "Location Type Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "The name that will appear at the top of the location hub map",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_596e623b4c2ce",
+            "label": "Map Icon",
+            "name": "icon",
+            "type": "image",
+            "instructions": "50x50 PNG to be cropped into a circle (Upload 100x100 image to support retina)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": 50,
+            "min_height": 50,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59763002321c4",
+            "label": "Map Icon Scale",
+            "name": "icon_scale",
+            "type": "number",
+            "instructions": "Amount to scale the icon. \r\n0.5 = 50% of the size of the uploaded image (recommended for retina). 1 = true to the size of the uploaded image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "0.5",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 10,
+            "step": ".1"
+        },
+        {
+            "key": "field_5b350a71b89bd",
+            "label": "Draw Line",
+            "name": "draw_line",
+            "type": "true_false",
+            "instructions": "Draw a line connecting these location types. They will be ordered by the Hub Location publish dates.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "location-types"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1530202819
+}

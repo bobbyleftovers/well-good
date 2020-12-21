@@ -1,0 +1,17 @@
+{
+  "name": "wellgood/lib",
+  "description": "php w+g dependencies",
+  "config": {
+    "vendor-dir": "lib/vendor"
+  },
+  "authors": [{
+    "name": "zalobrrl",
+    "email": "zalo.l@barreldev.com"
+  }],
+  "require": {
+    "pgrimaud/instagram-user-feed":"^6.0",
+    "sunra/php-simple-html-dom-parser": "^1.5",
+    "paquettg/php-html-parser": "^2.2",
+    "cache/array-adapter": "^1.0"
+  }
+}

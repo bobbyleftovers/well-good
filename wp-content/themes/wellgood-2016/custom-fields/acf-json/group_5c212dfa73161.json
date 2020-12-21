@@ -1,0 +1,928 @@
+{
+    "key": "group_5c212dfa73161",
+    "title": "Editorial Tag Settings",
+    "fields": [
+        {
+            "key": "field_5db7fe7fff880",
+            "label": "Settings",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 1,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e879a6dda8f1",
+            "label": "Legacy Category",
+            "name": "editorialtag_legacy_category",
+            "type": "select",
+            "instructions": "Slug of the Legacy Category most related to this Editorial Tag",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "good-advice": "Good Advice",
+                "good-food": "Good Food",
+                "good-home": "Good Home",
+                "good-looks": "Good Looks",
+                "good-sweat": "Good Sweat",
+                "good-travel": "Good Travel"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5db7b05ec9f7e",
+            "label": "Franchise Tag",
+            "name": "editorialtag_franchise",
+            "type": "true_false",
+            "instructions": "Is this Editorial Tag a Franchise?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_5db7fed9ff882",
+            "label": "Sponsored",
+            "name": "editorialtag_sponsored",
+            "type": "true_false",
+            "instructions": "Is this Editorial Tag sponsored?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_5e4e9e6daa717",
+            "label": "Sponsor Settings",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db7fed9ff882",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e62bba46d8d8",
+            "label": "Sponsor",
+            "name": "editorialtag_sponsor",
+            "type": "wysiwyg",
+            "instructions": "Sponsorship text below Franchise logo. (ex. \"Presented by Company\")",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db7fed9ff882",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5db7feaeff881",
+            "label": "Styling",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5db7ff71ff885",
+            "label": "Theme",
+            "name": "editorialtag_theme",
+            "type": "select",
+            "instructions": "Choose a theme for this Editorial Tag's cluster page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "white": "Light",
+                "black": "Dark"
+            },
+            "default_value": [
+                "white"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_56a27e0bd7abe",
+            "label": "Header Image",
+            "name": "image",
+            "type": "image",
+            "instructions": "Image to appear at the top of this category landing page. Recommended minimum size: 2400px x 525px",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5db7ff1aff883",
+            "label": "Modules",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c799fae8760a",
+            "label": "Featured",
+            "name": "editorialtag_featured",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5c79a010197ad",
+                    "label": "Featured Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Featured",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5c3b1f0f58639",
+                    "label": "Featured Posts",
+                    "name": "posts",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "post"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search",
+                        "taxonomy"
+                    ],
+                    "elements": "",
+                    "min": "",
+                    "max": 3,
+                    "return_format": "object"
+                }
+            ]
+        },
+        {
+            "key": "field_5c79a68f374ef",
+            "label": "Recent Posts Title",
+            "name": "editorialtag_recent_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Most Recent",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c3f9b3c1dfca",
+            "label": "Modules",
+            "name": "editorialtag_modules",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "5c3f9b424f21d": {
+                    "key": "5c3f9b424f21d",
+                    "name": "editorialtag_module_full",
+                    "label": "Full Background Carousel",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c3faefe48c0d",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "We Think You'll Like",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c3f9bc81dfcc",
+                            "label": "Posts",
+                            "name": "posts",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "elements": "",
+                            "min": "",
+                            "max": "",
+                            "return_format": "object"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5c3fb44970b8a": {
+                    "key": "layout_5c3fb44970b8a",
+                    "name": "editorialtag_module_half",
+                    "label": "Half Background Carousel",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c3fb44970b8b",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Most Popular",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c3fb45670b8d",
+                            "label": "Background Image",
+                            "name": "background_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5c3fb44970b8c",
+                            "label": "Posts",
+                            "name": "posts",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "elements": "",
+                            "min": "",
+                            "max": "",
+                            "return_format": "object"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5c3fd669b38a6": {
+                    "key": "layout_5c3fd669b38a6",
+                    "name": "editorialtag_module_videos",
+                    "label": "Video Carousel",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c3fd669b38a7",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Popular Videos",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c3fd669b38a9",
+                            "label": "Posts",
+                            "name": "posts",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post"
+                            ],
+                            "taxonomy": [
+                                "post_tag:video"
+                            ],
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "elements": "",
+                            "min": "",
+                            "max": "",
+                            "return_format": "object"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5c3fdbe08173f": {
+                    "key": "layout_5c3fdbe08173f",
+                    "name": "editorialtag_module_tag",
+                    "label": "Featured Tag",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c3fdbe081740",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "If blank, the tag name will be displayed",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Optional Title",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c3fdbfa81742",
+                            "label": "Tag",
+                            "name": "tag",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "9224": "Abroad Strokes",
+                                "9129": "Active Clothing",
+                                "9130": "Active Recovery",
+                                "9225": "Alt-Baking Bootcamp",
+                                "9226": "Astrology",
+                                "9131": "Athleisure Wear",
+                                "9132": "Barre Workouts",
+                                "9227": "Beauty Geek",
+                                "9228": "Beauty Weeks",
+                                "9133": "Boxing Tips",
+                                "9134": "Bras and Undies",
+                                "9229": "Breast Health",
+                                "9135": "Career Advice",
+                                "9230": "Checks+Balanced",
+                                "9136": "Clean Beauty",
+                                "9137": "Cleaning Hacks",
+                                "9138": "Clothing Care",
+                                "9231": "Confused About",
+                                "9232": "Cook With Us",
+                                "9233": "Cosmic Health",
+                                "9139": "Crossfit Workouts",
+                                "9140": "Cycling Workouts",
+                                "9141": "Dance Workouts",
+                                "9142": "Dating Tips",
+                                "9234": "Dear Derm",
+                                "9143": "Decorating Ideas",
+                                "9144": "DIY Home Decor",
+                                "9235": "Eating Gluten-Free",
+                                "9236": "Eating Keto",
+                                "9237": "Eating Paleo",
+                                "9238": "Eating Vegan",
+                                "9239": "Eating Vegetarian",
+                                "9145": "Financial Tips",
+                                "9146": "Fitness Technology",
+                                "9147": "Fitness Tips",
+                                "9148": "Food and Nutrition",
+                                "9240": "Food Diaries",
+                                "9149": "Gardening Tips",
+                                "9151": "Good Moves",
+                                "9150": "Good@Work",
+                                "9153": "Hair Style Tips",
+                                "9152": "Hair-Care Tips",
+                                "9154": "Healthy Body",
+                                "9241": "Healthy Breakfast Recipes",
+                                "9155": "Healthy Cooking",
+                                "9156": "Healthy Drinks",
+                                "9157": "Healthy Eating Plans",
+                                "9158": "Healthy Eating Tips",
+                                "9159": "Healthy Gut",
+                                "9242": "Healthy Lunch Recipes",
+                                "9160": "Healthy Meal Ideas",
+                                "9161": "Healthy Mind",
+                                "9162": "Healthy Pregnancy",
+                                "9163": "Healthy Recipes for Dinner",
+                                "9164": "Healthy Sleeping Habits",
+                                "9165": "Healthy Snack Ideas",
+                                "9166": "HIIT Training Workouts",
+                                "9167": "Holistic Treatment",
+                                "9168": "Home Decor Ideas",
+                                "9169": "Home Tech",
+                                "9170": "Hormone Health",
+                                "9171": "Indoor Plant Ideas",
+                                "9172": "Jewelry Pieces",
+                                "9173": "Makeup Tips",
+                                "9243": "Marathon Training",
+                                "9174": "Meditation 101",
+                                "9175": "Menstrual Health",
+                                "9176": "Mental Challenges",
+                                "9177": "Nail Care",
+                                "9244": "Natural Acne Treatment",
+                                "9178": "OK TMI",
+                                "9245": "On the Cusp",
+                                "9179": "Organization Ideas",
+                                "9180": "Parenting Advice",
+                                "9181": "Pilates",
+                                "9182": "Pilates Classes",
+                                "9183": "Pilates Workouts",
+                                "9184": "Places to Visit",
+                                "9185": "Plant Based",
+                                "9186": "Political Issues",
+                                "9187": "Relationship Tips",
+                                "9188": "Restaurant Guides",
+                                "9189": "Running",
+                                "9190": "Running Routes Near Me",
+                                "9191": "Running Tips",
+                                "9193": "Self-Care Nation",
+                                "9192": "Self-Care Tips",
+                                "9194": "Sex Advice",
+                                "9195": "Size-Inclusive Brands",
+                                "9196": "Skin-Care Tips",
+                                "9197": "Sneaker Trends",
+                                "9198": "Spinning Workouts",
+                                "9199": "Spiritual Health",
+                                "9200": "Summer Skin Care",
+                                "9246": "Surfing Tips",
+                                "9201": "Sustainable Fashion",
+                                "9202": "Sustainable Living",
+                                "9203": "The Right Way",
+                                "9204": "The United States of Running",
+                                "9205": "Trainer of the Month Club",
+                                "9206": "Travel Ideas",
+                                "9207": "Travel Tips",
+                                "1": "Uncategorized",
+                                "9209": "Vitamins and Supplements",
+                                "9210": "Water Activities",
+                                "9211": "Well+Good TALKS",
+                                "9212": "Wellness Council",
+                                "9213": "Wellness in Color",
+                                "9214": "Wellness Retreats",
+                                "9215": "What the Wellness",
+                                "9216": "Winter Skin Care",
+                                "9217": "Women's Empowerment",
+                                "9218": "Workout Outfits",
+                                "9219": "Yoga",
+                                "9220": "Yoga Equipment",
+                                "9221": "Yoga Moves",
+                                "9222": "Yoga Studios Near Me",
+                                "9223": "You Versus Food"
+                            },
+                            "default_value": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1,
+                            "ajax": 1,
+                            "return_format": "value",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5c3fdf6e43435": {
+                    "key": "layout_5c3fdf6e43435",
+                    "name": "editorialtag_module_post",
+                    "label": "Featured Post",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c3fe0abaacba",
+                            "label": "Sponsored?",
+                            "name": "sponsored",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5c3fdf6e43436",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "If blank, the post name will be displayed",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Optional Title",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5c3fdf6e43437",
+                            "label": "Post",
+                            "name": "post",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "taxonomy"
+                            ],
+                            "elements": "",
+                            "min": 1,
+                            "max": 1,
+                            "return_format": "object"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Module",
+            "min": "",
+            "max": 5
+        },
+        {
+            "key": "field_5de989cf172fa",
+            "label": "All Topics Page",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5de989e2172fb",
+            "label": "Thumbnail",
+            "name": "editorialtag_thumbnail",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e4e96bbf42da",
+            "label": "Franchise Options",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db7b05ec9f7e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e4e977af42db",
+            "label": "Franchise Description",
+            "name": "editorialtag_franchise_description",
+            "type": "textarea",
+            "instructions": "Max 500 characters",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db7b05ec9f7e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 500,
+            "rows": 6,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e4e97fbf42dc",
+            "label": "Franchise Logo",
+            "name": "editorialtag_franchise_logo",
+            "type": "image",
+            "instructions": "Franchise logos should be 500px x 450px",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db7b05ec9f7e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e4e9827f42dd",
+            "label": "See More Link",
+            "name": "editorialtag_franchise_see_more_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5db7b05ec9f7e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "category"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1594203351
+}

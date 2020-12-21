@@ -1,0 +1,274 @@
+.product-guide-header {
+  @include z('navigation');
+  background-color: $product-guide-rose;
+  transform: translateY(-100%);
+  position: fixed;
+  left: auto;
+  width: 100%;
+  height: $nav-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: none;
+  @include orientation('landscape') {
+    @include background;
+    transform: translateX(-100%);
+    width: $nav-width;
+    height: 100%;
+  }
+  &__top {
+    @include gutter;
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    @include orientation('landscape') {
+      margin: 0 auto;
+      height: auto;
+    }
+    &--logo-back {
+      @include text-h6;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      color: $product-guide-white;
+      text-transform: uppercase;
+      font-size: 14px;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      line-height: 14px;
+      opacity: 0;
+      display: none;
+      transform: translateX(5px);
+      transition: opacity .5s, transform .5s;
+      @include orientation('landscape') {
+        display: flex;
+      }
+    }
+    &--logo-copy {
+      @include text-h5;
+      color: $product-guide-white;
+      padding-left: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 14px;
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity .5s, transform .5s;
+      @include orientation('landscape') {
+        padding-left: 0;
+      }
+      & span {
+        transform: scaleY(.85);
+        letter-spacing: 6px;
+        margin-left: 6px;
+      }
+    }
+    &--logo {
+      width: 100%;
+      position: relative;
+      @include orientation('landscape') {
+        text-align: center;
+        margin: 20px auto;
+      }
+      & > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+      }
+    }
+    &--hamburger {
+      position: relative;
+      display: flex;
+      height: 9px;
+      justify-content: space-between;
+      width: 20px;
+      flex-direction: column;
+      @include orientation('landscape') {
+        display: none;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      & span {
+        height: 1px;
+        background-color: $product-guide-white;
+        width: 100%;
+      }
+    }
+  }
+  &__bottom {
+    display: none;
+    @include orientation('landscape') {
+      display: flex;
+      position: relative;
+      top: 0;
+      height: auto;
+      width: 100%;
+      right: auto;
+      flex-shrink: 0;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+    &--social {
+      @include z('content');
+      height: 47px;
+      color: $product-guide-white;
+      background-color: $product-guide-red;
+      width: 100%;
+      display: flex;
+      flex-shrink: 0;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      & > span {
+        @include text-h6;
+      }
+      & > ul {
+        list-style: none;
+        padding: 0;
+        display: inline-flex;
+        height: 18px;
+        margin: 0;
+        & > li {
+          margin-left: 10px;
+          font-size: 11px;
+          & a {
+            text-decoration: none;
+            color: $product-guide-white;
+          }
+        }
+      }
+    }
+  }
+  &__quiz-callout {
+    @include z('content');
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: $product-guide-white;
+    color: $product-guide-black;
+    bottom: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    flex-direction: column;
+    width: 180px;
+    height: 80px;
+    transform: translateY(100%);
+    transition: transform $nav-speed;
+    @include break('width', $break-small) {
+      width: 190px;
+      height: 100px;
+    }
+    &:before {
+      content: '';
+      @include z('negative');
+      position: absolute;
+      bottom: 0;
+      border: solid 1px $product-guide-red;
+      border-bottom: none;
+      top: 4px;
+      right: 4px;
+      left: 4px;
+      @include break('width', $break-small) {
+        top: 6px;
+        right: 6px;
+        left: 6px;
+      }
+      @include orientation('landscape') {
+        top: 4px;
+        right: 4px;
+        left: 4px;
+        @include break('height', $break-small) {
+          top: 6px;
+          right: 6px;
+          left: 6px;
+        }
+      }
+    }
+    &--sponsor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20px;
+    }
+    &--sponsor_relationship {
+      color: $product-guide-grey;
+    }
+    &--sponsor_logo {
+      height: 30px;
+      width: 50px;
+      margin: 0 5px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &--title {
+      @include text-h4;
+    }
+    &--link {
+      @include text-h6;
+      display: flex;
+      align-items: center;
+      text-decoration: underline;
+      height: 22px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  &.product-guide-header--loading {
+    transform: translateX(100vw);
+    transition: transform .9s;
+  }
+  &.product-guide-header--loaded {
+    transform: translateX(200vw);
+    transition: transform .9s;
+  }
+  &.active {
+    position: fixed;
+    transform: translateY(0);
+    transition: transform $animation-transition;
+    transition-delay: 0;
+    top: 0;
+    left: auto;
+    @include orientation('landscape') {
+      top: auto;
+      left: 0;
+      transform: translateX(0);
+    }
+    .product-guide-header__quiz-callout {
+      transform: translateY(0);
+      transition: transform $animation-transition;
+      transition-delay: .1s;
+    }
+  }
+  &--index {
+    transition: transform $animation-transition;
+  }
+  &--category {
+    transform: translateY(0);
+    @include orientation('landscape') {
+      transform: translateX(0);
+    }
+    & .product-guide-header__quiz-callout {
+      transform: translateY(0);
+    }
+  }
+  &.loading {
+    &  * {
+      transition: none !important;
+    }
+  }
+}

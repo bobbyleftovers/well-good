@@ -1,0 +1,27 @@
+.featured-content-promo-wrapper {
+  border-top: 1px solid #EEE7E0;
+  border-bottom: 1px solid #EEE7E0;
+  padding: 30px 0;
+  margin: 30px 0;
+}
+
+.featured-content-promo-text {
+  padding: 25px 20px;
+}
+
+.featured-content-promo-text .text-label {
+  margin-bottom: 10px;
+}
+
+.featured-content-promo-btns {
+  padding-top: 10px;
+}
+
+.featured-content-promo-title {
+  margin-bottom: 5px;
+}
+
+.featured-content-promo-text .text-big {
+  font-size: 18px;
+  line-height: 29px;
+}

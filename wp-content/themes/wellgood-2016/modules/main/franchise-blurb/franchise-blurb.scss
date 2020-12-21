@@ -1,0 +1,56 @@
+.franchise-blurb__franchise {
+  margin: 10px 15px 10px 0;
+  float: left;
+
+	@media (min-width: break($s)) {
+    margin: 7px 30px 0 0;
+    float: none;
+  }
+}
+
+.franchise-blurb__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.franchise-blurb__image-module {
+  position: relative;
+  background-size: contain;
+  height: 81px;
+  width: 90px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: none;
+
+  @media (min-width: break($s)) {
+    display: inline;
+    height: 126px;
+    width: 140px;
+  }
+
+  &--mobile {
+    display: inline;
+
+    @media (min-width: break($s)) {
+      display: none;
+    }
+  }
+}
+
+.franchise-blurb__description {
+  & a {
+    font-style: italic;
+    color: $black !important;
+    text-decoration: underline !important;
+    border-bottom: none !important;
+
+    &:hover {
+      color: $hover;
+    }
+  }
+}
+
+.franchise-blurb__sponsor--text {
+  letter-spacing: 2px;
+}

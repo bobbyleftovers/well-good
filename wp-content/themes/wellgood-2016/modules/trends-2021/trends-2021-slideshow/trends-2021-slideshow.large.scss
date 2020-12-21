@@ -1,0 +1,58 @@
+
+  // set watchCSS: true on flickity instance, disable for small devices
+  .trends-2021-slideshow--large  .trends-2021-slideshow__container:after {
+    content: '';
+    display: none;
+
+    @screen sm {
+      content: 'flickity';
+    }
+  }
+  
+  .trends-2021-slideshow--large .trends-2021-slideshow__caption.text-caption {
+    font-size: 12px;
+    font-style: italic;
+    @apply text-gray #{!important};
+    max-width: 275px;
+
+    @screen ml {
+      font-size: 14px;
+    }
+
+    @screen lg {
+      width: 72%;
+    }
+  }
+
+.trends-2021-slideshow--large .trends-2021-slideshow__figure {
+      padding-left: 25px;
+      padding-right: 25px;
+      
+      @screen sm-down {
+        max-width: 325px;
+      }
+
+      @screen sm {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      @screen ml {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+  
+      @screen lg {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+}
+
+
+.trends-2021-slideshow--large .trends-2021-slideshow__container:not(.flickity-enabled) {
+  @screen sm {
+    max-height: 32.36vw;
+    overflow: hidden;
+    position: relative;
+  }
+}

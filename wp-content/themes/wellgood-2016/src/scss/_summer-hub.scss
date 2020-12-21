@@ -1,0 +1,39 @@
+.summer-wrapper {
+  background-image: repeating-linear-gradient(199deg, #EFCA71, #F18255 2000px, #EFCA71 4000px);
+  margin-bottom: 40px;
+
+  &.summer-hub-v2 {
+    background-image: none !important;
+    background-color: $light-tan;
+  }
+}
+
+
+.summer-posts-container {
+  padding: 120px 20px 100px;
+
+  .summer-hub-v2 & {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    max-width: 1235px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: break($xs)) {
+    padding: 120px 64px 100px;
+
+    .summer-hub-v2 & {
+      padding: 30px 21px 20px;
+    }
+  }
+
+  @media (min-width: break($m)) {
+    padding: 120px 80px 100px;
+  }
+
+  @media (min-width: break($l)) {
+    .summer-hub-v2 & {
+      padding: 30px 0 0;
+    }
+  }
+}

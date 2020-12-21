@@ -1,0 +1,88 @@
+.product-guide-recommendation {
+  @include z('content');
+  &__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 120px;
+    @include break('width', $break-small) {
+      height: 130px;
+    }
+    @include orientation('landscape') {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+  &__image {
+    margin: 5px 10px 5px 0;
+    background-color: $product-guide-white;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    height: 90px;
+    width: 100px;
+    @include break('width', $break-small) {
+      height: 110px;
+      width: 130px;
+    }
+    @include orientation('landscape') {
+      margin: 20px;
+      height: 200px;
+      width: 220px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    width: 50%;
+    @include break('width', $break-small) {
+      width: auto;
+    }
+    @include orientation('landscape') {
+      align-items: center;
+      text-align: center;
+    }
+    &--details {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &--title {
+      width: 100%;
+      margin: 4px auto;
+      @include break('width', $break-small) {
+        margin: 10px auto;
+      }
+      @include orientation('landscape') {
+        width: 200px;
+        margin: 4px auto;
+        @include break('height', $break-small) {
+          margin: 10px auto;
+        }
+      }
+    }
+    &--category {
+      color: $product-guide-white;
+      text-decoration: none;
+    }
+  }
+  & article {
+    display: none;
+  }
+  &.details-open {
+    transform: none;
+    z-index: inherit;
+    &:hover {
+      transform: none;
+      transition: none;
+    }
+  }
+}
+

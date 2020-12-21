@@ -1,0 +1,168 @@
+@mixin justify() {
+	text-align: justify;
+	&:after {
+		content: '';
+		width: 100%;
+		display: inline-block;
+	}
+}
+
+@mixin vertically-center($el) {
+	&:after {
+		content: '';
+		height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	#{$el} {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+@mixin extend($placeholder) {
+	@extend %#{$placeholder};
+}
+
+@mixin max-width($value: $max-width) {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $value;
+}
+
+@mixin appearance($value: none) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+// Detect Edge and IE11
+@mixin fallback {
+    // IE 11
+    @media all and (-ms-high-contrast:none) {
+      @content;
+    }
+    // Edge
+    @supports (display: -ms-grid) {
+      @content;
+    }
+}
+
+// Detect support for modern implementation of Grid
+@mixin has-grid {
+  @supports (grid-area: auto) {
+    @content;
+  }
+}
+
+// Not a mixin but this is a find place for this.
+@keyframes blinker {
+  0%    { opacity: 0; }
+  40%   { opacity: 1; }
+  60%   { opacity: 1; }
+  100%  { opacity: 0; }
+}
+
+
+@mixin font($_style) {
+	@if $_style == _p {
+		font-family: $freight;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 17px;
+		@media (min-width: break($l)) {
+			font-size: 13px;
+			line-height: 19px;
+		}
+	} @else if $_style == _h5 {
+		font-family: $sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 10px;
+		line-height: 11px;
+		letter-spacing: 1.54px;
+	} @else if $_style == _h4 {
+		font-family: $sans-serif-extra-condensed;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 20px;
+		letter-spacing: .51px;
+		@media (min-width: break($l)) {
+			letter-spacing: .15px;
+		}
+	} @else if $_style == _h3 {
+		font-family: $sans-serif-extra-condensed;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 22px;
+		letter-spacing: .89px;
+		@media (min-width: break($m)) {
+			font-size: 25px;
+			line-height: 24px;
+			letter-spacing: .89px;
+		}
+	} @else if $_style == _h2 {
+		font-family: $sans-serif-extra-condensed;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 20px;
+		letter-spacing: .62px;
+		@media (min-width: break($m)) {
+			font-size: 28px;
+			line-height: 28px;
+			letter-spacing: .82px;
+		}
+		@media (min-width: break($l)) {
+			font-size: 34px;
+			line-height: 29px;
+			letter-spacing: 1px;
+		}
+	} @else if $_style == _h1 {
+		font-family: $sans-serif-extra-condensed;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 37px;
+		line-height: 30px;
+		letter-spacing: .62px;
+		@media (min-width: break($m)) {
+			font-size: 45px;
+			line-height: 38px;
+			letter-spacing: .68px;
+		}
+		@media (min-width: break($l)) {
+			font-size: 56px;
+			line-height: 45px;
+			letter-spacing: .86px;
+		}
+	}
+}
+@mixin stagger($_max) {
+	$nth:1;
+	$items:$_max;
+	@for $i from $nth through $items {
+		@if $i > 1 {
+			&:nth-of-type(#{$i}){
+				transition-delay:#{($i - 1) * 60}ms;
+			}
+		}
+	}
+}
+
+@mixin transition( $prop, $speed:$transition-duration ) {
+	transition-duration: $speed;
+	transition-timing-function: $transition-timing-function;
+	transition-property: $prop;
+}
+
+%trans {
+	transition-duration: $transition-duration;
+	transition-timing-function: $transition-timing-function;
+}
+@each $prop in all, height, opacity, color, background-color, border-color, transform, top, left, padding {
+	%trans-#{$prop} {
+		@extend %trans;
+		transition-property: $prop;
+	}
+}

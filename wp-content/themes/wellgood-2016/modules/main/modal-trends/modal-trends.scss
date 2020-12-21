@@ -1,0 +1,299 @@
+html.js-modal-trends-open,
+body.js-modal-trends-open {
+	overflow-y: hidden;
+}
+
+.modal-trends {
+	backface-visibility: hidden;
+	display: none;
+	overflow: visible;
+	z-index: 1009;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	@include vertically-center('.modal-trends--outer');
+	text-align: center;
+	font-size: 0.001px;
+	.modal-bg {
+		position: fixed;
+		background: rgba($white, 0.9);
+	}
+
+	.modal-close {
+		z-index: 1020;
+		padding: 19px;
+		&:before {
+			color: $black;
+			font-size: 12px;
+		}
+		@media (min-width: break($m)) {
+			&:hover {
+				&:before {
+					color: $seafoam;
+				}
+			}
+		}
+		@media (min-width: break($s)) {
+			padding: $edge-gutter;
+			&:before {
+				font-size: 18px;
+			}
+		}
+	}
+
+	.js-modal-trends__sponsored,
+	.js-modal-trends__sponsored-link {
+		display: none;
+		&.show {
+			display: block;
+		}
+	}
+
+	.js-modal-trends__sponsor-link__by,
+	.js-modal-trends__sponsor-link__image {
+		display: none;
+		&.show {
+			display: inline-block;
+		}
+	}
+
+	.js-modal-trends__image {
+		display: block;
+		@media (min-width: break($s)) {
+			display: none;
+		}
+	}
+
+	.js-modal-trends__image--full {
+		display: none;
+		@media (min-width: break($s)) {
+			display: block;
+		}
+	}
+
+	.trend__image__wrapper {
+		@media (min-width: break($s)) {
+		    width: 40%;
+			display: inline-block;
+		    vertical-align: top;
+		}
+	    img {
+	    	width: 100%;
+	    	height: auto;
+	    }
+	}
+
+	.trend__meta {
+		padding: 0 20px 20px;
+		.article-card--trend__image__content {
+			text-align: left;
+		}
+		@media (min-width: break($s)) {
+			padding: 0 0 0 40px;
+		    width: 60%;
+			display: inline-block;
+		    vertical-align: top;
+		    max-width: none;
+		    text-align: left;
+		}
+	}
+
+	.modal-trends-content__share {
+		padding: 20px 0 70px;
+		border-top: 1px solid $light-grey;
+
+		@media(min-width: break($ml)){
+			padding: 20px 0 0;
+		}
+	}
+
+	@media (min-width: break($s)) {
+		overflow-x: visible;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+}
+.modal-trends--outer {
+	z-index: 1010;
+	position: relative;
+	background-color: $white;
+	text-align: left;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	@media (min-width: break($s)) {
+		box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+		width: 85%;
+		max-width: 1115px;
+		position: relative;
+		top: auto;
+		bottom: auto;
+		left: auto;
+		right: auto;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba( $white, 0.35 );
+		z-index: 0;
+	}
+
+	@media (min-width: break($m)) {
+	}
+}
+.modal-trends-content__wrapper {
+	position: relative;
+	overflow-x: visible;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	position: absolute;
+	top: 50px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	@media (min-width: break($s)) {
+		position: relative;
+		top: auto;
+		bottom: auto;
+		left: auto;
+		right: auto;
+	}
+}
+.modal-trends-content__inner {
+	z-index: 1011;
+	position: relative;
+	text-align: center;
+	font-size: 0.001px;
+	@media (min-width: break($s)) {
+		padding: 60px;
+	}
+}
+
+.modal-trends-nav {
+	z-index: 1020;
+	position: fixed;
+	display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+	height: 50px;
+	background: $white;
+	@media (min-width: break($s)) {
+		position: static;
+		background: none;
+		width: 100%;
+		height: auto;
+	}
+	@media (min-width: break($m)) {
+		display: inline-block;
+	    top: auto;
+	    left: auto;
+	    right: auto;
+	}
+}
+
+.modal-trends-prev-next-divider {
+	background: $light-grey;
+    height: 20px;
+    width: 1px;
+    display: inline-block;
+    vertical-align: middle;
+	@media (min-width: break($s)) {
+		display: none;
+	}
+}
+
+.modal-trends-prev,
+.modal-trends-next {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1020;
+	padding: 15px;
+	text-decoration: none;
+	&:before,
+	&:after {
+		vertical-align: middle;
+		font-size: 18px;
+		color: $black;
+	}
+	&.disabled {
+		opacity: .2;
+		cursor: auto;
+		@media (min-width: break($m)) {
+			&:hover {
+				color: $black;
+				&:before,
+				&:after {
+					color: $black;
+				}
+			}
+		}
+	}
+	@media (min-width: break($m)) {
+		&:hover {
+			color: $seafoam;
+			&:before,
+			&:after {
+				color: $seafoam;
+			}
+		}
+	}
+	@media (min-width: break($s)) {
+		position: fixed;
+		top: 50%;
+		margin-top: -120px;
+		padding: 100px 50px;
+		&:before,
+		&:after {
+			font-size: 60px;
+		}
+	}
+}
+
+.modal-trends-prev {
+	@include icon("angle-left", "before", false);
+	@media (min-width: break($s)) {
+		@include icon("arrow-left-super-thin", "before", false);
+		left: 15px;
+		margin-right: 0;
+	 	padding-left: 0;
+	}
+	@media (min-width: break($l)) {
+		left: 60px;
+	}
+}
+
+.modal-trends-next {
+	@include icon("angle-right", "after", false);
+	@media (min-width: break($s)) {
+		@include icon("arrow-right-super-thin", "after", false);
+		right: 15px;
+	 	padding-right: 0;
+	}
+	@media (min-width: break($l)) {
+		right: 60px;
+	}
+}
+
+.modal-trends-prev__label,
+.modal-trends-next__label {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 8px;
+	@media (min-width: break($s)) {
+		display: none;
+	}
+}

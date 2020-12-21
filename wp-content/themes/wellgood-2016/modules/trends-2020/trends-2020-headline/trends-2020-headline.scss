@@ -1,0 +1,63 @@
+.trends-2020-headline {
+	width: 100%;
+	max-width: 869px;
+	margin: 0 auto;
+}
+
+.trends-2020-headline__title {
+	margin-bottom: 27px;
+  text-align: center;
+  @media (max-width: break($s, false)) {
+    margin-bottom: 10px;
+  }
+}
+
+.trends-2020-headline__title > span {
+	display:block;
+  margin-bottom: 19px;
+  @media (max-width: break($s, false)) {
+    margin-bottom: 10px;
+  }
+}
+
+.trends-2020-headline__title > img {
+	width:95%;
+	display:block;
+	max-width: 300px;
+	margin: 0 auto;
+  @media (max-width: break($m, false)) {
+		max-width: 580px;
+  }
+  @media (max-width: break($s, false)) {
+    max-width: 500px;
+  }
+}
+
+.trends-2020-headline__description {
+	color: $white;
+	width: 100%;
+	max-width: 581px;
+	margin: 0 auto;
+  text-align: center;
+}
+
+
+.trends-2020-headline__title,
+.trends-2020-headline__description {
+  transform: translate3d(0,0,0);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.trends-2020-headline__description {
+  transition-delay: 0.5s;
+}
+
+body:not(.ie) .waypoint .trends-2020-headline__title {
+  transform: translate3d(0,10px,0);
+  opacity:0;
+}
+
+body:not(.ie) .waypoint .trends-2020-headline__description {
+  transform: translate3d(0,10px,0);
+  opacity:0;
+}

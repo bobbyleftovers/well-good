@@ -1,0 +1,15 @@
+.text-h1--extra-large {
+  @extend %text-h1;
+}
+
+.theme-trends-2021 {
+  .text-h1 {
+    font-size: 90px;
+    line-height: 1em;
+  }
+
+  .text-h1--extra-large {
+    font-size: 120px;
+    line-height: 1em;
+  }
+}

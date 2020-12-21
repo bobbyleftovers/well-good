@@ -1,0 +1,57 @@
+.signup-form--sidebar {
+	border: 1px solid $light-grey;
+	text-align: center;
+	margin-top: 30px;
+
+	.single-post & {
+		margin-top: 10px;
+	}
+
+	.sidebar-signup-graphic {
+		position: relative;
+		@include aspect_ratio(5/4);
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+	.signup-form__inner {
+		width: 100%;
+	}
+
+	@media (min-width: break($s)) and (max-width: break($m)) {
+		font-size: 0.001px;
+		display: inline-block;
+		max-width: none;
+		width: 100%;
+
+		.sidebar-signup-graphic {
+			vertical-align: middle;
+			display: inline-block;
+			width: 50%;
+			height: auto;
+			@include aspect_ratio(5/2);
+		}
+
+		.signup-form__inner {
+			@include paragraph;
+
+			vertical-align: middle;
+			display: inline-block;
+			width: 50%;
+			margin: 0;
+			padding: 0 0 0 20px;
+			.menu-item.menu-item-type-social {
+				a {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.signup-form__tagline,
+	form {
+		padding: 0 25px;
+	}
+}

@@ -1,0 +1,14 @@
+.font-code,
+.unicoderange .font-code,
+.inline-code  {
+  font-family: Consolas,Monaco,Andale Mono,monospace;
+}
+
+.text-h2-styleguide,
+.unicoderange .text-h2-styleguide  {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  @apply font-sans text-seafoam-dark block mb-e20;
+  margin-top: 45px;
+}

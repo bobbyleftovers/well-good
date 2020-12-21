@@ -1,0 +1,22 @@
+// Core/quote
+.theme-trends-2021 .core-quote {
+  z-index: 1;
+  float: none;
+  clear: both;
+}
+
+.theme-trends-2021 .core-quote:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 57%;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  padding-bottom: 54.05%;
+  border-radius: 129%;
+  background: var(--trends-2021-primary);
+  opacity: 0.48;
+  z-index: -1;
+  filter: blur(50px);
+}

@@ -1,0 +1,39 @@
+.core-quote {
+ padding-left: 0;
+ border: 0 !important;
+ max-width: 354px;
+ display: block;
+ margin: 30px auto 30px; 
+ @screen md {
+  max-width: 500px;
+  margin: 25px auto 25px; 
+ }
+ @screen ml {
+  max-width: 622px;
+  margin: 60px auto 45px; 
+ }
+ @screen lg {
+  max-width: 666px;
+  margin: 70px auto 45px; 
+ }
+ color: inherit;
+}
+
+.core-quote cite {
+  display: block;
+  margin: 15px auto 0;
+  opacity: 0.6;
+}
+
+.core-paragraph + .core-quote {
+  margin-top: 20px;
+
+  
+  @screen ml {
+    margin-top: 50px;
+  }
+  
+  @screen lg {
+    margin-top: 60px;
+  }
+}

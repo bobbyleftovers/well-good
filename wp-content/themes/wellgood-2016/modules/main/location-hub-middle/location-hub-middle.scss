@@ -1,0 +1,8 @@
+// template recycled from suja template -- styles can be found in the suja-middle moduel
+.chub-second-middle__content {
+    margin-top: 30px;
+
+    @media (min-width: break($s)){
+        margin-top: 50px;
+    }
+}

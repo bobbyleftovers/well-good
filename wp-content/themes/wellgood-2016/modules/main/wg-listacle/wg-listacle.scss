@@ -1,0 +1,44 @@
+h1, h2:not(.text-h2), h3, h4, h5, h6 {
+  & + .theme-main-2020 > .wg-listacle.no-title {
+    margin-top: 20px;
+  }
+}
+
+.wg-listacle__image {
+  flex:0 0 342px;
+  max-width: 50%;
+}
+.wg-inline-listacle__content > p:first-child {
+  margin-top:0;
+}
+
+// @WORK
+// @zalo don't kill me for this, i'll come back
+.wg-listacle__content {
+  .post__main & h3 {
+    @extend %text-h5;
+
+    font-style: italic;
+    margin-top: 20px !important;
+  }
+}
+.wg-listacle-wrapper {
+  .post__main & ol {
+    margin-left: 0 !important;
+
+    & li {
+      list-style-type: none !important;
+    }
+  }
+  .post__main & .wg-listacle-title {
+    margin-top: 0 !important;
+  }
+}
+
+.wg-listacle-wrapper .wg-listacle-title {
+  @apply mb-e15 #{!important};
+
+  @screen md {
+    @apply mb-e5 #{!important};
+  }
+}

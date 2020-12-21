@@ -1,0 +1,54 @@
+{
+    "key": "group_5f7f06b615845",
+    "title": "Gutenberg: ACF\/Slideshow\/Format",
+    "fields": [
+        {
+            "key": "field_5f7f06ede27ad",
+            "label": "Format",
+            "name": "format",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "large": "Large (multiple shapes)",
+                "small": "Small (ovals)"
+            },
+            "default_value": "large",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/slideshow"
+            },
+            {
+                "param": "block_page_template",
+                "operator": "==",
+                "value": "templates\/page-trends-2021.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1602165584
+}

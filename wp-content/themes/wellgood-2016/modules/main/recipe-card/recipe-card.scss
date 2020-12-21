@@ -1,0 +1,583 @@
+
+// Main block
+
+.recipe-card {
+  margin-top: 1em;
+
+  .recipe--standard & {
+    border: $recipe-border-grey;
+    padding: 20px;
+
+    @media (min-width: break($recipe-break)) {
+      padding: 40px;
+    }
+  }
+}
+
+.recipe-card,
+.recipe-after {
+  & ul, 
+  & ol {
+    margin-left: 0 !important;
+    list-style-position: inside !important;
+  }
+}
+
+
+// Recipe header
+
+.recipe-header__title-wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.recipe-header__title {
+  // Reset margins to allow for alignment with download icon
+  @extend %h1;
+  
+	margin-top: 0;
+  margin-bottom: 0;
+
+  .recipe--standard & {
+    @media (max-width: break($recipe-break, true)) {
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
+}
+
+.recipe-header__download {
+	width: $recipe-spacer-md;
+	height: $recipe-spacer-md;
+	color: $seafoam;
+}
+
+
+
+// Sections
+
+// The typography is slightly different than h2 or h3, so creating new styles here
+.recipe-section__title {
+  @extend %h2;
+
+  margin-top: $recipe-spacer-lg;
+
+  @extend %unicode-fallback-serif;
+
+  &--notes {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+
+// Details
+
+.recipe-section--details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 740px;
+
+
+  .recipe--standard & {
+    @media (min-width: break($recipe-break)) {
+      grid-template-columns: auto 250px;
+    }
+  }
+}
+
+.recipe-details__main {
+  @media (min-width: break($recipe-break)) {
+    order: 1;
+  }
+}
+
+.recipe-details__side {
+  display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: $recipe-spacer-md;
+
+	@media (min-width: break($recipe-break)) {
+    order: 2;
+		flex-direction: column;
+		justify-content: flex-start;
+    width: 180px;
+
+	}
+
+}
+
+.recipe-details__list {
+  list-style-type: none;
+
+  .recipe--standard & {
+      width: 250px;
+  }
+
+  .recipe--sponsored & {
+      border: $recipe-border-grey;
+      text-align: center;
+      max-width: 740px;
+
+      @media (min-width: break($recipe-break)) {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        padding: $recipe-spacer-md $recipe-spacer-lg;
+        padding-bottom: $recipe-spacer-md;
+        border-bottom: 1px solid $seafoam;
+      }
+
+  }
+}
+
+.recipe-details__list-item {
+  display: flex;
+  align-items: center;
+
+  .recipe--sponsored & {
+
+    @media (max-width: break($recipe-break, true)) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      padding-top: $recipe-spacer-md;
+      padding-bottom: $recipe-spacer-md;
+      border-bottom: $recipe-border-grey;
+      width: 90%;
+      margin-right: auto;
+      margin-left: auto;
+
+      &:last-child {
+        border-color: $seafoam;
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 100%;
+      }
+    }
+
+    @media (min-width: break($recipe-break)) {
+      border-right: $recipe-border-grey;
+      flex-direction: column;
+
+      &:last-child {
+        border-right: none;
+      }
+
+
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+
+    }
+  }
+}
+
+.recipe-detail__title {
+  font-weight: 700;
+  width: 150px;
+
+  .recipe--sponsored & {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: $neuehaas;
+    margin-bottom: 0;
+  }
+}
+
+.recipe-detail__icon {
+	color: $seafoam;
+}
+
+.recipe-detail__input {
+  width: 42px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.recipe-detail__value {
+  display: flex;
+  align-items: center;
+}
+
+.recipe-dietary {
+  display: flex;
+  align-items: center;
+  margin: 0 4px;
+}
+.recipe-dietary__icon {
+  margin: 0px;
+}
+
+// In .recipe-details__side:
+
+.recipe-details__image {
+  background-size: cover;
+  border-radius: 50%;
+
+  width: 100px;
+  height: 100px;
+
+  @media(min-width: break($recipe-break)) {
+    width: 180px;
+    height: 180px;
+  }
+
+}
+
+.recipe-details__rating {
+	display: flex;
+  justify-content: center;
+  flex-direction: column;
+	margin-top: $recipe-spacer-sm;
+	padding-left: $recipe-spacer-md;
+	padding-right: $recipe-spacer-md;
+}
+
+
+
+
+// Ingredients
+
+.recipe-ingredients {
+	margin-left: 20px;
+
+  .recipe--sponsored & {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 740px;
+
+  }
+}
+
+.recipe-ingredient {
+
+  .recipe--standard & {
+    list-style-position: outside;
+    margin-left: 16px;
+  }
+
+  .recipe--sponsored & {
+    list-style-type: none !important;
+    text-align: center;
+    padding-top: 10px;
+    width: 50%;
+    margin-bottom: $recipe-spacer-md;
+    padding: 10px 10px 0;
+
+    @media (min-width: break($ml) ) {
+      width: 33.333%;
+    }
+
+    @media (min-width: break($l) ) {
+      width: 25%;
+    }
+
+  }
+}
+
+// Specificity necessary for override
+.post__main a.recipe-ingredient__link {
+  &:hover:not(.btn) {
+    border-bottom: none;
+
+  }
+}
+
+.recipe-ingredient__image-wrap {
+  border-radius: 50%;
+  width: 125px;
+  margin-bottom: $recipe-spacer-sm;
+  overflow: hidden;
+  position: relative;
+  &:after {
+    content: '';
+    padding-bottom: 100%;
+    display: block;
+  }
+}
+
+// Specifcity necessary for override
+img.recipe-ingredient__image {
+  .post__main & {
+    height: 100%;
+    max-width: none !important;
+  }
+
+  // Note: this is replicating the hover styles of the "You May Also Like" posts
+  transition: 0.2s ease-in-out all;
+  a:hover & {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.recipe-ingredient__text {
+  color: $black;
+  margin-top: $recipe-spacer-sm;
+  font-size: 16px;
+  line-height: 1.5em;
+  text-decoration: none;
+
+  @include transition(color);
+  @media(min-width: break($m)){
+    .recipe-ingredient__link:hover &, &--sponsored:hover {
+      color: $seafoam;
+    }
+  }
+
+}
+
+.recipe-ingredient__icon-external {
+  opacity: 0.25;
+  color: $black;
+  position: relative;
+  top: 3px;
+  padding-left: 3px;
+}
+
+.recipe-indredient__contents-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+
+.recipe-ingredient__sponsor-notice {
+  background-color: $seafoam;
+  text-transform: uppercase;
+  color: $white;
+  font-family: $sans-serif-condensed;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 17px;
+  padding-left: 8px;
+  padding-right: 8px;
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+
+  left: 35%;
+
+}
+
+.recipe-ingredients__btn-wrap {
+  margin-top: 30px;
+  &--sponsored {
+    border-top: $recipe-border-grey;
+    border-bottom: $recipe-border-grey;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+
+    .chicory-button-container {
+      position: relative;
+
+      a {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(102%);
+      }
+    }
+  }
+}
+
+// Instructions
+
+.recipe-instructions {
+  counter-reset: item;
+	list-style-type: none;
+}
+
+.recipe-instructions__video {
+  margin-bottom: 50px;
+  margin-top: $recipe-spacer-md;
+}
+
+.recipe-instruction__detail {
+	counter-increment: item;
+	padding-top: $recipe-spacer-md;
+	padding-bottom: $recipe-spacer-md;
+	border-bottom: $recipe-border-grey;
+  display: block;
+
+
+	// TODO: double check on preferred breakpoint
+	@media (min-width: break($recipe-break)) {
+    display: flex;
+	}
+
+	&:last-child {
+    border-bottom: 0;
+    padding-bottom: $recipe-spacer-lg;
+
+    .recipe--sponsored & {
+      padding-bottom: 40px;
+    }
+	}
+
+	&:before {
+		content: counter(item);
+		grid-area: int;
+		border-radius: 50%;
+		border: 1px solid $seafoam;
+    color: $seafoam;
+  	width: calc(#{$recipe-spacer-md} - 1);
+		height: calc(#{$recipe-spacer-md} - 3);
+		margin-top: $recipe-spacer-sm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3px;
+    padding-left: 1px;
+
+	}
+}
+
+.recipe-instruction__image {
+	position: relative;
+  width: 293px;
+
+  &:after {
+    content: '';
+    padding-bottom: 75%;
+    display: block;
+  }
+}
+
+.recipe-instruction__desc,
+.recipe__group-title {
+  padding-top: $recipe-spacer-sm;
+  width: 100%;
+  margin-left: $recipe-spacer-sm;
+
+  @media (min-width: break($recipe-break)) {
+    padding-right: $recipe-spacer-md;
+  }
+}
+
+.recipe-instruction__desc {
+  margin-top: 0;
+}
+
+
+
+// After recipe
+
+.recipe-after {
+	margin-top: $recipe-spacer-md;
+}
+
+// ul. specificity necessary to override .post__main ul li style.
+ul.recipe-after__terms {
+	margin-left: 0;
+	display: flex;
+}
+
+li.recipe-after__term {
+  list-style-type: none;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.recipe-after__term-image {
+  width: 25px;
+}
+
+.recipe-after__icon:before {
+	color: $seafoam;
+	font-size: $recipe-spacer-md;
+	padding-right: 3px; // Magic number
+}
+
+.recipe-extras {
+  border: $recipe-border-grey;
+  border-bottom: 1px solid $seafoam;
+  padding: 30px 35px 35px;
+
+  ul, ul li { // Weird general selectors to override general style on .post__main
+    list-style-type: none;
+  }
+
+  .recipe-section__title {
+    margin-top: 0;
+  }
+}
+
+.recipe-extras__wrap {
+  margin-top: $recipe-spacer-md;
+  display: flex;
+  max-width: 688px;
+  flex-wrap: wrap;
+
+
+  // @media( min-width: break($recipe-break) ) {
+  //   grid-template-rows: repeat(3, 35px);
+  //   grid-template-columns: repeat(2, 1fr);
+  //   grid-column-gap: 30px;
+  // }
+}
+
+.recipe-extra {
+  width: 100%;
+  margin-bottom: 17px;
+  @media (min-width: break($recipe-break)) {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+}
+
+// Specificity necessary to override global link hover style
+a.recipe-extra__link {
+
+  justify-content: start;
+  align-items: flex-start;
+  display: flex;
+
+  &:hover:not(.btn) {
+    border-bottom: 0;
+  }
+  .recipe-extra__icon {
+    height: 18px;
+    width: auto;
+    margin-right: 10px;
+    margin-top: 7px;
+  }
+}
+
+.recipe-extra__text {
+  color: $black;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 8px;
+}
+
+.chicory-button-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  button {
+    @extend .btn;
+    background: transparent;
+  }
+}
+
+.recipe-header__download-link {
+  text-decoration: none;
+}
+
+// Hide the BS from the plugin – this is not a real solution.
+.wpurp-container {
+  display: none;
+}

@@ -1,0 +1,84 @@
+.base-button {
+  height: 45px;
+  min-width: 160px;
+  @apply bg-seafoam-dark cursor-pointer inline-flex items-center justify-center px-e10 border transition duration-300 relative;
+  &:focus {
+    @apply outline-none;
+  }
+  &.disabled {
+    @apply cursor-not-allowed;
+  }
+}
+
+.base-button.disabled {
+  @apply cursor-not-allowed;
+}
+
+.base-button {
+  &:not(.disabled)  {
+    &:hover {
+      @apply bg-transparent;
+    }
+    &:focus {
+      @apply bg-transparent;
+      &:after {
+        @apply absolute;
+        content:'';
+        top:3px;
+        left:3px;
+        width:calc(100% - 6px);
+        height:calc(100% - 6px);
+        z-index: 0;
+      }
+    }
+  }
+  &.disabled {
+    @apply opacity-60;
+  }
+}
+
+.base-button--primary {
+  @apply bg-seafoam-dark border-seafoam-dark text-white;
+  &:not(.disabled)  {
+    &:hover {
+      @apply text-seafoam-dark;
+    }
+    &:focus {
+      @apply text-white;
+      &:after {
+        @apply bg-seafoam-dark;
+      }
+    }
+  }
+}
+
+
+.base-button--white {
+  @apply bg-white border-white text-seafoam-dark;
+  &:not(.disabled)  {
+    &:hover {
+      @apply text-white;
+
+      &.base-button--white-alt {
+        background-color: #284E52 !important;
+        border-color: #284E52 !important;
+      }
+    }
+    &:focus {
+      @apply text-seafoam-dark;
+      &:after {
+        @apply bg-white;
+      }
+
+      &.base-button--white-alt {
+        background-color: #284E52 !important;
+        border-color: #284E52 !important;
+      }
+    }
+  }
+}
+
+.base-button__text {
+  position:relative;
+  z-index: 10;
+}

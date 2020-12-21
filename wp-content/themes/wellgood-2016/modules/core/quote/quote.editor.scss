@@ -1,0 +1,14 @@
+.block-editor .wp-block blockquote {
+  @apply font-safe-display #{!important};
+  @extend %text-quote;
+  border-left: none;
+  text-align: center;
+  padding: 50px 5px 40px;
+}
+
+.block-editor .wp-block .wp-block-quote__citation {
+  font-style: italic;
+  @extend %text-big;
+  color: inherit;
+  opacity: 0.6;
+}

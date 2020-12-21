@@ -1,0 +1,14 @@
+.disclaimers__rightrail {
+  margin-bottom: 0;
+  display: none;
+  @media (min-width: break($m)) {
+    display: block;
+  }
+
+  &--mobile {
+    display: block;
+    @media (min-width: break($m)) {
+      display: none;
+    }
+  }
+}

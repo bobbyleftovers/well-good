@@ -1,0 +1,26 @@
+.acf-video .components-button {
+  min-width: 80px;
+  text-align: center !important;
+  justify-content: center;
+  opacity: 0;
+
+  [data-type="acf/video"]:hover & {
+    opacity:1;
+  }
+
+  .is-selected[data-type="acf/video"] & {
+    display: none;
+  }
+}
+
+.acf-video .base-button-play {
+  cursor: default;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+
+  [data-type="acf/video"]:hover &,
+  .is-selected[data-type="acf/video"] & {
+    opacity:0;
+  }
+}

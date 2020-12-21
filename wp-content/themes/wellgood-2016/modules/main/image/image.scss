@@ -1,0 +1,96 @@
+.image-module {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+	opacity: 0;
+	transform: scale(1, 1) translate3d(0, 0, 0);
+	@include transition(all);
+  @extend %bg-cover;
+	
+	&.post__image-wrapper {
+		position: relative;
+	}
+	
+  .post__featured-image-wrapper & {
+    position: relative;
+    opacity: 1;
+  }
+}
+.image-module-img {
+	width: 100%;
+	height: auto;
+	opacity: 0;
+}
+
+.image-module__icon {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 25px;
+	height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	padding-left: 3px;
+	padding-bottom: 1px;
+	font-size: 11px;
+	line-height: 1;
+	background: $light-tan;
+	border-radius: 50%;
+	z-index: 11;
+	text-align: center;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+
+	// Main Nav > Video menu item
+	.sub-menu__posts & {
+		bottom: 10px;
+		right: 10px;
+	}
+
+	.sub-menu__posts .sub-menu__card__image:hover & {
+		background: $white;
+	}
+
+	// Main Nav > Video menu item > Featured video
+	// Archive > Featured post
+	.article-list &,
+	.sub-menu__featured-container &,
+	.relationship-stories__list &,
+	.article-card--latest-stories &,
+	.article-card--tag-featured & {
+		width: 30px;
+		height: 30px;
+		font-size: 10px;
+	}
+
+	// Main nav > Video menu item > List 4 videos
+	.sub-menu__cards & {
+		font-size: 11px;
+	}
+
+	// Hide in author avatar
+	.article-card__avatar & {
+		display: none;
+	}
+}
+
+.image-module__icon--play {
+	@extend .icon-play;
+
+	color: $seafoam;
+}
+
+.image-module__franchise {
+	position: absolute;
+	height: 100px;
+	width: 200px;
+	top: 10px;
+	left: 10px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}

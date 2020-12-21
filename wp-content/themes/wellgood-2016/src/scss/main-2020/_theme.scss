@@ -1,0 +1,23 @@
+// Reset 2020
+@import "reset";
+
+// Mixins
+@import 'mixins.scss';
+
+// Fix preflight issues
+svg {
+  display: unset;
+  vertical-align: unset;
+}
+
+//Theme
+@import 'typography.scss';
+@import 'utils.scss';
+@import 'viewport.scss';
+@import 'outlines.scss';
+
+
+//Main 2020 global comp
+@import './onetrust-consent-sdk.scss';
+@import '~@modules/main-2020/base-button/base-button.scss';
+@import '~@modules/main-2020/base-input-submit/base-input-submit.scss';

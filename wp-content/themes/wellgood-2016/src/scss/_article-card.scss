@@ -1,0 +1,144 @@
+.article-list {
+	margin-top: 20px;
+}
+.article-card {
+	text-align: left;
+	z-index: 1;
+	padding: 30px 0 30px 0;
+	border-bottom: 1px solid $light-grey;
+	
+	@media (min-width: break($s)) {
+		padding-top: 30px;
+	}
+
+	@media (min-width: break($m)) {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+	&:first-child {
+		padding-top: 0;
+	}
+
+	&:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+.article-card__image {
+	@extend %image-fallback;
+	@include aspect_ratio( 3/2 );
+
+	display: block;
+	overflow: hidden;
+	transition: opacity ease-in-out .333s;
+
+	@media (min-width: break($s)) {
+		@include aspect_ratio( ((3/2)/.45) );
+		
+		width: 45%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	img {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	.article-card.hovering & {
+		opacity: $image-hover-opacity;
+		transition: opacity ease-in-out .333s;
+	}
+	
+}
+.article-card__meta {
+	margin-top: 6px;
+	width: auto;
+	background-color: $white;
+	padding: 2px;
+
+	@media (min-width: break($s)) {
+		margin-top: 0;
+		width: 55%;
+		padding-left: 40px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.article-card--category-featured & {
+		margin-top: -44px;
+		margin-right: 38px;
+		margin-left: 38px;
+		width: auto;
+	}
+}
+.article-card__category {
+	@extend %article-label;
+
+	display: block;
+	margin: 6px 0;
+
+	& > a {
+		color: $seafoam;
+		transition: color 110ms ease-in-out;
+	}
+
+	& > a:hover {
+		color: $hover;
+		transition: color 110ms ease-in-out;
+	}
+
+	.article-card--category-featured & {
+		margin: 0 auto;
+	}
+}
+.article-card__title {
+	@extend %article-title,
+		%article-title--medium;
+
+	margin-top: 0;
+	margin-bottom: 0;
+	max-width: 415px;
+	transition: color ease-in-out .333s;
+
+	.article-card--category-featured & {
+		padding-top: 0;
+	}
+
+	.article-card.hovering & {
+		color: $hover;
+		transition: color ease-in-out .333s;
+	}
+}
+.article-card__excerpt {
+	@extend %article-excerpt;
+
+	color: $grey;
+	margin-top: 10px;
+	margin-bottom: 15px;
+
+	@media (min-width: break($s)) {
+		margin-bottom: 5px;
+	}
+}
+.article-card__avatar {
+	position: relative;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.article-card__by {
+	display: block;
+	margin-top: 5px;
+
+	@media (min-width: break($s)) {
+		display: inline-block;
+		margin-top: 20px;
+	}
+}

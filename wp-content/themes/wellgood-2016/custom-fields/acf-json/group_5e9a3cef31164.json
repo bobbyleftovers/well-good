@@ -1,0 +1,62 @@
+{
+    "key": "group_5e9a3cef31164",
+    "title": "Trending articles",
+    "fields": [
+        {
+            "key": "field_5e9a3d2bb1a5a",
+            "label": "Trending Articles Title",
+            "name": "trending_articles_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Trending Articles",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e9ce124881fe",
+            "label": "Fetch posts from Parse.ly or fetch latests?",
+            "name": "trending_articles_fetch_parsely",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Trending posts in Parse.ly",
+            "ui_off_text": "Latest posts"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/page-ambassadors.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1587340021
+}

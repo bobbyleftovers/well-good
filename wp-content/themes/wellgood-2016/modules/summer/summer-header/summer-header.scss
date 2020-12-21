@@ -1,0 +1,283 @@
+body { // TODO: no bueno
+  overflow-x: hidden;
+}
+
+.ratio {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+  }
+}
+
+.ro-110::after {
+  padding-bottom: 110%;
+}
+
+.ro-77::after {
+  padding-bottom: 77%;
+}
+
+.summer-header__wrap {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.summer-header {
+  min-height: 400px;
+  height: 70vh; // Default
+
+  .summer-hub-v2 & {
+    height: auto;
+  }
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: $white;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    position: relative;
+    z-index: 9;
+  }
+
+  &__brand,
+  &__banner {
+    margin-bottom: auto;
+  }
+
+  &__brand {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 20px;
+  }
+
+  &__tagline,
+  &__backlink {
+    color: inherit;
+  }
+
+  @supports( width: var(--width) ) {
+    --imageHeight: 80vh;
+    --overlapContent: 13vh;
+    height: calc( var(--imageHeight) - var(--overlapContent) );
+
+    .summer-hub-v2 & {
+      height: auto;
+    }
+
+    @media( min-width: break($m) ) {
+      --imageHeight: 95vh;
+    }
+  }
+}
+
+.summer-header__images {
+
+  &.waypoint {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+
+  transition-property: opacity, transform;
+  transition-timing-function: $transition-easing;
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+
+  position: absolute;
+  top: 0;
+  left: 0; // IE 11
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100vw;
+
+  // Defaults
+  height: 80vh;
+  min-width: calc( 80vh * 1.4 );
+
+  @supports( width: var(--width) ) {
+    z-index: 1;
+
+    --ratio: 1.4;
+    --width: calc( var(--imageHeight) * var(--ratio) );
+    --overflow: calc( var(--width) - 100vw );
+    --offset: calc( var(--overflow) / -2 );
+
+    height: var(--imageHeight);
+    min-width: calc( var(--imageHeight) * var(--ratio) );
+    transform: translateX( var(--offset) );
+
+    @media( min-width: break($m) ) {
+      --offset: 0;
+    }
+  }
+
+  > * {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.summer-header__image {
+  &--background {
+
+    &:before {
+      content: "";
+      display: block;
+      position: relative;
+      width: 100%;
+      @include aspect-ratio(1.18);
+
+      .summer-header--has-border & {
+        @include aspect-ratio(1.53);
+      }
+    }
+
+    .image-module {
+      background-position: bottom;
+    }
+  }
+
+  &--border {
+    transform: translateY(-2px);
+
+    .image-module {
+      overflow: hidden;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: relative;
+      @include aspect-ratio(15.3);
+      width: 100%;
+    }
+  }
+}
+
+.summer-header__backlink {
+  text-decoration: none;
+  font-family: $sans-serif;
+  letter-spacing: 2px;
+  font-size: 13px;
+  text-transform: uppercase;
+
+  svg {
+    margin-left: 6px;
+    margin-top: 2px;
+  }
+
+  @media(min-width: break($m)) {
+    position: absolute;
+    right: 0;
+    transform: translateY(8px); // 1/2 of font size
+  }
+}
+
+.summer-header__logo {
+  @include aspect-wrapper;
+  width: 130px;
+
+  @media(min-width: break($s)) {
+    width: 190px;
+  }
+
+  @media(min-width: break($m)) {
+    width: 230px;
+  }
+
+  .image-module {
+    @include aspect-ratio(6);
+    background-size: contain;
+  }
+
+  @media(min-width: break($m)) {
+    margin-left: auto;
+    margin-right: auto; // TODO: adjust image size instead of font size
+    font-size: 24px;
+  }
+}
+
+.summer-header__title {
+  @extend %unicode-fallback-serif;
+
+  font-size: 35px;
+  margin-top: 0;
+  font-weight: 500;
+  letter-spacing: 2px;
+  align-self: center;
+
+  @media(min-width: break($m)) {
+    font-size: 100px;
+  }
+
+  @media(min-width: break($l)) {
+    font-size: 130px;
+    letter-spacing: 5px;
+  }
+}
+
+.summer-tagline {
+  p.summer-tagline__text {
+    font-size: 17px;
+    line-height: 21px;
+    margin-bottom: 15px;
+
+    @media(min-width: break($m)) {
+      margin-bottom: 45px;
+      font-size: 20px;
+    }
+  }
+}
+
+.summer-tagline__scroll-icon {
+  width: 53px;
+  height: 53px;
+  display: block;
+  margin: 0 auto;
+
+  .summer-hub-v2  & {
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+
+    @media(max-width: break($xs)) {
+      width: 25px;
+      height: 25px;
+      margin-bottom: 15px;
+    }
+  }
+
+  svg {
+    width: 100%;
+  }
+  g {
+    stroke: white;
+
+    .summer-hub-v2  & {
+      stroke: $seafoam;
+    }
+  }
+}
+
+.summer-header-v2__bg .image-module {
+  background-position: center;
+
+  @media(min-width: break($new-md)) {
+    background-size: contain;
+  }
+
+  @media(min-width: break(1820px)) {
+    background-size: cover;
+  }
+}

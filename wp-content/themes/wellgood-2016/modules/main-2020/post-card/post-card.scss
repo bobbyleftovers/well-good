@@ -1,0 +1,31 @@
+.post-card.group {
+  &:hover .post-card__thumbnail__bg {
+    opacity: 0.86 !important;
+  }
+}
+
+.post-card__thumbnail-padding {
+  padding-bottom:66.66%;
+  .post-card--featured & {
+    height: 270px;
+    @screen sm {
+      height: 0;
+      padding-bottom: 69.53%;
+    }
+  }
+  .post-card--mini & {
+    padding-bottom: 100%;
+  }
+}
+
+.post-card__thumbnail-mask {
+  background: linear-gradient(201.07deg, rgba(0, 0, 0, 0.0001) 23.14%, rgba(0, 0, 0, 0.4) 99.59%);
+}
+
+.post-card__body {
+  max-width: 410px;
+}
+
+.post-card .image-module {
+  z-index: 0;
+}

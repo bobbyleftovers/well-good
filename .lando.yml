@@ -1,0 +1,8 @@
+name: well-good
+recipe: pantheon
+config:
+  framework: wordpress
+  env: dev
+  site: well-good
+  id: 10fd143a-af36-4acd-bad9-6ef19a2619c6
+  xdebug: true

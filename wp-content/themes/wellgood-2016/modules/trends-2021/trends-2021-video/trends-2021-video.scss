@@ -1,0 +1,34 @@
+@import '@modules/acf/trends-video/trends-video.front.scss';
+
+.trends-2021-video__video {
+  max-width: 1131px;
+}
+
+.acf-video .video__caption-mask,
+.acf-video .video__caption-wrapper {
+  display:none;
+}
+
+// Regular ACF video
+.theme-trends-2021 .acf-video .base-button-play__bg {
+  background: $white;
+}
+
+.theme-trends-2021 .acf-video .base-button-play__icon {
+  border-left-color: $black;
+}
+
+// Trends 2021 video
+
+.trends-2021-video__video .acf-video .base-button-play__bg {
+  background: var(--trends-2021-secondary);
+  opacity: 0.8;
+}
+
+.trends-2021-video.text-white .trends-2021-video__video .acf-video .base-button-play__icon {
+  border-left-color: $white;
+}
+
+.trends-2021-video.text-gray-dark .trends-2021-video__video .acf-video .base-button-play__icon {
+  border-left-color: $black;
+}

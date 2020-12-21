@@ -1,0 +1,236 @@
+.trends-2021-post-card {
+	svg:not(:root) {
+		overflow: visible;
+  }
+  
+  &__wrapper {
+    position: relative;
+    padding: 50px;
+    margin-top: -50px;
+    margin-right: -50px;
+    margin-left: -50px;
+    margin-bottom: -50px;
+    width: calc(100% + 100px);
+  }
+
+	&__inner {
+		position: relative;
+    width: 100%;
+    padding-bottom: 10%;
+	}
+
+	&__layer {
+		z-index: 3;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 86.32%;
+    height: auto;
+	}
+
+	&__img{
+		width: 100%;
+		height: 100%;
+	}
+
+	&__clip-path {
+		stroke-width: 2px;
+	}
+
+	&--bottom {
+    display: block;
+	}
+
+	&--middle {
+		z-index: 4;
+    left: 6.24%;
+    top: 3px;
+		width: 91.22%;
+    height: auto;
+	}
+
+	&--top {
+		z-index: 5;
+		top: 7.8%;
+    left: auto;
+    right: 0;
+	}
+
+	&__title {
+		position: relative;
+    z-index: 10;
+	}
+
+	.trends-2021-post-card__accent {
+		position: absolute;
+    z-index: 2;
+    filter: blur(50px);
+    opacity: 0;
+		border-radius: 100%;
+    transition: opacity 1.6s;
+    html.is-safari &:not(.accent--hover),
+    html.is-touch .flickity-viewport & {
+      display: none !important;
+    }
+  }
+  
+  html.is-touch &,
+  &.show {
+    .trends-2021-post-card__accent {
+      opacity: 0.7;
+
+      @screen sm {
+        opacity: 0.6;
+      }
+    }
+  }
+
+	.accent--bottom-left {
+		width: 100%;
+    height: 88%;
+    left: -55%;
+    bottom: -18%;
+
+		@screen sm {
+			height: 84%;
+			width: 105%;
+			left: -20%;
+			bottom: -20%;
+		}
+
+		@screen ml {
+			height: 90%;
+			width: 115%;
+			left: -30%;
+			bottom: -20%;
+		}
+	}
+
+	.accent--bottom-center {
+		width: 100%;
+    height: 88%;
+    left: -17%;
+    bottom: -13%;
+  }
+  
+  .accent--hover {
+    width: 86.32%;
+    left: 13.6%;
+    bottom: -0.4px;
+    filter: blur(0px);
+    z-index: 99;
+    opacity: 0 !important;
+    border-radius: 0px !important;
+    overflow: hidden;
+    transition: all 0.35s;
+    height: 0%;
+  }
+
+  .accent--hover > div {
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+    height: 100%;
+    top: 60%;
+    filter: blur(40px);
+    .flickity-viewport & {
+      top: 70%;
+    }
+  }
+
+  &.show a:hover .accent--hover{
+    opacity: 1 !important;
+    height: 40%;
+    .flickity-viewport & {
+      height: 100%;
+    }
+  }
+  
+
+	.accent--top-right {
+		display: none;
+		width: 90%;
+    height: 100%;
+    top: -20%;
+		right: -20%;
+		filter: blur(60px);
+		
+		@screen sm {
+			display: block;
+		}
+	}
+
+	&--grid {
+		flex: 1;
+	}
+}
+
+@keyframes keyhole {
+  to {
+    stroke-dasharray: 1000 0;
+  }
+}
+
+.trends-2021-post-card__clip-path--middle {
+  stroke-dasharray: 0 1000;
+  stroke-dashoffset: -1740;
+  opacity: 1 !important;
+
+  .trends-2021-post-card.show & {
+    animation: keyhole 0.9s linear forwards;
+    animation-delay: 0.7s;
+  }
+}
+
+html.no-touch .trends-2021-post-card .trends-2021-post-card--top {
+  transition: transform 1.3s ease 0.6s, opacity 1.3s ease 0.6s;
+  transform: translate3d(0, 5%, 0);
+}
+
+html.no-touch .trends-2021-post-card .trends-2021-post-card--bottom {
+  transition: transform 0.7s ease 0.5s, opacity 0.7s ease 0.5s;
+  transform: translate3d(0, 0%, 0);
+}
+
+.trends-2021-post-card--top,
+.trends-2021-post-card--middle,
+.trends-2021-post-card--bottom {
+  opacity: 0;
+
+  html.is-touch &,
+  .trends-2021-post-card.show & {
+    transform: translate3d(0, 0, 0) !important;
+    opacity: 1 !important;
+  }
+}
+
+html.is-touch .accent--hover {
+  display: none !important;
+}
+
+.trends-2021-post-card__layer--div {
+  height: auto;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.trends-2021-post-card__layer__padding {
+  width: 100%;
+  padding-bottom: 137.72%;
+}
+
+.trends-2021-post-card__layer--div img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.trends-2021-post-card--bottom {
+  position: relative !important;
+}

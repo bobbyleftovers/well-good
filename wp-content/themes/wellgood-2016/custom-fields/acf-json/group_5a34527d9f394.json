@@ -1,0 +1,67 @@
+{
+    "key": "group_5a34527d9f394",
+    "title": "Dietary Types Taxonmoy",
+    "fields": [
+        {
+            "key": "field_5a34528602183",
+            "label": "Icon",
+            "name": "icon",
+            "type": "image",
+            "instructions": "Upload a small icon to represent this dietary type.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5a3453b220204",
+            "label": "Shortname",
+            "name": "shortname",
+            "type": "text",
+            "instructions": "An abbreviation or 2-3 character name for this dietary type.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "dietary"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1513379484
+}

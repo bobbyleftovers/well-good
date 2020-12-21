@@ -1,0 +1,33 @@
+.acf-signup-form__title,
+.acf-signup-form__text {
+  max-width: 297px;
+}
+
+.acf-signup-form .signup-form__form {
+  margin-left: 0 !important;
+  max-width: 283px;
+}
+
+.acf-signup-form__title,
+.acf-signup-form__text,
+.acf-signup-form .signup-form__form {
+  @screen xs-down {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.acf-signup-form .signup-form__result {
+  display: block;
+  position: absolute !important;
+  margin-top: 0 !important;
+  top: 100%;
+  bottom: auto;
+  left: 0;
+  margin-top: -10px;
+  transform: translateY(0);
+}
+
+.acf-signup-form.is-dark .signup-form__result {
+  @apply text-white;
+}

@@ -1,0 +1,87 @@
+@import "_mixins.scss";
+
+.theme-main-2020,
+.block-editor {
+
+  // Reset tailwind default font classes
+  %font-display { 
+    @include font-display() 
+  }
+
+  %font-serif { 
+    @include font-serif() 
+  }
+
+  %font-sans { 
+    @include font-sans() 
+  }
+
+  // Reset
+  %reset-p {
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: inherit;
+  }
+
+  // Custom font classes
+  // Everything will be under .theme-main-2020, so it won't collide
+
+  /* Caption */
+  %text-caption {
+    @include font-serif();
+    @apply text-gray-light;
+    @apply text-sm;
+  }
+
+  // Default
+  @include generate-typography-extend('h1', 'display', 400);
+  @include generate-typography-extend('h1--article', 'display', 400);
+  @include generate-typography-extend('h2', 'display', 400);
+  @include generate-typography-extend('h3', 'display', 400);
+  @include generate-typography-extend('h4', 'sans', 300);
+  @include generate-typography-extend('h5', 'display', 400);
+  @include generate-typography-extend('quote', 'display', 400);
+  @include generate-typography-extend('dropcap', 'display', 400);
+  @include generate-typography-extend('big', 'serif', false, false, 2);
+  @include generate-typography-extend('default', 'serif', false, false, 2);
+  @include generate-typography-extend('small', 'serif', false, false, 2);
+  @include generate-typography-extend('tag', 'sans', false, 'uppercase', 2);
+  @include generate-typography-extend('label', 'display', false, 'uppercase font-bold', 2);
+  @include generate-typography-extend('link', 'sans', false, 'uppercase font-medium');
+  @include generate-typography-extend('byline', 'display', 400, false, 1);
+
+  // Tablet responsive utilities
+  @include generate-typography-extend-mq('tablet', 'h1', 'display');
+  @include generate-typography-extend-mq('tablet', 'h1--article', 'display');
+  @include generate-typography-extend-mq('tablet', 'h2', 'display');
+  @include generate-typography-extend-mq('tablet', 'h3', 'display', 400);
+  @include generate-typography-extend-mq('tablet', 'h4', 'sans', 300);
+  @include generate-typography-extend-mq('tablet', 'h5', 'display', 400);
+  @include generate-typography-extend-mq('tablet', 'big', 'serif', false, false, 2);
+  @include generate-typography-extend-mq('tablet', 'default', 'serif', false, false, 2);
+  @include generate-typography-extend-mq('tablet', 'small', 'serif', false, false, 2);
+
+  // Tablet landscape responsive utilities
+  @include generate-typography-extend-mq('tablet-landscape', 'h1', 'display');
+  @include generate-typography-extend-mq('tablet-landscape', 'h1--article', 'display');
+  @include generate-typography-extend-mq('tablet-landscape', 'h2', 'display');
+  @include generate-typography-extend-mq('tablet-landscape', 'h3', 'display', 400);
+  @include generate-typography-extend-mq('tablet-landscape', 'h4', 'sans', 300);
+  @include generate-typography-extend-mq('tablet-landscape', 'h5', 'display', 400);
+  @include generate-typography-extend-mq('tablet-landscape', 'big', 'serif', false, false, 2);
+  @include generate-typography-extend-mq('tablet-landscape', 'default', 'serif', false, false, 2);
+  @include generate-typography-extend-mq('tablet-landscape', 'small', 'serif', false, false, 2);
+  
+  // Desktop responsive utilities
+  @include generate-typography-extend-mq('desktop', 'h1', 'display');
+  @include generate-typography-extend-mq('desktop', 'h1--article', 'display');
+  @include generate-typography-extend-mq('desktop', 'h2', 'display');
+  @include generate-typography-extend-mq('desktop', 'h3', 'display', 400);
+  @include generate-typography-extend-mq('desktop', 'h4', 'sans', 300);
+  @include generate-typography-extend-mq('desktop', 'h5', 'display', 400);
+  @include generate-typography-extend-mq('desktop', 'big', 'serif', false, false, 2);
+  @include generate-typography-extend-mq('desktop', 'default', 'serif', false, false, 2);
+  @include generate-typography-extend-mq('desktop', 'small', 'serif', false, false, 2);
+}

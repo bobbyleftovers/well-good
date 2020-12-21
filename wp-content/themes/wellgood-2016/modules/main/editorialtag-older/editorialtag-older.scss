@@ -1,0 +1,137 @@
+.editorialtag-older {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 30px;
+	@media (min-width: break($m)) {
+		margin-top: 35px;
+	}
+	@media (min-width: break($l)) {
+		margin-top: 40px;
+	}
+}
+
+.editorialtag-older__card {
+	width: 100%;
+	min-height: 130px;
+	display: flex;
+	position: relative;
+	margin-bottom: 30px;
+	background-color: $white;
+
+	@media (min-width: break($s)) {
+		width: 49%;
+	}
+
+	@media (min-width: break($m)) {
+		width: 32%;
+	}
+
+	& a:hover .image-module {
+		transform: scale(1);
+	}
+
+	&--image {
+		position: relative;
+		height: 100%;
+		width: 100px;
+		flex-shrink: 0;
+		flex-grow: 0;
+		background-color: $black;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		@media (min-width: break($s)) {
+			width: 70px;
+		}
+		@media (min-width: break($l)) {
+			width: 120px;
+		}
+
+		& .image-module__icon {
+			bottom: 10px;
+			right: 10px;
+		}
+	}
+
+	&--content {
+		display: flex;
+		flex-direction: column;
+		background-color: $white;
+		height: 100%;
+		width: 100%;
+		flex-shrink: 1;
+		flex-grow: 1;
+		padding: 20px 0 20px 20px;
+		justify-content: flex-start;
+
+		& a {
+			text-decoration: none;
+			color: $black;
+		}
+	}
+
+	&--title {
+		@extend %article-title,
+			%article-title--extra-small;
+
+		margin-bottom: 14px;
+		line-height: 1.3;
+	}
+
+	&--meta {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&--author {
+		@extend %post-card__author;
+	}
+}
+
+.editorialtag-older__pagination {
+	@include font(_h2);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	& span,
+	& span a {
+		position: relative;
+		color: #999;
+		text-decoration: none;
+	}
+	& span {
+		padding: 0 5px;
+		&.active {
+			& a {
+				color: $black;
+				&:after {
+					content: "";
+					width: 15px;
+					height: 5px;
+					background-color: $black;
+					position: absolute;
+					left: 0;
+					bottom: -5px;
+				}
+			}
+		}
+	}
+	& .arrow {
+		padding: 0px;
+		margin: 0 25px;
+		width: 20px;
+		height: 32px;
+		& svg #Most-Popular-Module-Hover-Functionality {
+			stroke: $black;
+		}
+		&.disabled {
+			& svg #Most-Popular-Module-Hover-Functionality {
+				stroke: #ddd;
+			}
+		}
+	}
+}

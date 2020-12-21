@@ -1,0 +1,20 @@
+/**
+ *
+ * Basic typography style for copy text
+ */
+
+body {
+  font-family: $sans-serif !important;
+}
+
+a {
+  color: $green;
+}
+
+.generic-portal .portal-content .portal-left-col .ambassador-nav li a:hover, .generic-portal .portal-content .portal-left-col .ambassador-nav li a:focus, .generic-portal .portal-content .portal-left-col .ambassador-nav li a.active, .custom-portal .portal-content .portal-left-col .ambassador-nav li a:hover, .custom-portal .portal-content .portal-left-col .ambassador-nav li a:focus, .custom-portal .portal-content .portal-left-col .ambassador-nav li a.active {
+  color: $green;
+}
+
+ga-activity-feed .activity-feed-container .activity .ambassador-template a, ga-activity-feed .activity-feed-container .activity .ambassador-template span {
+  margin-bottom: -4px;
+}

@@ -1,0 +1,203 @@
+[v-cloak] {display: none}
+
+.related-content {
+  margin-top: 21px;
+	margin-bottom: 21px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+  background-color: $light-tan;
+
+  padding-left: $edge-gutter;
+  padding-right: $edge-gutter;
+  margin-left: -$edge-gutter;
+  margin-right: -$edge-gutter;
+
+  @screen xs {
+    margin-top: 26px;
+    margin-bottom: 26px;
+  }
+
+  @screen sm {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+
+  @screen md {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  @screen ml {
+    padding-top: 22px;
+		padding-bottom: 5px;
+		padding-left: 30px;
+		padding-right: 30px;
+		margin-left: 0;
+		margin-right: 0;
+  }
+  
+  .trends-2021-related-posts & {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+.related-content__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+a.related-content__link {
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+.related-content__card {
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+
+    // @media (min-width: break($s)) {
+    //   height: 110px;
+    //   width: 48%;
+    // }
+
+    // @media (min-width: break($m)) {
+    //     width: 100%;
+    // }
+
+    @media (min-width: break($ml)) {
+        min-height: 160px;
+        width: 48%;
+        align-items: unset;
+    }
+
+    &:last-child {
+        & .related-content__card--content {
+            padding-bottom: 0;
+        }
+    }
+
+    & a:hover .image-module {
+        transform: scale(1);
+    }
+
+    &--full {
+        width: 100%;
+    }
+
+    &--image {
+        position: relative;
+        height: 100%;
+        width: 100px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @screen xs {
+          width: 112px;
+        }
+        @screen sm {
+          width: 110px;
+        }
+        @screen ml {
+          width: 114px;
+        }
+        @screen lg {
+          width: 121px;
+        }
+        .related-content__card--full & {
+            width: 180px;
+        }
+    }
+
+    &--content {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        width: 100%;
+        flex-shrink: 1;
+        flex-grow: 1;
+        padding: 0 0 15px 15px;
+        justify-content: flex-start;
+
+        @screen md {
+          padding: 0 0 0 12px;
+        }
+
+        @screen ml {
+          padding: 0 0 0 14px;
+        }
+
+        @screen lg {
+          padding: 0 20px;
+        }
+
+        & a {
+            text-decoration: none;
+            color: $black;
+        }
+    }
+}
+
+.related-content__title {
+    @extend %text-label;
+}
+
+.related-content__hr {
+    border-color: $tan;
+    .post__main & {
+        margin: 0;
+    }
+}
+
+.related-content__wrapper {
+    display: none;
+    &.is-loaded {
+        display:block;
+    }
+}
+
+.related-content__card--image {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.related-content__card--image .post__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    height:100%;
+}
+
+.related-content__card--image img {
+    height:100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.related-content__card--image__padding {
+  padding-bottom: 130%;
+  width: 100%;
+}
+
+.related-content__card--image a {
+    display: none !important;
+}
+
+.related-content__card--title {
+  max-width: 18em;
+}

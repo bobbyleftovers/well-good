@@ -1,0 +1,4 @@
+production:
+  target: https://well-good.lndo.site
+development:
+  target: https://well-good.lndo.site

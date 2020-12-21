@@ -1,0 +1,246 @@
+.trends-2020-hero {
+  opacity: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.trends-2020-hero__bg {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity:0.2;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  &:not(.show-always){
+    display:none;
+  }
+  body.ie & {
+    display:block !important;
+  }
+  @media (max-width: break($m)) {
+    display:block !important;
+  }
+}
+
+.trends-2020-hero h1 {
+  margin-top:0;
+  margin-bottom:0;
+  opacity:0;
+  position:absolute;
+  z-index: -1;
+  top:0;
+}
+
+.trends-2020-hero__wrap {
+  margin:0 auto;
+  max-width: 837px;
+  width:80%;
+  position:relative;
+  padding-top: 4.65vw;
+  padding-bottom: 2.29vw;
+  z-index: 10;
+  @media (max-width: break($m)) {
+    padding-top: 43px;
+    padding-bottom: 38px;
+  }
+}
+
+.trends-2020-hero__hero {
+  position: relative;
+  top:0;
+  left:0;
+  width:100%;
+  height:auto;
+}
+
+.trends-2020-hero__hero__padding {
+  width:100%;
+  padding-bottom:69.65%;
+  @media (max-width: break($s)) {
+    padding-bottom:52%;
+	}
+}
+
+.trends-2020-hero__introduction {
+  margin: 0 auto;
+  margin-top: 4.5vw;
+  @media (max-width: break($s)) {
+    margin-top: 17px;
+  }
+  text-align: center;
+  color:$white;
+  opacity:0;
+  transform: translateY(10px);
+  transition: all 0.5s ease-in-out 1.95s;
+  opacity:0;
+  width: 100%;
+  max-width: 581px;
+  .trends-2020-hero.is-loaded & {
+    opacity: 1;
+    transform: translateY(0px);
+ }
+ @media (max-width: break($s)) {
+  transition-delay: 0.8s;
+  }
+}
+
+.trends-2020-hero__hero__img {
+  position:absolute;
+  display:block;
+  top:0;
+  left:0;
+  max-width: 100%;
+  transition: opacity 0s ease-in-out 0s;
+  .trends-2020-hero.is-loaded & {
+     opacity: 1;
+  }
+}
+
+.trends-2020-hero__hero__img.img-wellness {
+  width:69.65%;
+  top:0;
+  left:0;
+  transition-duration: 0.4s;
+  .trends-2020-hero.is-loaded & {
+    transition-delay: 0.3s;
+  }
+}
+
+.trends-2020-hero__hero__img.img-trends {
+  width:73.95%;
+  left:18.04%;
+  top:22.98%;
+  transition: opacity 0s;
+  @media (max-width: break($s)) {
+    top:31%;
+    left:17%;
+	}
+}
+
+.trends-2020-hero__hero__img.img-trends--1 {
+  transition: opacity 0.15s;
+  .trends-2020-hero.is-loaded & {
+    transition-delay: 0.55s;
+  }
+}
+
+.trends-2020-hero__hero__img.img-trends--2 {
+  transform: translateY(0%);
+  .trends-2020-hero.is-loaded & {
+    transform: translateY(10%);
+    transition-delay: 0.7s;
+  }
+  @media (max-width: break($s)) {
+    top:32%;
+	}
+}
+
+.trends-2020-hero__hero__img.img-trends--3 {
+  transform: translateY(15%); 
+  .trends-2020-hero.is-loaded & {
+    transform: translateY(20%); 
+    transition-delay: 0.85s;
+  }
+  @media (max-width: break($s)) {
+    top:33%;
+	}
+}
+
+.trends-2020-hero__hero__img.img-trends--4 {
+  transform: translateY(25%); 
+  .trends-2020-hero.is-loaded & {
+    transform: translateY(30%); 
+    transition-delay: 1s;
+  }
+  @media (max-width: break($s)) {
+    display: none;
+	}
+}
+
+.trends-2020-hero__hero__img.img-trends--5 {
+  transform: translateY(35%);
+  .trends-2020-hero.is-loaded & {
+    transform: translateY(40%); 
+    transition-delay: 1.15s;
+  }
+  @media (max-width: break($s)) {
+    display: none;
+	}
+}
+
+.trends-2020-hero__hero__img.img-trends--6 {
+  transform: translateY(45%); 
+  .trends-2020-hero.is-loaded & {
+    transform: translateY(50%); 
+    transition-delay: 1.3s;
+  }
+  @media (max-width: break($s)) {
+    display: none;
+	}
+}
+
+.trends-2020-hero__hero__img.img-trends--7 {
+  transform: translateY(55%); 
+  .trends-2020-hero.is-loaded & {
+    transform: translateY(60%); 
+    transition-delay: 1.45s;
+  }
+  @media (max-width: break($s)) {
+    display: none;
+	}
+}
+
+.trends-2020-hero__hero__img.img-trends--8 {
+  transform: translateY(65%); 
+  .trends-2020-hero.is-loaded & {
+    transform: translateY(70%); 
+    transition-delay: 1.6s;
+  }
+  @media (max-width: break($s)) {
+    display: none;
+	}
+}
+
+.trends-2020-hero__hero__img.img-trends--9 {
+  transform: translateY(75%); 
+  .trends-2020-hero.is-loaded & {
+    transform: translateY(80%); 
+    transition-delay: 1.75s;
+  }
+  @media (max-width: break($s)) {
+    display: none;
+	}
+}
+
+.trends-2020-hero__hero__img.img-trends--10 {
+  transform: translateY(85%); 
+  .trends-2020-hero.is-loaded & {
+    transform: translateY(90%); 
+    transition-delay: 1.9s;
+  }
+  @media (max-width: break($s)) {
+    display: none;
+	}
+}
+
+.trends-2020-hero__hero__img.img-2020 {
+  width:21.03%;
+  top: auto;
+  left: auto;
+  bottom:0;
+  right: 0;
+  transition-delay: 1.8s;
+  transition-duration: 0.4s;
+  @media (max-width: break($s)) {
+    transition-delay: 0.75s;
+	}
+}
+
+.trends-2020-hero.animation-finished .trends-2020-hero__hero__img,
+.trends-2020-hero.animation-finished .trends-2020-hero__introduction {
+  transition: none !important;
+  transition-delay: 0s !important;
+}

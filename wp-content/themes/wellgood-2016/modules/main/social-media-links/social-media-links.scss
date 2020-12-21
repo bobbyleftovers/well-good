@@ -1,0 +1,44 @@
+.menu-item-type-social {
+	a {
+		position:relative;
+		overflow: hidden;
+		display: inline-block;
+    padding: 20px 5px;
+    .ambassador-newsletter-page & {
+      padding: 0;
+      line-height: 60px;
+      padding-right: 1px;
+      &:before {
+        font-size: 13px;
+      }
+    }
+		@media (min-width: break($m)) {
+			padding-left: 2px;
+			padding-right: 2px;
+		}
+
+		.label {
+			display: block;
+			position:absolute;
+			top:0;
+			left:0;
+			text-indent: -999em;
+			z-index: -1;
+		}
+		&:before {
+			color: $seafoam;
+			letter-spacing: 0;
+			text-align: center;
+			line-height: 2em;
+			font-size: 14px;
+			display: inline-block;
+			width: 28px;
+			height: 28px;
+			background-color: transparent;
+      .ambassador-newsletter-page & {
+        border:none;
+        background-color: transparent !important;
+      }
+		}
+	}
+}

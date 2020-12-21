@@ -1,0 +1,47 @@
+.custom-landing-body,
+.custom-registration-row .portal-well {
+  background-color: #f3f3f3;
+  color: $black;
+}
+
+.custom-registration-row .portal-well .logo-image {
+  max-width: 240px;
+  @media(max-width: 650px) {
+    max-width: 120px;
+  }
+}
+
+.custom-registration-row .portal-well.register-portal .form-outer {
+  background-color: #fff;
+}
+
+.custom-landing-body {
+  h2 {
+    font-family: $sans-serif-condensed;
+    text-transform: uppercase;
+  }
+
+  label {
+    font-family: $sans-serif-extra-condensed !important;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: black;
+  }
+
+  .content-column {
+    @media(max-width: 650px) {
+      text-align: center;
+    }
+  }
+
+  .content-column h3 {
+    font-family: $sans;
+    text-transform: none;
+    font-size: 40px;
+    color: $green;
+
+    @media(max-width: 650px) {
+      font-size: 30px;
+    }
+  }
+}

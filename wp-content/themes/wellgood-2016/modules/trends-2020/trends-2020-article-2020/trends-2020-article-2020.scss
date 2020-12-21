@@ -1,0 +1,356 @@
+.trends-2020-article-2020,
+.trends-2020-trends-2020__add {
+  max-width: 1063px;
+  margin:0 auto 78px;
+  position:relative;
+  @media (max-width: break($m)) {
+    margin-bottom:45px;
+    max-width: 550px;
+    &:not(.trends-2020-trends-2020__add):not(.has-ad-after){
+      padding-bottom:45px;
+      border-bottom:1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+  @media (max-width: break($m)) {
+    margin-bottom:42px;
+    &:not(.trends-2020-trends-2020__add):not(.trends-2020-trends-2020__add){
+      padding-bottom:39px;
+    }
+  }
+}
+
+.trends-2020-article-2020__thumbnail img {
+  max-width:100%;
+}
+
+.trends-2020-article-2020__thumbnail {
+  width:100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 411px;
+  height:auto;
+  overflow: hidden;
+  @media (max-width: break($m)) {
+    margin-bottom: 20px;
+    min-height: 0;
+    &.has-caption {
+      margin-bottom: 35px;
+    }
+  }
+
+}
+
+.trends-2020-article-2020__thumbnail_bg {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position:absolute !important;
+  width:110%;
+  height:100%;
+  top:0;
+  left:50%;
+}
+
+.trends-2020-article-2020__thumbnail__padding {
+  width:100%;
+  padding-bottom:79.5%;
+}
+
+.trends-2020-article-2020__thumbnail__caption {
+  position:absolute;
+  top:100%;
+  padding-top:12px;
+  left:34px;
+  width:100%;
+  opacity:0.6;
+  color:$white !important;
+  @media (max-width: break($l)) {
+    left:25px;
+    padding-top:10px;
+  }
+  @media (max-width: break($l)) {
+    opacity:0.5;
+  }
+}
+
+.trends-2020-article-2020__row {
+  width: calc(100% + 68px);
+  margin-left: -34px;
+  margin-right: -34px;
+  .trends-2020-trends-2020__article:nth-child(odd) &{
+    flex-direction: row-reverse;
+  }
+  @media (max-width: break($l)) {
+    width: calc(100% + 50px);
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+  @media (max-width: break($m)) {
+    display:block
+  }
+}
+
+.trends-2020-article-2020__col{
+  padding-left: 34px;
+  padding-right: 34px;
+  @media (max-width: break($l)) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  @media (max-width: break($m)) {
+    display:block;
+    max-width: none;
+  }
+}
+
+.trends-2020-article-2020__counter {
+  position:absolute;
+  width: auto;
+  top:17px;
+  .trends-2020-trends-2020__article:nth-child(even) &{
+    right: 34px;
+    @media (max-width: break($l)) {
+      right:25px;
+    }
+    transform: translate3d(50%, 0, 0);
+   }
+  .trends-2020-trends-2020__article:nth-child(odd) &{
+    right:auto;
+   left: 34px;
+   @media (max-width: break($l)) {
+    left: 25px;
+    }
+   transform: translate3d(-50%, 0, 0);
+  }
+  @media (max-width: break($m)) {
+    right: auto !important;
+    left: 25px !important;
+    top: auto;
+    bottom: 3%;
+    transform: translate3d(-50%, 0, 0) !important;
+  }
+}
+.trends-2020-article-2020__counter__digit {
+  height: 110px;
+  width:auto;
+
+  @media (max-width: break($m)) {
+    height: 100px;
+  }
+
+  @media (max-width: break($s)) {
+    height: 80px;
+  }
+}
+
+.trends-2020-article-2020__counter.counter--1 {
+  margin-left:-5px;
+  @media (max-width: break($m)) {
+    margin-left:-2px;
+  }
+}
+
+.trends-2020-article-2020__counter.counter--2 {
+  margin-right:20px;
+  @media (max-width: break($m)) {
+    margin-right:0;
+    margin-left:10px;
+  }
+}
+
+.trends-2020-article-2020__counter.counter--3 {
+  margin-left:5px;
+  @media (max-width: break($m)) {
+    margin-left:5px;
+  }
+}
+
+.trends-2020-article-2020__counter.counter--4 {
+  margin-right:20px;
+  @media (max-width: break($l)) {
+    margin-right:16px;
+  }
+  @media (max-width: break($m)) {
+    margin-left:8px;
+    margin-right:0;
+  }
+}
+
+.trends-2020-article-2020__counter.counter--5 {
+  margin-left:10px;
+  @media (max-width: break($m)) {
+    margin-left:8px;
+    margin-right:0;
+  }
+}
+
+.trends-2020-article-2020__counter.counter--6 {
+  margin-right:10px;
+  @media (max-width: break($m)) {
+    margin-left:8px;
+    margin-right:0;
+  }
+}
+
+.trends-2020-article-2020__counter.counter--7 {
+  margin-left:10px;
+  @media (max-width: break($m)) {
+
+  }
+}
+
+.trends-2020-article-2020__counter.counter--8 {
+  margin-right:10px;
+  @media (max-width: break($m)) {
+    margin-left:8px;
+    margin-right:0;
+  }
+}
+
+.trends-2020-article-2020__counter.counter--9 {
+  margin-left:10px;
+  @media (max-width: break($m)) {
+
+  }
+}
+
+.trends-2020-article-2020__counter.counter--10 {
+  margin-right:35px;
+  @media (max-width: break($m)) {
+    margin-left:29px;
+    margin-right:0;
+  }
+}
+
+.trends-2020-article-2020__counter.counter--11 {
+  margin-left:15px;
+  @media (max-width: break($m)) {
+    margin-left:13px;
+    margin-right:0;
+  }
+}
+
+.trends-2020-article-2020__counter.counter--12 {
+  margin-right:30px;
+  @media (max-width: break($m)) {
+    margin-left:26px;
+    margin-right:0;
+  }
+}
+
+.trends-2020-article-2020__counter.counter--13 {
+  margin-left:30px;
+  @media (max-width: break($m)) {
+    margin-left:23px;
+    margin-right:0;
+  }
+}
+
+
+/*
+* Animation
+*/
+
+.trends-2020-article-2020__title,
+.trends-2020-article-2020__description {
+  opacity: 1;
+  transition: opacity 0.6s, transform 0.6s;
+  transform: translate3d(0, 0px, 0);
+  body:not(.ie) .trends-2020-article-2020.waypoint & {
+    opacity:0;
+    transform: translate3d(0, 9px, 0);
+  }
+  &.trends-2020-article-2020__description {
+    transition-delay: 0.25s;
+  }
+}
+
+.trends-2020-article-2020__thumbnail {
+  opacity: 1;
+  transition: opacity 0.7s, transform 0.7s;
+  transform: translate3d(0, 0px, 0);
+  transition-delay: 0.2s;
+  body:not(.ie) .trends-2020-trends-2020__article:nth-child(odd) .trends-2020-article-2020.waypoint &,
+  body:not(.ie) .odd .trends-2020-article-2020.waypoint & {
+    opacity:0;
+    transform: translate3d(6%, 0, 0);
+  }
+  body:not(.ie) .trends-2020-trends-2020__article:nth-child(even) .trends-2020-article-2020.waypoint &,
+  body:not(.ie) .even .trends-2020-article-2020.waypoint & {
+    opacity:0;
+    transform: translate3d(-6%, 0, 0);
+  }
+  @media (max-width: break($m)) {
+    body:not(.ie) .trends-2020-article-2020.waypoint & {
+      transform: translate3d(-2%, 0, 0) !important;
+    }
+  }
+}
+
+.trends-2020-article-2020__thumbnail_bg {
+  transition: transform 0.9s;
+  transition-delay: 0.2s;
+  transform: translate3d(-50%, 0, 0);
+  width:100%;
+  body:not(.ie) .trends-2020-trends-2020__article:nth-child(odd) .trends-2020-article-2020.waypoint &,
+  body:not(.ie) .odd .trends-2020-article-2020.waypoint & {
+    transform: translate3d(-55%, 0, 0);
+  }
+  body:not(.ie) .trends-2020-trends-2020__article:nth-child(even) .trends-2020-article-2020.waypoint &,
+  body:not(.ie) .even .trends-2020-article-2020.waypoint & {
+    transform: translate3d(-45%, 0, 0);
+  }
+  @media (max-width: break($m)) {
+    body:not(.ie) .trends-2020-article-2020.waypoint & {
+      transform: translate3d(-45%, 0, 0) !important;
+    }
+  }
+}
+
+.trends-2020-article-2020__counter {
+  opacity: 1;
+  transition: opacity 1s, transform 1s;
+  transition-delay: 0.4s;
+  body:not(.ie) .trends-2020-trends-2020__article:nth-child(even) .trends-2020-article-2020.waypoint &,
+  body:not(.ie) .even .trends-2020-article-2020.waypoint & {
+    opacity:0;
+    transform: translate3d(50%, 10%, 0);
+  }
+  body:not(.ie) .trends-2020-trends-2020__article:nth-child(odd) .trends-2020-article-2020.waypoint &,
+  body:not(.ie) .odd .trends-2020-article-2020.waypoint & {
+    opacity:0;
+    transform: translate3d(-50%, 10%, 0);
+  }
+}
+
+
+.trends-2020-article-2020__sponsor {
+  width:100%;
+  max-width:239px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 14px;
+  display:flex;
+  align-items: center;
+  margin-top:-8px;
+  margin-bottom:23px;
+}
+
+.trends-2020-article-2020__sponsor .h5 {
+  display:inline-block;
+  margin-top:0;
+  margin-bottom: 0;
+}
+
+
+.trends-2020-article-2020__sponsor a {
+  display:inline-block;
+  margin-left:8px;
+  line-height: 1em;
+}
+
+.trends-2020-article-2020__sponsor a img {
+  display:inline-block;
+  height: 33px;
+  width:auto;
+}

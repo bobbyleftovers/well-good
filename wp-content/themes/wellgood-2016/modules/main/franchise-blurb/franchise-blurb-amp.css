@@ -1,0 +1,50 @@
+.franchise-blurb__franchise {
+  width: 70px;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.franchise-blurb__franchise .amp-image {
+  display : block;
+}
+
+.franchise-blurb__description,
+.franchise-blurb__description a {
+  color: #000000;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 29px;
+  font-family: 'Arial', sans-serif;
+}
+
+.franchise-blurb__description a {
+  display: inline-block;
+  color: #42676b;
+}
+
+.franchise-blurb {
+  border-bottom: 1px solid #E7DFD7;
+  margin-top: -5px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  min-height: 0 !important;
+  align-items: flex-start;
+}
+
+.franchise-blurb__sponsor{
+  display: block;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 12px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.franchise-blurb__logo {
+  width: 70px;
+  line-height: 1;
+  font-size: 0;
+}

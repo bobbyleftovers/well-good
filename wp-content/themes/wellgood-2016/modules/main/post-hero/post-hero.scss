@@ -1,0 +1,368 @@
+.post-hero {
+	margin: 85px auto 0;
+
+	@media (min-width: break($m)) {
+		margin: 85px auto 30px;
+	}
+
+	& .meta__separator {
+		font-size: 24px;
+    line-height: 18px;
+    display: inline-block;
+		position: absolute;
+		user-select: none;
+	}
+
+	& .meta__name {
+		@extend %link-hover;
+	}
+}
+
+.post-hero--with-breadcrumbs {
+	margin-top: 15px;
+
+	.infinite & {
+		margin-top: 30px;
+	}
+}
+
+.post-hero__header,
+.post-hero__header--sponsored {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@media (min-width: break($s)) {
+		align-items: initial;
+	}
+
+	h1 {
+		margin-top: 0;
+	}
+
+	.post-hero--legacy-template & {
+		max-width: 1170px;
+	}
+}
+
+.post-hero__info {
+	@extend %clearfix;
+
+	max-width: 700px;
+
+	@media (min-width: break($ml)) {
+		display: block;
+		max-width: 800px;
+  }
+
+	@media (min-width: break($header-social-break)) {
+		display: block;
+		max-width: 1000px;
+		margin-right: auto;
+  }
+}
+
+.post-hero__sponsor {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto 10px;
+
+	.post-hero--legacy-template & {
+		justify-content: flex-start;
+	}
+}
+
+.post-hero__sponsor-banner {
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	line-height: 1.21;
+	overflow: hidden;
+	color: $black;
+	position: sticky;
+	width: 100%;
+	z-index: 2999;
+	top: $header-height;
+	height: 40px;
+	margin-bottom: -15px;
+	border-top: solid 1px #f0f0f0;
+  background-color: $white;
+	transition: $transition-duration $transition-timing-function height;
+  will-change: height;
+
+	@extend %unicode-fallback-serif;
+
+	@media (min-width: break($s)) {
+		height: 50px;
+  }
+
+  .sponcer-banner--sticky & {
+    height: 30px;
+		transition: $transition-duration $transition-timing-function height;
+		will-change: height;
+
+    @media (min-width: break($s)) {
+      height: 40px;
+    }
+  }
+
+	@media (min-width: break($ml)) {
+		top: $header-height-tablet;
+	}
+
+	@media (min-width: break($header-break)) {
+		top: calc(#{$header-height-desktop} + 1px);
+	}
+
+	& > .container {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// max-width: 1170px;
+
+		@media (min-width: break($s)) {
+			justify-content: flex-start;
+		}
+
+		& .image-module {
+			position: relative;
+			margin-left: 10px;
+		}
+	}
+}
+
+.post-hero__sponsor-logo {
+	margin-left: 4px;
+
+	& > .image-module,
+	& > .image-module > img {
+    transition: 0.5s ease height;
+    will-change: height;
+    transform: translate3d(0, 0, 0);
+		height: 20px;
+		width: auto;
+
+		@media (min-width: break($s)) {
+			height: 25px;
+    }
+
+    .sponcer-banner--sticky & {
+      height: 15px;
+
+      @media (min-width: break($s)) {
+        height: 20px;
+      }
+    }
+	}
+}
+
+.post-hero__sponsor-name {
+  @extend %article-label;
+
+  color: $black;
+	margin-left: 7px;
+	font-size: 10px;
+	line-height: 19px; // To properly align vertically
+
+	@media (min-width: break($s)) {
+		margin-left: 9px;
+		font-size: 13px;
+	}
+}
+
+.container.post-hero__image-container {
+	&--small {
+		max-width: 845px;
+
+		& > .image-module,
+		& > .image-module > img {
+			max-height: 559px;
+		}
+	}
+
+	&--medium {
+		max-width: 1170px;
+
+		& > .image-module,
+		& > .image-module > img {
+			max-height: 752px;
+		}
+	}
+
+	&--large {
+		& > .image-module,
+		& > .image-module > img {
+			max-height: 926px;
+		}
+	}
+
+  & .image-module {
+    position: relative;
+    opacity: 1;
+	}
+	& .post__pin-link {
+		transition: all ease-in-out 250ms;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.container.post-hero__image-container--large,
+.container.post-hero__video-container {
+	@media (max-width: break($s, false)) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.post-hero__video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+	margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+	align-items: center;
+}
+
+.post-hero__video-cover {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-size: cover;
+	background-position: center center;
+
+	@media (hover: none) {
+		display: none;
+	}
+}
+
+.post-hero__video-play-button {
+  height: 80px;
+  width: 80px;
+	position: absolute;
+	border-radius: 100%;
+	background-color: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
+
+  &:before {
+    content: "";
+    border: 0;
+    position: absolute;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    margin-left: 6.5px;
+    border-color: transparent transparent transparent $seafoam;
+    transition: 100ms all ease;
+    border-style: solid;
+    border-width: 9.5px 0 9.5px 17px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+	@media (hover: none) {
+		display: none;
+	}
+
+	@media (min-width: break($m)) {
+		height: 100px;
+		width: 100px;
+
+		&:before {
+			margin-left: 6.5px;
+			border-width: 11.875px 0 11.875px 21.25px;
+		}
+	}
+
+}
+
+.post-hero__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+	height: 100%;
+	display: none;
+	z-index: -1;
+
+	&--loaded {
+		display: block;
+	}
+
+	@media (hover: none) {
+		z-index: 1;
+		display: block;
+	}
+}
+
+.post-hero__video--play {
+	& .post-hero__video-cover {
+		display: none;
+	}
+}
+
+.figcaption--legacy {
+	color: $grey;
+  font-size: 18px;
+  line-height: 29px;
+	text-align: center;
+  margin-top: 8px;
+
+  @screen md {
+    font-size: 19px;
+    line-height: 33px;
+  }
+}
+
+.post-hero--legacy-template {
+	width: auto;
+	text-align: left;
+
+	& .post-hero__title {
+		margin-bottom: 5px;
+		margin-top: 15px;
+
+		@media (min-width: break($new-sm)) {
+			text-align: left;
+		}
+	}
+
+	& .post-hero__author {
+		@media (min-width: break($new-ml)) {
+			justify-content: initial;
+		}
+	}
+
+	& .post-hero__breadcrumbs {
+		text-align: center;
+
+		@media (min-width: break($new-ml)) {
+			text-align: left;
+		}
+	}
+
+	& .post-hero__info {
+		text-align: center;
+		margin-bottom: 20px;
+
+		@media (min-width: break($new-ml)) {
+			margin-left: 0;
+			margin-right: 325px;
+			margin-bottom: 0;
+			text-align: left;
+		}
+	}
+}

@@ -1,0 +1,537 @@
+{
+    "key": "group_5e82cb5310767",
+    "title": "Hero Settings",
+    "fields": [
+        {
+            "key": "field_5e9896f25cff5",
+            "label": "Hero Type",
+            "name": "post_hero_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "legacy": "Legacy",
+                "image": "Image",
+                "video": "Video"
+            },
+            "default_value": "image",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f04b4e3e9394",
+            "label": "Image Size",
+            "name": "post_hero_image_size",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e9896f25cff5",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "small": "Small",
+                "medium": "Medium",
+                "large": "Large"
+            },
+            "default_value": "small",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f054b7747d78",
+            "label": "Override Featured Image?",
+            "name": "post_hero_override_featured_image",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e9896f25cff5",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f04b449e9393",
+            "label": "Override Image",
+            "name": "post_hero_featured_image_override",
+            "type": "image",
+            "instructions": "When Hero Type is set to \"Image,\" by default the Featured Image will be displayed in the post's hero. If you would like to keep the Featured Image for things like social sharing but display a different image in the hero, use Featured Image Override",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e9896f25cff5",
+                        "operator": "==",
+                        "value": "image"
+                    },
+                    {
+                        "field": "field_5f054b7747d78",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5f05475c476c4",
+            "label": "Override Caption",
+            "name": "post_hero_featured_image_caption_override",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e9896f25cff5",
+                        "operator": "==",
+                        "value": "image"
+                    },
+                    {
+                        "field": "field_5f054b7747d78",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ec37591ded25",
+            "label": "Video Type",
+            "name": "post_hero_video_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e9896f25cff5",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "youtube": "YouTube",
+                "jwplayer": "JW Player"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5ecff18b8fc8d",
+            "label": "YouTube Link",
+            "name": "post_hero_youtube_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e9896f25cff5",
+                        "operator": "==",
+                        "value": "video"
+                    },
+                    {
+                        "field": "field_5ec37591ded25",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e82ca4997011",
+            "label": "Media ID",
+            "name": "post_hero_jw_media_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e9896f25cff5",
+                        "operator": "==",
+                        "value": "video"
+                    },
+                    {
+                        "field": "field_5ec37591ded25",
+                        "operator": "==",
+                        "value": "jwplayer"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ec376127548f",
+            "label": "Player",
+            "name": "post_hero_video_player",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ec37591ded25",
+                        "operator": "==",
+                        "value": "jwplayer"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [],
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e99706dd5afd",
+            "label": "Override Thumbnail?",
+            "name": "post_hero_override_thumbnail",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e9896f25cff5",
+                        "operator": "==",
+                        "value": "video"
+                    },
+                    {
+                        "field": "field_5ec37591ded25",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_5e9897355cff6",
+            "label": "Video Thumbnail",
+            "name": "post_hero_video_thumbnail",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e9896f25cff5",
+                        "operator": "==",
+                        "value": "video"
+                    },
+                    {
+                        "field": "field_5ec37591ded25",
+                        "operator": "==",
+                        "value": "youtube"
+                    },
+                    {
+                        "field": "field_5e99706dd5afd",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e9971a8d5b02",
+            "label": "Video Thumbnail Override",
+            "name": "post_hero_video_thumbnail_override",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e99706dd5afd",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5ec37591ded25",
+                        "operator": "==",
+                        "value": "youtube"
+                    },
+                    {
+                        "field": "field_5e9896f25cff5",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e9970cbd5afe",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ec37591ded25",
+                        "operator": "==",
+                        "value": "youtube"
+                    },
+                    {
+                        "field": "field_5e9897355cff6",
+                        "operator": "==empty"
+                    },
+                    {
+                        "field": "field_5e99706dd5afd",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5e9896f25cff5",
+                        "operator": "!=",
+                        "value": "video"
+                    },
+                    {
+                        "field": "field_5ecff18b8fc8d",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "The video's thumbnail will be fetched from API",
+            "new_lines": "",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5e99713dd5b00",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ec37591ded25",
+                        "operator": "==",
+                        "value": "youtube"
+                    },
+                    {
+                        "field": "field_5e99706dd5afd",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5e9897355cff6",
+                        "operator": "!=empty"
+                    },
+                    {
+                        "field": "field_5e9896f25cff5",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "The video's thumbnail was fetched from API",
+            "new_lines": "",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5e997153d5b01",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ec37591ded25",
+                        "operator": "==",
+                        "value": "youtube"
+                    },
+                    {
+                        "field": "field_5e99706dd5afd",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5e9896f25cff5",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "The video's thumbnail will be overridden",
+            "new_lines": "",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1600194539
+}

@@ -1,0 +1,11 @@
+.trends-2021-container .signup-form__submit {
+
+  &:not(.disabled) {
+    @apply text-gray #{!important};
+  }
+
+  &:not(.disabled):hover,
+  &:focus:not(.disabled) {
+    @apply text-white #{!important};
+  }
+}

@@ -1,0 +1,62 @@
+.renew-year-2021-home-post-card {
+  @screen md {
+    min-height: 246px;
+  }
+
+  @screen ml {
+    min-height: 378px
+  }
+
+  @screen xl {
+    min-height: 466px;
+  }
+
+  &__bar {
+    width: 120%;
+    height: 0;
+    opacity: 0;
+    border-top: 1px solid white;
+    transform: translateX(100%);
+    transition: all 600ms ease-out;;
+  }
+
+  &--right .renew-year-2021-home-post-card__bar {
+    transform: translateX(-100%);
+  }
+
+  &__content {
+    width: 100%;
+
+    @screen md {
+      width: 50%;
+    }
+
+    @screen xl {
+      width: 100%;
+      max-width: 41.94%;
+      min-width: 600px;
+    }
+  }
+
+  &__img {
+    background-position: top center;
+
+    @screen md-down {
+      min-height: 249px;
+      padding-top: 84%;
+    }
+
+    @screen md {
+      padding-top: 32%;
+    }
+
+    @screen ml {
+      padding-top: 32%;
+    }
+  }
+
+  &.show .renew-year-2021-home-post-card__bar {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}

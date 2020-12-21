@@ -1,0 +1,36 @@
+.absolute-center {
+  @apply absolute transform origin-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+.transform-center {
+  @apply transform origin-center -translate-x-1/2 -translate-y-1/2;
+}
+
+.absolute-full {
+  @apply absolute top-0 left-0 w-full h-full;
+}
+
+.hover-underline-seafoam-dark,
+.hover-underline-gray {
+  @apply border-solid border-transparent border-b-1 transition-colors duration-500 ease-in-out;
+}
+
+.hover-underline-seafoam-dark:hover {
+  @apply border-seafoam-dark;
+}
+
+.hover-underline-gray:hover {
+  @apply border-gray;
+}
+
+.clear {
+  clear: both;
+  position: block;
+  height: 1px;
+  float: none;
+  width: 100%;
+}
+
+.error-outline {
+  outline: 1px solid #F06767;
+}

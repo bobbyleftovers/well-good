@@ -1,0 +1,35 @@
+
+article.home {
+	padding-top: 20px;
+	.main {
+		width: 100%;
+		@media (min-width: break($m)) {
+			display: table;
+			>section {
+				display: table-cell;
+				vertical-align: top;
+			}
+		}
+	}
+
+	.sidebar {
+		position: relative;
+		@media (min-width: break($m)) {
+			padding-left: 25px;
+			// padding-top: 30px;
+			width: 325px;
+		}
+	}
+}
+
+.home__slot {
+	display: none;
+
+	@media( max-width: break($m, true)) {
+		display: block;
+	}
+}
+
+.home__slot--last {
+	margin-top: 50px;
+}

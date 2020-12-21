@@ -1,0 +1,229 @@
+
+.sub-menu {
+	@extend %navigation-item;
+	@include transition(all);
+
+	position: fixed;
+	padding: 25px $edge-gutter 20px;
+	bottom: 0;
+	right: - $nav-width-mobile * 2;
+	top: 0;
+	width: $nav-width-mobile;
+	background-color: $white;
+	z-index: 0;
+
+	@media (min-width: break($m)) {
+		position: absolute;
+		right: 0;
+		left: 0;
+		bottom: auto;
+		width: auto;
+		padding: 30px 0;
+		top: 100%;
+		margin-top: -1px;
+		transform: translateY(-100%);
+		z-index: -2;
+    transition-property: transform;
+    opacity: 0;
+    transition: transform $transition-duration $transition-timing-function, opacity 1ms linear $transition-duration;
+
+	}
+
+	&.js-sub-menu-open {
+		right: - $nav-width-mobile;
+		z-index: 200;
+
+		@media (min-width: break($m)) {
+			display: block;
+			right: 0;
+			box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+			z-index: -1;
+			visibility: visible;
+      transform: translateY(1px);
+      opacity: 1;
+      transition: opacity 1ms linear, transform $transition-duration $transition-timing-function;
+
+		}
+	}
+
+	&.fade-transition {
+		transition-property: opacity;
+	}
+
+	[class*="icon-"] {
+		vertical-align: middle;
+	}
+}
+.sub-menu__inner {
+	@include max-width($break-max);
+
+	@media (min-width: break($m)) {
+		padding-left: $edge-gutter-tablet;
+		padding-right: $edge-gutter-tablet;
+		display: flex;
+	}
+
+	@media (min-width: break($break-max + $edge-gutter * 2)) {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+.sub-menu__header {
+	@extend %clearfix;
+	position: relative;
+	margin-bottom: 40px;
+
+	@media (min-width: break($m)) {
+		display: none;
+	}
+
+	[class*="icon-"] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 15px;
+		opacity: 0.3;
+	}
+}
+.sub-menu__footer {
+	margin-top: 40px;
+
+	[class*="icon-"] {
+		font-size: 14px;
+		vertical-align: middle;
+	}
+
+	@media (min-width: break($m)) {
+		display: none;
+	}
+
+	a {
+		font-family: $sans-serif-condensed;
+		color: #BCBCBC;
+		line-height: 19px;
+	}
+}
+.sub-menu__popular-tags {
+	@extend %submenu-typography;
+
+	@media (min-width: break($m)) {
+		vertical-align: top;
+		display: inline-block;
+		margin: 0 30px 0 0;
+		text-align: left;
+		flex: 1 0 auto;
+		width: 170px;
+		max-width: 170px;
+	}
+}
+.sub-menu__popular-tags-tag {
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	@media (min-width: break($m)) {
+		margin: 0;
+
+		a {
+			@include transition(color);
+
+			&:hover {
+				color: $hover;
+			}
+		}
+	}
+}
+.sub-menu__posts {
+	display: none;
+
+	@media (min-width: break($m)) {
+		flex: 1 1 auto;
+		display: inline-flex;
+	}
+}
+.sub-menu__featured-container {
+	@media (min-width: break($m)) {
+		flex: 0 0 28%;
+		margin-right: 30px;
+	}
+}
+.sub-menu__cards {
+	@media (min-width: break($m)) {
+		flex: 1 1 0;
+		display: inline-block;
+		font-size: 0;
+		margin-left: -8px;
+		margin-right: -8px;
+	}
+}
+.sub-menu__card {
+	display: inline-block;
+	margin-bottom: 15px;
+	padding: 0 8px;
+	width: 49%;
+
+	article {
+		display: flex;
+		align-items: center;
+	}
+}
+.sub-menu__card--featured {
+	display: block;
+	width: 100%;
+
+	.sub-menu__card__image-wrapper,
+	.sub-menu__card__title{
+		width: 100%;
+	}
+	.sub-menu__card__title {
+		padding-left: 0;
+		margin-top: 10px;
+		text-align: center;
+	}
+}
+.sub-menu__card__image-wrapper {
+	vertical-align: middle;
+	display: inline-block;
+	width: 50%;
+}
+.sub-menu__card__title {
+	@extend %link-hover;
+	vertical-align: middle;
+	display: inline-block;
+	width: 50%;
+	text-align: left;
+	padding-left: 15px;
+	margin: 0;
+}
+.sub-menu__card__image {
+	@extend %image-hover;
+	@extend %image-fallback;
+	@include aspect_ratio( 3/2 );
+	overflow: hidden;
+	display: block;
+	vertical-align: middle;
+
+	img {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+.js-nav__primary-open {
+	overflow: hidden;
+	&,
+	.main-wrapper {
+		height: 100%;
+	}
+	.main-wrapper {
+		width: 100%;
+	}
+	.menu-social-menu-container,
+	.menu-header-menu-container {
+		visibility: visible;
+		opacity: 1;
+		z-index: 100;
+  }
+}

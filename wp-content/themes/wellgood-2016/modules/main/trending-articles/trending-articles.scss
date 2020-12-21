@@ -1,0 +1,19 @@
+.trending-articles {
+  padding-top: 60px;
+  padding-bottom: 36px;
+
+  @include media-breakpoint-down(sm){
+    padding-top:45px;
+    max-width: 770px;
+  }
+  @include media-breakpoint-down(xs){
+    padding-top:30px;
+    max-width: 435px;
+  }
+}
+.trending-articles__col:last-child {
+  display:none;
+  @include media-breakpoint-only(sm){
+    display:block;
+  }
+}

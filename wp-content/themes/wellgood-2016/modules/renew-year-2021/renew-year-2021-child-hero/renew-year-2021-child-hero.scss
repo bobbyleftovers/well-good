@@ -1,0 +1,110 @@
+.renew-year-2021-child-hero {
+	.accent--1 {
+		top: -48%;
+    right: -48%;
+    width: 85%;
+
+		@screen ml {
+			width: 65%;
+			right: -29%;
+			top: -32%;
+		}
+		
+		@screen xl {
+			width: auto;
+			top: -280px;
+			right: -280px;
+		}
+	}
+	
+	.accent--2 {
+		bottom: -25%;
+    right: -47%;
+    width: 77%;
+
+		@screen ml {
+			width: 65%;
+			right: -39%;
+			bottom: -13%;
+		}
+		
+		@screen xl {
+			width: auto;
+			bottom: -170px;
+			right: -390px;
+		}
+	}
+
+
+
+	&__content {
+		max-width: 700px;
+	}
+
+	// needed to target the newsletter
+	.base-button.base-button--primary {
+		background: #fff;
+		border: 2px solid #fff;
+		color: #333;
+
+		&:hover {
+			color: #fff!important;
+		}
+	}
+
+	&__signup-form {
+		
+		.signup-form__form {
+			max-width: 370px;
+		}
+
+		.text-input {
+			color: white
+		}
+
+		.text-input label {
+			color: white;
+			opacity: 0.7;
+		}
+
+		color: white;
+		.error div {
+		}
+
+		.signup-form__group {
+			margin-top: 0;
+		}
+	}
+
+	&__bar {
+    width: 120%;
+    height: 0;
+		border-top: 1px solid white;
+		transform: translateX(-100%);
+		transition: 600ms ease-out
+	}
+	
+	&.show .renew-year-2021-child-hero__bar {
+		transform: translateX(0);
+	}
+
+	&__featured-image {
+		padding-top: 85%;
+
+		@screen ml {
+			padding-top: 0;
+		}
+	}
+
+	&__frame {
+		height: 100%;
+
+		@screen md {
+			height: auto;
+		}
+
+		@screen ml {
+			height: 100%;
+		}
+	}
+}

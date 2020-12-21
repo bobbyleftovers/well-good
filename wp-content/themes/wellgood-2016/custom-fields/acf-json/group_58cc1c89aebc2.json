@@ -1,0 +1,516 @@
+{
+    "key": "group_58cc1c89aebc2",
+    "title": "Post Options",
+    "fields": [
+        {
+            "key": "field_5f9ae02e95b2d",
+            "label": "Disable Narrativ",
+            "name": "disable_narrativ",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5faaadb4e0d71",
+            "label": "Disable Skimlinks",
+            "name": "disable_skimlinks",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_8daasdf921l32",
+            "label": "Hide from home page",
+            "name": "hide_from_home",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Hide this post from the home page latest posts listing",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "_postextra_hide_date",
+            "label": "Hide date on this article",
+            "name": "_postextra_hide_date",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "default_value": "no",
+            "layout": "vertical",
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5e9637d0ad5dc",
+            "label": "Hide Related Content",
+            "name": "skip_related_content",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Hide related content injection for this post",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "show_featured_image",
+            "label": "Show featured image",
+            "name": "show_featured_image",
+            "type": "radio",
+            "instructions": "Show the featured image above the post content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Yes",
+                "no": "No"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "no",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5a5e85747a413",
+            "label": "Enable Slideshow",
+            "name": "enable_slideshow",
+            "type": "true_false",
+            "instructions": "Check to select a slideshow for the header of this post.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "show_featured_image",
+                        "operator": "==",
+                        "value": "no"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a5e85b37a414",
+            "label": "Slideshow",
+            "name": "slideshow",
+            "type": "post_object",
+            "instructions": "Select the slideshow to display in this post.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "show_featured_image",
+                        "operator": "==",
+                        "value": "no"
+                    },
+                    {
+                        "field": "field_5a5e85747a413",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "slideshow"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "enable_sidebar_ad_refresh",
+            "label": "Enable Sidebar Ads to refresh on slideshows",
+            "name": "enable_sidebar_ad_refresh",
+            "type": "checkbox",
+            "instructions": "This will refresh the sidebar ad as users scroll to new slideshow items.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "refresh": "Refresh Ads"
+            },
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 0,
+            "return_format": "value",
+            "allow_custom": 0,
+            "save_custom": 0
+        },
+        {
+            "key": "post_tracking_code",
+            "label": "Post Specific Tracking Code",
+            "name": "post_tracking_code",
+            "type": "textarea",
+            "instructions": "Enter full 1x1 pixel, NOT JUST the pixel URL. Format should follow below:<br>\r\n<code>&lt;img src=\"https:\/\/....\" width=\"1\" height=\"1\" border=\"0\" \/><\/code>\r\n<br><br>\r\nFor multiple pixels ensure there are no spaces between end of first pixel and start of second pixel.\r\n<br>\r\nCache buster is always <code>[timestamp]<\/code>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5f8711c4371ce",
+            "label": "Partner Mention Tracking Code",
+            "name": "partner_mention_tracking_code",
+            "type": "textarea",
+            "instructions": "Enter full 1x1 pixel, NOT JUST the pixel URL. Format should follow below:<br>\r\n<code>&lt;img src=\"https:\/\/....\" width=\"1\" height=\"1\" border=\"0\" \/><\/code>\r\n<br><br>\r\nFor multiple pixels ensure there are no spaces between end of first pixel and start of second pixel.\r\n<br>\r\nCache buster is always <code>[timestamp]<\/code>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5f8e4244d0a85",
+            "label": "Partner Mention URL",
+            "name": "partner_mention_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_56c5ef69195b7",
+            "label": "More Reading Links",
+            "name": "more_reading",
+            "type": "flexible_content",
+            "instructions": "<pre><\/pre>\n            Include each more reading link with a [more-reading] shortcode and id attribute referencing the position of the link in the list below.<br>[more-reading id=\"1\"]  &nbsp;&nbsp; Embeds the first link.<br>[more-reading id=\"2\"]  &nbsp;&nbsp; Embeds the second link, etc.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Add Link",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "56c5ef77a033d",
+                    "name": "external_link",
+                    "label": "External Link",
+                    "display": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_56c5f20f195ba",
+                            "label": "URL",
+                            "name": "url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_56c5f1e5195b8",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56c5f1f3195b9",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "preview_size": "thumbnail",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "return_format": "array",
+                            "library": "all"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "56c5f230195bb",
+                    "name": "post",
+                    "label": "Post",
+                    "display": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_56c5f23f195bc",
+                            "label": "Post",
+                            "name": "post",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [],
+                            "taxonomy": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "object",
+                            "ui": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        },
+        {
+            "key": "field_f8dsa3232987gsa",
+            "label": "Collection",
+            "name": "collection",
+            "type": "post_object",
+            "instructions": "Choose a collection. Add a collection under <a href=\"\/wp-admin\/edit.php?post_type=collections\">collections<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "collections"
+            ],
+            "taxonomy": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5a0b65a0af269",
+            "label": "Enable SimpleReach Tracking",
+            "name": "enable_simplereach_tracking",
+            "type": "checkbox",
+            "instructions": "Select to turn on SimpleReach tracking script",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Turn On SimpleReach": "Turn On SimpleReach"
+            },
+            "allow_custom": 0,
+            "save_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5ae78d359cb2c",
+            "label": "Enable Pressboard",
+            "name": "enable_pressboard",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a43db30dbcb9",
+            "label": "Exclude Post From MSN Feed",
+            "name": "exclude_from_msn_feed",
+            "type": "true_false",
+            "instructions": "MSN doesn't allow sexually explicit content.. If this post is risky, you might want to consider excluding it from the content that is sent out to MSN's feed. You can do that by checking this box!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ac3f95dccf83",
+            "label": "In-Post Sidebar",
+            "name": "in_post_sidebar",
+            "type": "wysiwyg",
+            "instructions": "This content can be added at the bottom of the post editor using the shortcode: [in_post_sidebar].",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "recipe"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1605021396
+}

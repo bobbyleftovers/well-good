@@ -1,0 +1,51 @@
+.post-card {
+  display: block;
+  width:100%;
+  background:$white;
+  text-decoration: none;
+  margin-bottom:20px;
+}
+
+.post-card__content {
+	padding: 14px 0 0;
+}
+
+.post-card__image-wrapper {
+  width:100%;
+  padding-bottom: 66%;
+  display: block;
+  position:relative;
+  overflow: hidden;
+}
+
+.post-card__image {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  background-position: bottom;
+  transition: transform 0.4s;
+  background-color: $light-grey;
+}
+
+.post-card__excerpt {
+  color: $grey;
+}
+
+.post-card__main {
+  padding-bottom: 26px;
+}
+
+.post-card__title .core-heading {
+  @extend %article-title,
+  %article-title--small;
+
+  transition: 0.3s;
+
+  &:hover {
+    color: $seafoam;
+  }
+}

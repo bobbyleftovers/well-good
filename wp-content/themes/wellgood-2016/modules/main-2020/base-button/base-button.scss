@@ -1,0 +1,83 @@
+/*! purgecss start ignore */
+.base-button {
+  height: 45px;
+  min-width: 160px;
+  text-decoration: none !important;
+  @apply rounded-none bg-seafoam-dark cursor-pointer inline-flex items-center justify-center px-e10 border transition duration-300 relative appearance-none border-0;
+  &:focus {
+    @apply outline-none;
+  }
+  &.disabled {
+    @apply cursor-not-allowed;
+  }
+  &:not(.disabled)  {
+    &:hover {
+      @apply bg-transparent;
+    }
+    &:focus {
+      @apply bg-transparent;
+      &:after {
+        @apply absolute;
+        content:'';
+        top:3px;
+        left:3px;
+        width:calc(100% - 6px);
+        height:calc(100% - 6px);
+        z-index: 0;
+      }
+    }
+  }
+  &.disabled {
+    @apply opacity-80;
+  }
+}
+
+.base-button.base-button--primary {
+  @apply bg-seafoam-dark border-solid border-seafoam-dark border;
+  &:not(.disabled)  {
+    &:hover {
+      @apply text-seafoam-dark;
+    }
+    &:focus {
+      @apply text-white;
+      &:after {
+        @apply bg-seafoam-dark;
+      }
+    }
+  }
+}
+
+
+.base-button.base-button--white {
+  @apply bg-white border-solid border-white border text-seafoam-dark;
+  &.text-gray {
+    @apply text-gray;
+  }
+  &:not(.disabled)  {
+    &:hover {
+      @apply text-white;
+    }
+    &:focus {
+      @apply text-seafoam-dark;
+      &.text-gray {
+        @apply text-gray;
+      }
+      &:after {
+        @apply bg-white;
+      }
+    }
+  }
+}
+
+input.base-button--white:not(.disabled) {
+  &:hover,
+  &:focus {
+    @apply text-white bg-seafoam-dark;
+  }
+}
+
+.base-button__text {
+  position:relative;
+  z-index: 10;
+}
+/*! purgecss end ignore */

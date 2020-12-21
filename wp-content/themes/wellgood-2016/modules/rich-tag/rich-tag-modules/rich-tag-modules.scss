@@ -1,0 +1,14 @@
+.rich-tag-module__ad .advertisement,
+.rich-tag-module__ad .advertising-adslot {
+    padding-top:0 !important;
+    padding-bottom: 0 !important;
+}
+
+.rich-tag-module__ad.container__ad--inline[data-ad-loaded=true] section.advertisement.ad-position-inline>.advertising-adslot:before {
+    transform: translate3d(-50%,-100%,0);
+    top: -4px;
+}
+
+.rich-tag-module__ad + .rich-tag-module__border {
+    display:none;
+}

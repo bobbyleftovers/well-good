@@ -1,0 +1,127 @@
+.article-card--category-featured {
+	text-align: center;
+
+	@media (min-width: break($m)) {
+		display: inline-block;
+		width: 50%;
+		padding-left: 17px;
+		padding-right: 17px;
+		vertical-align: top;
+
+		& + .article-card--category-featured {
+			padding-top: 0;
+		}
+	}
+	@media (min-width: break($s)) {
+		.article-card__image {
+			@include aspect_ratio( 3/2 );
+		}
+	}
+
+	.article-card__image,
+	.article-card__meta{
+		display: block;
+		max-width: none;
+	}
+
+	.article-card__image {
+		width: 100%;
+	}
+
+	.article-card__by {
+		display: none;
+	}
+	.article-card__title {
+		position: relative;
+		text-align: center;
+		z-index: 100;
+	}
+	.article-card__excerpt {
+		margin-top: 0;
+	}
+	.article-card__excerpt,
+	.article-card__title {
+		padding-left: 10px;
+		padding-right: 10px;
+		
+		@media (min-width: break($m)) {
+			margin-left: 38px;
+			margin-right: 38px;
+		}
+		
+		@media (min-width: break($l)) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		.article-card--category-featured & {
+			@media (min-width: break($m)) {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+	.article-card__meta {
+		padding: 12px;
+	}
+}
+
+.category__slot {
+	padding-bottom: 20px;
+	border-bottom: 1px solid $light-grey;
+	margin-bottom: 20px;
+	display: none;
+
+	@media( max-width: break($m, true)) {
+		display: block;
+	}
+}
+
+.category__sidebar {
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+.category__featured-article-list {
+	margin-bottom: 25px;
+	font-size: 0.0001px;
+	@media (min-width: break($m)) {
+		margin-left: -17px;
+		margin-right: -17px;
+		display: flex;
+	}
+}
+.category__article-list {
+	margin-bottom: 35px;
+	&:not(.category__article-list-with-tags) {
+		margin-top: 0;
+	}
+}
+.popular-tags {
+	text-align: center;
+	line-height: 1.8em;
+
+	@media (min-width: break($m)) {
+		text-align: left;
+	}
+
+	.icon-tag {
+		float: none;
+		margin-right: 0;
+	}
+	a,
+	.icon-tag,
+	.icon-tag:before {
+		vertical-align: middle;
+	}
+}
+.popular-tags__headline {
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+.category .collection {
+	@extend .module-alternate;
+
+	padding-top: 7px;
+}

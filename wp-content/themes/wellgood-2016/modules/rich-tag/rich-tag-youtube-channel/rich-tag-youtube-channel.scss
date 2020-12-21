@@ -1,0 +1,12 @@
+.rich-tag-yt__channer-card {
+  min-height: 244px;
+  @screen sm {
+    min-height: 323px;
+  }
+  @screen md {
+    min-height: 281px;
+  }
+  @screen lg {
+    min-height: 350px;
+  }
+}

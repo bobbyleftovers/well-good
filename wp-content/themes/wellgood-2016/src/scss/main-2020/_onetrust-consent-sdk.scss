@@ -1,0 +1,8 @@
+/*! purgecss start ignore */
+body.is-local #onetrust-consent-sdk,
+body.is-staging #onetrust-consent-sdk {
+  z-index: -9999999 !important;
+  position:relative;
+  opacity: 0 !important;
+}
+/*! purgecss end ignore */

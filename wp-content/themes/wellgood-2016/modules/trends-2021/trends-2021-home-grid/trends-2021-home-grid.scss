@@ -1,0 +1,101 @@
+.trends-2021-home-grid {
+  max-width: 400px !important;
+  @screen sm {
+    max-width: 652px !important;
+  }
+  @screen ml {
+    max-width: 790px !important;
+  }
+  @screen lg {
+    max-width: 1022px !important; 
+  }
+  @screen xl {
+    max-width: 1102px !important; 
+  }
+}
+
+.trends-2021-home-grid .trends-2021-post-card__wrapper {
+  @screen xs-down {
+    padding-bottom: 27px;
+  }
+}
+
+.trends-2021-home-grid__post-card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.trends-2021-home-grid__post-card__padding {
+  padding-bottom: 128.35%;
+
+  @sceen lg {
+    padding-bottom: 128%;
+  }
+}
+
+.trends-2021-home-grid__post-card__content {
+  padding: 20px;
+  padding-top: 45px;
+
+  @screen ml {
+    padding: 22px;
+  }
+
+  @screen lg {
+    padding: 43px;
+  }
+
+  .text-h2 {
+    @screen ml-down {
+      font-size: 24px !important;
+      line-height: 30px !important;
+    }
+  }
+}
+
+.trends-2021-home-grid .signup-form__fields input[type="email"] {
+  background: white;
+}
+
+.trends-2021-home-grid .signup-form__fields input[type="submit"] {
+  opacity: 1;
+}
+
+.trends-2021-home-grid .signup-form__result {
+  position: relative !important;
+  bottom: auto !important;
+  top: auto !important;
+  transform: translateY(0) !important;
+  margin-top: 0;
+}
+
+
+.trends-2021-home-grid .signup-form__group {
+  margin-top: 0px;
+
+	@screen ml-down {
+		margin-top: 0px;
+    flex-direction: column;
+  }
+
+  @screen ml { 
+    margin-top: 0px;
+  }
+}
+
+.trends-2021-home-grid .signup-form__submit {
+
+  &:not(.disabled):hover,
+  &:focus:not(.disabled) {
+    @apply bg-white text-seafoam-dark #{!important};
+  }
+
+  @screen ml-down {
+    margin-top:10px;
+    width: 100%;
+  }
+
+  @screen ml {
+    max-width: 100px;
+  }
+}

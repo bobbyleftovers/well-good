@@ -1,0 +1,13 @@
+.trends-2020-adverstisement {
+  &.container__ad--slot[data-ad-loaded=true] section.advertisement.ad-position-slot>.advertising-adslot:before {
+    background-color: transparent;
+    color: $white;
+    top: -30px; 
+  }
+
+  &.container__ad--inline[data-ad-loaded=true] section.advertisement.ad-position-inline>.advertising-adslot:before {
+    background-color: transparent;
+    color: $white;
+    top: -10px;
+  }
+}

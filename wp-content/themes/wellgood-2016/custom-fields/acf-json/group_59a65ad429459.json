@@ -1,0 +1,540 @@
+{
+    "key": "group_59a65ad429459",
+    "title": "Council Hub Options",
+    "fields": [
+        {
+            "key": "field_59a75621fab57",
+            "label": "General Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59a75634fab58",
+            "label": "Page Background Color",
+            "name": "page_background_color",
+            "type": "color_picker",
+            "instructions": "If set, the background color of the page will be set to the color provided here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_59a75c03ff925",
+            "label": "Image Clone",
+            "name": "image_clone",
+            "type": "clone",
+            "instructions": "Image to be displayed at the top of this page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_595e64ad6c701",
+                "field_595e64ad6c711"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_59a75f51c862b",
+            "label": "Header Title",
+            "name": "header_title",
+            "type": "text",
+            "instructions": "Title to be displayed above the intro content in this page's header",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59a7969c10649",
+            "label": "Middle Image",
+            "name": "middle_image",
+            "type": "image",
+            "instructions": "Image to be displayed between featured posts grid and council members grid",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "article",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59a7979b1064a",
+            "label": "Middle Image Link",
+            "name": "middle_image_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5a13653e13ecb",
+            "label": "Show Council Members",
+            "name": "show_council_members",
+            "type": "true_false",
+            "instructions": "Check to show the Council members.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a13592b4f8c1",
+            "label": "Back Button Text",
+            "name": "back_button_text",
+            "type": "text",
+            "instructions": "Customize the text for the \"Back to Council Hub\" button. If no value is supplied, the value will be pulled from the established Parent Page (if provided).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59a764752032f",
+            "label": "Featured Posts",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59a791695fbca",
+            "label": "Featured Posts Title",
+            "name": "featured_posts_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59a790cf5fbc3",
+            "label": "Featured Posts",
+            "name": "featured_posts",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Add Feature",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "59a790d36d359",
+                    "name": "feature",
+                    "label": "Feature",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_59a790e45fbc7",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": 150
+                        },
+                        {
+                            "key": "field_59a791035fbc8",
+                            "label": "Featured Image",
+                            "name": "featured_image",
+                            "type": "image",
+                            "instructions": "Landscape aspect ratio. Recommended size 1330 x 870.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "article",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_59a791315fbc9",
+                            "label": "Post",
+                            "name": "post",
+                            "type": "post_object",
+                            "instructions": "Choose a post or page",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "page",
+                                "post"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "object",
+                            "ui": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        },
+        {
+            "key": "field_59a6dd8f6cc28",
+            "label": "Sub Menu Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59a6ddb36cc29",
+            "label": "Menu Thumbnail",
+            "name": "menu_thumbnail",
+            "type": "image",
+            "instructions": "The thumbnail to be displayed for this page on the Council Hub sub-navigation",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": 170,
+            "min_height": 170,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59a6ddd76cc2a",
+            "label": "Menu Title",
+            "name": "menu_title",
+            "type": "text",
+            "instructions": "The title to be displayed for this page on the Council Hub sub-navigation",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59a6de1d6cc2b",
+            "label": "Page State",
+            "name": "page_state",
+            "type": "radio",
+            "instructions": "Select whether this page is active or not",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "active": "Active",
+                "inactive": "Inactive"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_59a6e05ca743c",
+            "label": "Inactive Text",
+            "name": "inactive_text",
+            "type": "text",
+            "instructions": "Text to be displayed over top of thumbnail when this page is inactive",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59a6de1d6cc2b",
+                        "operator": "==",
+                        "value": "inactive"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 35
+        },
+        {
+            "key": "field_59af00bd6f7ac",
+            "label": "Middle Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59af00fe6f7ad",
+            "label": "Second Middle Content Type",
+            "name": "second_middle_content",
+            "type": "select",
+            "instructions": "Select to display a video or photo for the second middle content block",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "photo": "Photo",
+                "video": "Video"
+            },
+            "default_value": [
+                "photo"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59af01386f7ae",
+            "label": "Second Middle Photo",
+            "name": "second_middle_photo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59af00fe6f7ad",
+                        "operator": "==",
+                        "value": "photo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59af01516f7af",
+            "label": "Second Middle Photo Link",
+            "name": "second_middle_photo_link",
+            "type": "url",
+            "instructions": "Link to be applied to the second middle photo.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59af00fe6f7ad",
+                        "operator": "==",
+                        "value": "photo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59af01706f7b0",
+            "label": "Brightcove Video ID",
+            "name": "second_middle_video",
+            "type": "text",
+            "instructions": "Select a brightcove video to be displayed for this content by providing a video ID. Each video has an ID listed next to it in the brightcove admin page (after being clicked\/selected). The ID should be a string of numbers and look something like \"5537750862001\".",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59af00fe6f7ad",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/page-council-hub.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1559856860
+}

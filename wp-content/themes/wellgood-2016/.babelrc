@@ -1,0 +1,10 @@
+{
+  "sourceMaps": true,
+  "presets": [
+    ["env", { "loose":true }]
+  ],
+  "plugins": [
+    ["transform-decorators-legacy"],
+    ["transform-react-jsx"]
+  ]
+}

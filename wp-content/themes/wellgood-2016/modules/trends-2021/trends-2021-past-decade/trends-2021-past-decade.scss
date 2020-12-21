@@ -1,0 +1,201 @@
+.trends-2021-past-decade {
+  background: #F9DDD3;
+}
+
+.trends-2021-past-decade__cell {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &:first-child {
+    padding-left: calc(50vw - 105px);
+  }
+
+  &:last-child {
+    padding-right: calc(50vw - 105px);
+  }
+
+  @screen md {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:first-child {
+      padding-left: 20px;
+    }
+
+    &:last-child {
+      padding-right: 20px;
+    }
+  }
+
+  @screen ml {
+    padding-left: 12.5px;
+    padding-right: 12.5px;
+
+    &:first-child {
+      padding-left: 10.9vw;
+    }
+
+    &:last-child {
+      padding-right: 10.9vw;
+    }
+  }
+
+  @screen lg {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &:first-child {
+      padding-left: 10.4vw;
+    }
+
+    &:last-child {
+      padding-right: 10.4vw;
+    }
+  }
+}
+
+.trends-2021-past-decade__cell__content {
+  display: block;
+  float:left;
+  position: relative;
+  transition: 0.2s;
+  width: 210px;
+
+  @screen md {
+    width: 182px;
+  }
+
+  @screen ml {
+    width: 23.43vw;
+  }
+
+  @screen lg {
+    width: 22.22vw;
+  }
+
+  html.no-touch &:hover {
+    filter: drop-shadow(0px 0px 23px rgba(173, 65, 23, 0.56));
+    text-decoration: underline;
+  }
+}
+
+.trends-2021-past-decade__img {
+  background-color: white;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .image-module {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100% !important;
+    height: 100% !important;
+
+    img  {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.trends-2021-past-decade__img__padding {
+  width:100%;
+  padding-bottom: 123%;
+}
+
+.trends-2021-past-decade__slideshow.flickity-enabled,
+.trends-2021-past-decade__slideshow .flickity-viewport {
+  overflow:visible;
+}
+
+.trends-2021-past-decade__slideshow:not(.flickity-enabled) {
+  max-height: 31.6vw;
+  overflow: hidden;
+}
+
+.trends-2021-slideshow .flickity-prev-next-button,
+.trends-2021-past-decade .flickity-prev-next-button {
+    background: #fff;
+    top: 41%;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #d8d8d8; //$grey_light, not defined
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+
+    &:active {
+      opacity: 1;
+    }
+
+    @screen ml {
+      width: 56px;
+      height: 56px;
+    }
+}
+
+.trends-2021-past-decade .flickity-prev-next-button {
+
+  @screen ml-down {
+    display: none !important;
+  }
+
+  &.previous {
+    left: 25px  !important;
+  
+    @screen lg {
+      left: 30px  !important;
+    }
+
+    @screen xl {
+      left: 40px  !important;
+    }
+
+    svg {
+      left: 5%;
+    }
+  }
+
+  &.next {
+    right: 25px  !important;
+  
+    @screen lg {
+      right: 30px !important;
+    }
+
+    @screen xl {
+      right: 40px  !important;
+    }
+
+    svg {
+      left: -5%;
+    }
+  }
+}
+
+.trends-2021-past-decade .flickity-page-dots {
+  display: block;
+  padding-top: 26px;
+  bottom: auto;
+  position: relative;
+
+  @screen ml {
+    display: none;
+  }
+}
+
+.trends-2021-past-decade .flickity-page-dots .dot {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  @apply border border-solid border-seafoam-dark;
+  opacity: 1;
+  margin-left: 4px;
+  margin-right: 5px;
+
+  &.is-selected {
+    @apply bg-seafoam-dark;
+  }
+}

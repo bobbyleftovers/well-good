@@ -1,0 +1,119 @@
+.chub-header__title {
+    text-align: center;
+    letter-spacing: 0.025em;
+    margin-top: 50px;
+    font-size: 35px;
+
+    @media( min-width: break($m) ){
+        margin-top: 65px;
+        font-size: 45px;
+    }
+    @media (min-width: break($mxl)){
+        font-size: 57px;
+    }
+    
+}
+.chub-header__intro {
+    margin-bottom: 60px;
+    @media (min-width: break($m)){
+        margin-bottom: 50px;
+    }
+    .paragraph_centered {
+        margin: 20px auto 0;
+    }
+}
+.chub-header__hero {
+    margin-bottom: 50px;
+}
+.chub-wellness-collective-images {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: break($m)) {
+        max-width: 860px;
+    }
+    @media (min-width: break($l)) {
+        max-width: none;
+    }
+}
+
+.chub-wellness-collective-image-container {
+    height: 280px;
+    width: 100%;
+    position: relative;
+    &:after {
+        content: "";
+        height: 1px;
+        width: 70%;
+        max-width: 220px;
+        display: block;
+        background-color: black;
+        transform: translateX(-50%);
+        position: absolute;
+        left: 50%;
+        top: 0;
+    }
+    &:nth-child(1):after {
+        content: none;
+    }
+    @media (min-width: break($m)) {
+        width: 50%;
+        &:after {
+            content: "";
+            height: 220px;
+            width: 1px;
+            display: block;
+            background-color: black;
+            transform: translateY(30px);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &:before {
+            content: "";
+            width: 70%;
+            max-width: 220px;
+            height: 1px;
+            background-color: black;
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+        }
+        &:nth-child(1):after,
+        &:nth-child(3):after,
+        &:nth-child(1):before,
+        &:nth-child(2):before {
+            content: none;
+        }
+    }
+    @media (min-width: break($l)) {
+        width: 25%;
+        &:after {
+            content: "";
+            height: 220px;
+            width: 1px;
+            display: block;
+            background-color: black;
+            transform: translateY(-50%);
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+        &:nth-child(3):after {
+            content: "";
+        }   
+        &:nth-child(1):after,
+        &:before {
+            content: none;
+        }
+    }
+}
+
+.chub-wellness-collective-image {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

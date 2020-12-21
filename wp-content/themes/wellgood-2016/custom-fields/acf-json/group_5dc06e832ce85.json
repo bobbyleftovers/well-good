@@ -1,0 +1,54 @@
+{
+    "key": "group_5dc06e832ce85",
+    "title": "Stage",
+    "fields": [
+        {
+            "key": "field_5dc079f7f2f28",
+            "label": "",
+            "name": "stage",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Stage 1",
+                "2": "Stage 2",
+                "3": "Stage 3"
+            },
+            "default_value": [
+                1
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/page-2020-hub.php"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 0,
+    "description": "",
+    "modified": 1574429373
+}

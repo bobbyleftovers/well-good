@@ -1,0 +1,33 @@
+.trends-2020-sponsored-article {
+  background: $maroon;
+  padding:77px;
+  transition:0.2s;
+  @media (max-width: break($l, false)) {
+    padding:50px;
+  }
+
+  @media (max-width: break($m, false)) {
+    padding:50px 45px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 720px) {
+    padding:40px;
+  }
+
+  @media (max-width: break($s, false)) {
+    padding:20px;
+  }
+
+  body:not(.ie) &.waypoint {
+    opacity:0;
+  }
+
+}
+
+.trends-2020-sponsored-article .trends-2020-article-2020 {
+  margin-bottom:0 !important;
+  padding-bottom:0 !important;
+  border-bottom: 0 !important;
+}

@@ -1,0 +1,214 @@
+@mixin break($direction, $size) {
+  @media (min-#{$direction}: #{$size}px) {
+    @content;
+  }
+}
+@mixin orientation($arg) {
+  @media (orientation: #{$arg}) {
+    @content;
+  }
+}
+@mixin background($position:'top', $size:'large', $color:'light') {
+  background-repeat: repeat;
+  background-position: #{$position};
+  background-origin: border-box;
+  @if $color == 'light' {
+    background-image: url('~assets/img/zigzag.png');
+  } @else {
+    background-image: url('~assets/img/zigzag-dark.svg');
+  }
+  @if $size == 'large' {
+    background-size: 605px;
+  } @else {
+    background-size: 500px;
+  }
+}
+@mixin gutter {
+  padding: 0 $gutter-small;
+  @include break('width', $break-small) {
+    padding: 0 $gutter-medium;
+  }
+}
+@mixin animation($name) {
+  animation-name: #{$name};
+  animation-fill-mode: forwards;
+  animation-duration: $animation-transition;
+}
+@mixin z($arg) {
+  @if $arg == 'negative' {
+      z-index: -1;
+  } @else if $arg == 'zero' {
+      z-index: 0;
+  } @else {
+      $layers:
+          'content',
+          'content_overlay',
+          'header_underlay',
+          'header',
+          'navigation',
+          'advertisement',
+          'modal_underlay',
+          'modal',
+          'modal_control',
+          'quiz',
+          'recommendation',
+          'recommendation_modal',
+          'product_details',
+          'loader'
+      ;
+      @each $layer in $layers {
+          $i: index($layers, $layer);
+          @if $layer == $arg {
+              z-index: $i;
+          }
+      }
+  }
+}
+@mixin text-h1 {
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: $sans-serif-extra-condensed;
+  font-size: 44px;
+  line-height: 37px;
+  letter-spacing: 1.57px;
+  @include break('width', $break-small) {
+    font-size: 86px;
+    line-height: 76px;
+    letter-spacing: 3px;
+  }
+  @include orientation('landscape') {
+    font-size: 44px;
+    line-height: 37px;
+    letter-spacing: 1.57px;
+    @include break('height', $break-small) {
+      font-size: 86px;
+      line-height: 76px;
+      letter-spacing: 3px;
+    }
+  }
+}
+@mixin text-h2 {
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: $sans-serif-extra-condensed;
+  font-size: 28px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  @include break('width', $break-small) {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 1.43px;
+  }
+  @include orientation('landscape') {
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    @include break('height', $break-small) {
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: 1.43px;
+    }
+  }
+}
+@mixin text-h3 {
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: $sans-serif-extra-condensed;
+  font-size: 20px;
+  line-height: 21px;
+  letter-spacing: .71px;
+  @include break('width', $break-small) {
+    font-size: 28px;
+    line-height: 27px;
+    letter-spacing: 1px;
+  }
+  @include orientation('landscape') {
+    font-size: 20px;
+    line-height: 21px;
+    letter-spacing: .71px;
+    @include break('height', $break-small) {
+      font-size: 28px;
+      line-height: 27px;
+      letter-spacing: 1px;
+    }
+  }
+}
+@mixin text-h4 {
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: $sans-serif-extra-condensed;
+  font-size: 15px;
+  line-height: 14px;
+  letter-spacing: .54px;
+  @include break('width', $break-small) {
+    font-size: 19px;
+    line-height: 27px;
+    letter-spacing: .68px;
+  }
+  @include orientation('landscape') {
+    font-size: 15px;
+    line-height: 14px;
+    letter-spacing: .54px;
+    @include break('height', $break-small) {
+      font-size: 19px;
+      line-height: 27px;
+      letter-spacing: .68px;
+    }
+  }
+}
+@mixin text-h5($responsive: true) {
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: $sans-serif;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 1.1px;
+  @if $responsive != false {
+    @include break('width', $break-small) {
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 1.4px;
+    }
+  }
+  @include orientation('landscape') {
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 1.1px;
+    @if $responsive != false {
+      @include break('height', $break-small) {
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 1.4px;
+      }
+    }
+  }
+}
+@mixin text-h6 {
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: $sans-serif;
+  font-size: 9px;
+  line-height: 11px;
+  letter-spacing: .9px;
+  @include break('width', $break-small) {
+    font-size: 10px;
+    line-height: 11px;
+    letter-spacing: 1px;
+  }
+  @include orientation('landscape') {
+    font-size: 9px;
+    line-height: 11px;
+    letter-spacing: .9px;
+    @include break('height', $break-small) {
+      font-size: 10px;
+      line-height: 11px;
+      letter-spacing: 1px;
+    }
+  }
+}

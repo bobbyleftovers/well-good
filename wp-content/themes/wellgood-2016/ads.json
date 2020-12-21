@@ -1,0 +1,79 @@
+{
+	"horizontal": {
+    "description": "Desktop Horizontal Article / Homepage Ad",
+		"container": ".container__ad--horizontal",
+		"type": "desktop",
+		"size": [
+			"desktop"
+		]
+	},
+	"inline": {
+    "description": "Desktop Inline Article Ad",
+		"parent": ".wg__inline-ad-wrapper",
+		"container": ".container__ad--inline",
+		"type": "desktop",
+		"size": [
+			"desktop"
+		]
+	},
+	"rightrail": {
+    "description": "Desktop Right Rail Ad",
+		"container": ".container__ad--rightrail",
+		"type": "desktop",
+		"size": [
+			"desktop"
+		]
+	},
+	"desktopnative": {
+    "description": "Desktop Native Ad",
+		"parent": ".wg__inline-ad-wrapper",
+		"container": ".container__ad--desktopnative",
+		"type": "desktop",
+		"size": [
+			"desktop"
+		]
+  },
+	"outstream": {
+    "description": "Desktop OutStream",
+		"container": ".container__ad--outstream",
+		"type": "desktop",
+		"size": [
+			"desktop"
+		]
+  },
+	"adhesion": {
+    "description": "Mobile Adhesion",
+		"container": ".container__ad--adhesion",
+		"type": "mobile",
+		"size": [
+			"mobile"
+		]
+	},
+	"slot": {
+    "description": "Mobile Article Ad Slot",
+		"parent": ".wg__inline-ad-wrapper",
+		"container": ".container__ad--slot",
+		"type": "mobile",
+		"size": [
+			"mobile"
+		]
+  },
+	"mobilenative": {
+    "description": "Mobile Native Ad",
+		"parent": ".wg__inline-ad-wrapper",
+		"container": ".container__ad--mobilenative",
+		"type": "mobile",
+		"size": [
+			"mobile"
+		]
+  },
+  "amp": {
+    "description": "AMP Ad",
+		"container": ".container__ad--amp",
+		"type": "amp",
+		"size": [
+			"desktop",
+			"mobile"
+		]
+  }
+}

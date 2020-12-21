@@ -1,0 +1,106 @@
+/*
+*  Typography hierarchy
+*/
+
+.trends-2020,
+.trends-2020 p,
+.trends-2020__font-normal {
+  font-weight: normal;
+  font-family: $freight;
+  font-size: 19px;
+  line-height: 30px;
+  @media (max-width: break($s, false)) {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+.h5.trends-2020-game-changers__slide__text,
+.trends-2020__btn,
+.trends-2020-article-2020__thumbnail__caption {
+  font-family: $neuehaas;
+  font-size: 11px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  .trends-2020__btn {
+    line-height: 11px;
+  }
+}
+
+
+
+.trends-2020__font-small {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: $freight;
+}
+
+.trends-2020__h2 {
+  color: $white;
+  font-size: 56px;
+  line-height: 60px;
+  margin-top:0;
+  margin-bottom:0;
+
+  @extend %unicode-fallback-serif;
+
+  @media (max-width: break($s, false)) {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+
+.trends-2020__h3 {
+  font-size: 40px;
+  line-height: 44px;
+  margin-top:11px;
+  margin-bottom:10px;
+
+  @extend %unicode-fallback-serif;
+
+  @media (max-width: break($m, false)) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  @media (max-width: break($s, false)) {
+    font-size: 25px;
+    line-height: 32px;
+  }
+}
+
+.trends-2020__h4 {
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0.52px;
+
+  @extend %unicode-fallback-serif;
+
+  @media (max-width: break($s, false)) {
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.35px;
+  }
+}
+
+
+/*
+*  Font color
+*/
+
+
+.trends-2020 * {
+  color: $white;
+}
+
+.trends-2020__font-white,
+.trends-2020__font-white * {
+  color:$white;
+}
+
+.trends-2020__font-black,
+.trends-2020__font-black * {
+  color:$black;
+}

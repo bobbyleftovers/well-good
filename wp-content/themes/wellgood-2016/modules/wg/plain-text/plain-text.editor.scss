@@ -1,0 +1,56 @@
+.wp-block[data-type="wg/plain-text"] {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.wp-block[data-type="wg/plain-text"] textarea {
+  color: inherit;
+  background: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  text-decoration: inherit;
+  text-transform: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  display: inline-block;
+  height: 1em;
+}
+
+.wp-block[data-type="wg/plain-text"] {
+  color: inherit;
+  background: transparent;
+  text-decoration: inherit;
+  text-transform: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  display: inline-block;
+}
+
+.wp-block[data-type="wg/plain-text"] textarea,
+.plain-text-inherit .wp-block[data-type="wg/plain-text"] {
+  color: inherit !important;
+  background: transparent !important;
+  text-decoration: inherit !important;
+  text-transform: inherit !important;
+  font-size: inherit !important;
+  font-style: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  display: inline-block !important;
+}
+
+.wp-block[data-type="wg/plain-text"] textarea {
+  min-height: 1em;
+  box-shadow: none;
+}

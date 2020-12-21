@@ -1,0 +1,275 @@
+.shop-links {
+  .shop-features.standard & {
+    display: flex;
+    flex-flow: column;
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 0 5px;
+
+    @media (min-width: 400px) {
+      flex: 0 0 50%;
+      width: 50%;
+    }
+
+    @media (min-width: break($l)) {
+      flex: 0 0 33.33333%;
+      width: 33.33333%;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+
+  .shop-features.photo & {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.shop-links__inner {
+  margin-bottom: 30px;
+
+  @media (max-width: break($m, false)) {
+    text-align: center;
+  }
+}
+
+.shop-links__link,
+.post__main a.shop-links__link {
+  color: $black;
+  border: none;
+  text-decoration: none !important;
+
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+.shop-links__thumbnail {
+  position: relative;
+  overflow: hidden;
+
+  .shop-features.standard & {
+    padding-bottom: 100%;
+  }
+
+  &.flickity-enabled {
+    overflow: visible;
+    margin-bottom: 25px;
+  }
+
+  .flickity-viewport {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  .flickity-page-dots {
+    margin-left: 0;
+    bottom: -20px;
+  }
+}
+
+.shop-links__thumbnail .image-module {
+  position: absolute;
+
+  .shop-features.photo & {
+    position: relative;
+  }
+
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, calc(1 - #{$image-hover-opacity}));
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .shop-links__link:hover & {
+    &:before {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .shop-links--hover-text & {
+      transform: none;
+    }
+  }
+
+  .shop-links__thumbnail.flickity-enabled & {
+    transform: none;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.shop-links__content {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+  .shop-links--hover-text & {
+    background-color: $seafoam;
+    color: white;
+  }
+
+  .shop-links__thumbnail.flickity-enabled & {
+    transition: none;
+  }
+
+  .shop-links__link:hover &,
+  .shop-links__thumbnail.flickity-enabled & {
+    opacity: 1;
+    visibility: visible;
+
+    .btn {
+      transform: scale(1.1);
+    }
+  }
+
+  .btn {
+    background: $seafoam;
+    border: none;
+    color: $white;
+    padding: 10px 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.shop-links__hover-text {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  padding: 15px 20px;
+  font-family: $sans-serif;
+
+  @media (min-width: 400px) and (max-width: 560px) {
+    font-size: 11px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media (min-width: break($l)) {
+    font-size: 12px;
+  }
+}
+
+.shop-links__title {
+  @extend %h4;
+  margin: 15px auto 5px 0;
+  color: $black;
+  text-decoration: underline;
+
+  &:hover {
+    color: $seafoam;
+  }
+
+  .shop-features.photo & {
+    text-align: center;
+  }
+}
+
+.shop-links__price {
+  @extend %h4;
+  color: $grey;
+  text-decoration: none;
+
+  .shop-features.photo & {
+    text-align: center;
+  }
+}
+
+.shop-links__photo__image {
+  display: none;
+}
+
+
+// the .photo class encapsulates the photolay layout feature
+// .shop-features {
+//   width: calc(100vw - 50px);
+//   max-width: $break-max * 0.59375;
+
+//   @media(min-width: break($xs)) {
+//     width: calc(100vw - 80px);
+//   }
+// }
+
+.shop-features.photo {
+
+  width: calc(100vw - 80px);
+  max-width: $break-max * 0.59375;
+
+  .shop-links__photo {
+    background-image: none;
+    position: relative;
+    height: auto;
+
+    &:before {
+      z-index: 9;
+    }
+  }
+
+  .shop-links__photo__image {
+    position: relative;
+    display: block;
+    width: 100%;
+    opacity: 1;
+    z-index: 1;
+    backface-visibility: hidden;
+  }
+
+  .btn.alt {
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    display: inline-table;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(-50%);
+  }
+
+  &:hover .btn.alt {
+    transform: translateX(-50%) scale(1);
+  }
+
+}

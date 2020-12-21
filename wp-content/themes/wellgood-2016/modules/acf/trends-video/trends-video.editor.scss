@@ -1,0 +1,18 @@
+@import './trends-video.front.scss';
+
+.acf-trends-video {
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-safe-display #{!important};
+    @extend %text-h1;
+  }
+
+  p {
+    @extend %text-big;
+    text-align: center !important;
+  }
+}
+
+[data-type="acf/trends-video"] .block-editor-block-toolbar__slot {
+  display: none !important;
+}

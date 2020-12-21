@@ -1,0 +1,41 @@
+.acf-advertisement::after {
+  display: block;
+  height: 1px;
+  clear: both;
+  float: none;
+  width: 100%;
+  content: '';
+}
+
+.acf-advertisement .advertising-adslot::before {
+  @apply text-gray bg-transparent #{!important};
+}
+
+.acf-advertisement.container__ad--slot {
+  margin-top: 50px;
+  margin-bottom: 30px;
+
+  @screen md {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  @screen ml {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  @screen lg {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  @screen xl {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+}
+
+.acf-advertisement .advertising-adslot {
+  margin-bottom: 0;
+}

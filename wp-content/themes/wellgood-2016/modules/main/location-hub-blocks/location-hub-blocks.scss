@@ -1,0 +1,30 @@
+.lochub-blocks__image-wrapper {
+	@extend %image-fallback;
+
+	&:after {
+		margin-top: -63px;
+	}
+}
+.lochub-blocks__map-logo {
+	position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 9 !important;
+    width: 35%;
+    height: auto;
+}
+// .lochub-blocks-heading {
+//     margin-bottom: 25px;
+//     padding-bottom: 15px;
+// }
+
+.chub-blocks {
+    margin-bottom: 50px;
+
+    @media (max-width: break($s)){
+        margin-bottom: 30px;
+    }
+}

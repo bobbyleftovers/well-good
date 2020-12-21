@@ -1,0 +1,25 @@
+/*! purgecss start ignore */
+
+// Base styles
+@import '_normalize.scss';
+@import '_fonts.scss';
+@import '_typography.scss';
+@import '_background.scss';
+@import '_aspect.scss';
+@import '_icons.scss';
+@import '_base.scss';
+@import '_links.scss';
+@import '_menus.scss';
+
+// Legacy modules
+@import '~@modules/main/header/header.scss';
+@import '~@modules/main/footer/footer.scss';
+@import '~@modules/main/image/image.scss';
+@import '~@modules/main/email-capture/email-capture.scss';
+@import '~@modules/main/signup-form/signup-form.scss';
+@import '~@modules/main/sidebar-signup/sidebar-signup.scss';
+@import '~@modules/main/modal-signup/modal-signup.scss';
+@import '~@modules/main/social-media-links/social-media-links.scss';
+@import '~@modules/main/advertisement/advertisement.scss';
+@import '~@modules/main/spotlight-bubble/spotlight-bubble.scss';
+/*! purgecss end ignore */

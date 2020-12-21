@@ -1,0 +1,122 @@
+{
+    "key": "group_5f3692ffb61cb",
+    "title": "WG Post Shortcodes",
+    "fields": [
+        {
+            "key": "field_5f36950d6e3b1",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "On the post comment use the shortcode \"wg\" with the shortcode number as \"id\" parameter. Example:\r\n\r\n[wg id=\"2\"]",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5f36930f6d29c",
+            "label": "",
+            "name": "wg-shortcodes",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5f3693167d368": {
+                    "key": "layout_5f3693167d368",
+                    "name": "inline-shopable",
+                    "label": "Inline Shopable",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f3fe622de26e",
+                            "label": "",
+                            "name": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5f3fe470c1fba"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f36936d6d29e": {
+                    "key": "layout_5f36936d6d29e",
+                    "name": "listacle",
+                    "label": "Listacle",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f3fe41e30e83",
+                            "label": "",
+                            "name": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5f3fe3ab633c3"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Shortcode",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1598023322
+}

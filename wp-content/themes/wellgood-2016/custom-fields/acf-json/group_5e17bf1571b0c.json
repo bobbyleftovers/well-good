@@ -1,0 +1,43 @@
+{
+    "key": "group_5e17bf1571b0c",
+    "title": "Fullscreen Page Template",
+    "fields": [
+        {
+            "key": "field_5e17bf2e4d095",
+            "label": "Display Title?",
+            "name": "fullscreen_page_display_title",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "DISPLAY",
+            "ui_off_text": "HIDE"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/page-fullscreen.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1578615211
+}

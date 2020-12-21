@@ -1,0 +1,41 @@
+@import 'typography-extends.scss';
+
+/*! purgecss start ignore */
+
+// Global sttings (= body)
+body.theme-main-2020 {
+  @apply text-gray-dark;
+  font-weight: 400;
+}
+
+// Reset inherit styles
+.reset-p p,
+p.reset-p {
+  @extend %reset-p;
+}
+ /*! purgecss end ignore */
+
+// Reset tailwind default font classes
+ @include extend-utility('font-display');
+ @include extend-utility('font-serif');
+ @include extend-utility('font-sans');
+
+ // Text utilities
+ @include extend-utility('text-h1', true);
+ @include extend-utility('text-h1--article', true);
+ @include extend-utility('text-h2', true);
+ @include extend-utility('text-h3', true);
+ @include extend-utility('text-h4', true);
+ @include extend-utility('text-h5', true);
+ @include extend-utility('text-quote');
+ @include extend-utility('text-dropcap');
+ @include extend-utility('text-default', true);
+ @include extend-utility('text-big', true);
+ @include extend-utility('text-small', true);
+ @include extend-utility('text-tag');
+ @include extend-utility('text-byline');
+ @include extend-utility('text-link');
+ @include extend-utility('text-label');
+ @include extend-utility('text-caption');
+
+

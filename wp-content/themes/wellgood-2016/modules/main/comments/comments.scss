@@ -1,0 +1,11 @@
+.comments {
+	@include transition(all);
+	visibility: visible;
+	opacity: 1;
+}
+.js-comments-closed {
+	display: none;
+	transition-property: opacity, visibility;
+	visibility: hidden;
+	opacity: 0;
+}

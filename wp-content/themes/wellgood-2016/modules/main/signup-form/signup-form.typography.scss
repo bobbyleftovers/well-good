@@ -1,0 +1,10 @@
+.signup-form__headline {
+	@extend %section-title,
+		%section-title--small;
+}
+
+.signup-form__location-headline,
+.signup-form__radio {
+	@extend %h5;
+	font-size: 10px;
+}

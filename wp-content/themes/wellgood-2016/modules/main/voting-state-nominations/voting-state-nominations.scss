@@ -1,0 +1,31 @@
+.voting-state-nominations__container {
+  @media (min-width: break($m)) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.voting-state-nominations__form {
+  flex: 1 0 auto;
+  margin-bottom: 15px;
+
+  @media (min-width: break($m)) {
+    margin-right: 45px;
+    margin-bottom: 0;
+  }
+
+  iframe {
+    border: 1px solid #E8E8E8;
+    display: block;
+    width: 100%;
+  }
+}
+.post__content--nominations {
+  padding-bottom: 15px;
+
+  @media (min-width: break($s)) {
+    padding-bottom: 30px;
+  }
+  @media (min-width: break($m)) {
+    padding-bottom: 48px;
+  }
+}

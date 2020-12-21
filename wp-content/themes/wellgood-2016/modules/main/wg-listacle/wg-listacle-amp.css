@@ -1,0 +1,55 @@
+/* LIST */
+ol.wg-listacle {
+  list-style: none none;
+  margin-left: 0;
+  border-top: 1px solid #E7DFD7;
+  margin-top: 20px;
+}
+
+ol.wg-listacle li {
+  border-bottom: 1px solid #E7DFD7;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+ol.wg-listacle li + li h3 {
+  margin-top: 0;
+}
+
+ol.wg-listacle li:last-child {
+  border-bottom: 0;
+}
+
+/* Item Title */
+ol.wg-listacle li h3 {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Item Image */
+ol.wg-listacle li amp-img {
+  margin-bottom: 15px;
+}
+
+/* Content Styling */
+.wg-listacle__content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Link BTN */
+ol.wg-listacle a.text-link.base-button {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 15px;
+}

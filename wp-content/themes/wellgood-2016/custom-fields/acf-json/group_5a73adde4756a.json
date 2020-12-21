@@ -1,0 +1,277 @@
+{
+    "key": "group_5a73adde4756a",
+    "title": "Imagelink Hotspot Content",
+    "fields": [
+        {
+            "key": "field_5a73b0e1a721e",
+            "label": "Hotspot Content",
+            "name": "hotspot_content",
+            "type": "repeater",
+            "instructions": "Each of these rows can be called using the shorcode provided in the first field. You might have to save\/update the post before the shortcode field will be populated. The shortcode should be added in the imagelinks \"Popover Content\" field.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5a73be8c885e8",
+                    "label": "Content Shortcode",
+                    "name": "content_shortcode",
+                    "type": "text",
+                    "instructions": "Copy this shortcode and add it to the Popover Content for the hotspot you want it to display on",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a73adeb525f6",
+                    "label": "Hotspot Title",
+                    "name": "hotspot_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a73adfd525f7",
+                    "label": "Hotspot Content",
+                    "name": "hotspot_content",
+                    "type": "wysiwyg",
+                    "instructions": "This should be kept short...",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5a73ae26525f8",
+                    "label": "Hotspot CTA Text",
+                    "name": "hotspot_cta_text",
+                    "type": "text",
+                    "instructions": "Max 25 characters",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 25
+                },
+                {
+                    "key": "field_5a73ae34525f9",
+                    "label": "Hotspot CTA Link",
+                    "name": "hotspot_cta_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5a73af03525fa",
+                    "label": "Sponsored By Label",
+                    "name": "sponsored_by_label",
+                    "type": "text",
+                    "instructions": "Something like \"presented by\" or \"sponsored by\"",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a73af28525fb",
+                    "label": "Sponsor Logo",
+                    "name": "sponsor_logo",
+                    "type": "image",
+                    "instructions": "This doesn't need to be larger than 250px",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": 250,
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5a73afc7525fc",
+                    "label": "Sponsor Link",
+                    "name": "sponsor_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5a73afd5525fd",
+                    "label": "Product Image",
+                    "name": "product_image",
+                    "type": "image",
+                    "instructions": "This doesn't need to be larger than 800px",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": 800,
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5a73b009525fe",
+                    "label": "Product Image Title",
+                    "name": "product_image_title",
+                    "type": "text",
+                    "instructions": "The title that shows above the product image.. Something like \"Shop Now\", for example.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a73b024525ff",
+                    "label": "Product Name",
+                    "name": "product_name",
+                    "type": "text",
+                    "instructions": "Displays immediately below the product image",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5a73b04352600",
+                    "label": "Product Price",
+                    "name": "product_price",
+                    "type": "text",
+                    "instructions": "Displays immediately below the product title",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "imgl_item"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1558819538
+}

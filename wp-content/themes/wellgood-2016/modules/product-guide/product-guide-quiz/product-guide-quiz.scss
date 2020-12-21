@@ -1,0 +1,449 @@
+.product-guide-quiz {
+  @include z('modal');
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  transition-delay: 0.666s;
+  &__content {
+    min-height: 100%;
+    width: 100%;
+    color: $product-guide-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: $product-guide-rose;
+    transition: opacity .333s;
+    transition-delay: 0;
+    &--top {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      height: auto;
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &--bottom {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      flex-shrink: 0;
+      bottom: auto;
+      height: 150px;
+      @include break('width', 540) {
+        height: 180px;
+      }
+      @include orientation('landscape') {
+        @include break('height', 540) {
+          height: 300px;
+          position: absolute;
+          overflow: hidden;
+          bottom: 0;
+        }
+      }
+    }
+  }
+  &__background {
+    @include z('negative');
+    height: 100%;
+    width: 100%;
+    background-color: $product-guide-rose;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform .333s;
+    transition-delay: .333s;
+  }
+  &__close {
+    @include z('modal_control');
+    position: fixed;
+    background-image: url('~assets/img/closewhite.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+    height: 12px;
+    width: 12px;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__header,
+  &__body {
+    margin: 0 20px;
+    max-width: 910px;
+  }
+  &__header {
+    @include background('bottom');
+    display: none;
+    @include orientation('landscape') {
+      @include break('height', 540) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: 120px;
+        top: 0;
+        left: 52px;
+        right: 52px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+    }
+    &--logo {
+      background-color: $product-guide-rose;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4px 8px;
+      & > a {
+        text-decoration: none;
+        & * {
+          color: $product-guide-white;
+          letter-spacing: 6px;
+          transform: scaleY(.85);
+          font-size: 14px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__body {
+    @include z('quiz');
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 0;
+    width: 100%;
+    height: 100%;
+    @include orientation('landscape') {
+      padding-top: 0;
+    }
+    & form {
+      margin-top: 20px;
+      @include orientation('landscape') {
+        margin-top: 0;
+      }
+    }
+    &--legend {
+      @include text-h5;
+      padding: 0 0 10px;
+      text-align: center;
+    }
+  }
+  &__slide {
+    display: none;
+    &--active {
+      display: flex;
+    }
+  }
+  &__question {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &--text {
+      @include text-h2;
+    }
+  }
+  &__answer {
+    position: relative;
+    margin: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    @include break('width', 540) {
+      height: 125px;
+      width: 125px;
+    }
+    @include orientation('landscape') {
+      height: 100px;
+      width: 100px;
+      @include break('height', 540) {
+        height: 125px;
+        width: 125px;
+      }
+    }
+    &--title {
+      text-align: center;
+      position: absolute;
+      text-transform: uppercase;
+      color: $product-guide-black;
+      pointer-events: none;
+      width: 80%;
+      &:hover {
+        cursor: pointer;
+        user-select: none;
+      }
+    }
+    &--bubble {
+      height: 100%;
+      width: 100%;
+      opacity: .5;
+      background-color: $product-guide-offwhite;
+      border-radius: 100%;
+      &:hover {
+        cursor: pointer;
+        opacity: 1 !important;
+      }
+    }
+    & input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      visibility: hidden;
+      &:checked ~ .product-guide-quiz__answer--bubble {
+        opacity: 1;
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+  &__answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    @include orientation('landscape') {
+      margin: 30px auto 40px;
+      max-width: 700px;
+      @include break('width', 910) {
+        max-width: none;
+      }
+    }
+    & .product-guide-quiz__answer--bubble {
+      opacity: 1;
+    }
+    &--selected {
+      & .product-guide-quiz__answer--bubble {
+        opacity: .5;
+      }
+    }
+    &--hovering {
+      & .product-guide-quiz__answer--bubble {
+        opacity: .5;
+      }
+    }
+  }
+  &__button {
+    @include text-h4;
+    display: none;
+    border: solid 1px $product-guide-white;
+    background-color: $product-guide-rose;
+    color: $product-guide-white;
+    padding: 10px 40px;
+    margin: 20px 0 0;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    &--restart {
+      &:hover {
+        cursor: pointer;
+        background-color: $product-guide-white;
+        color: $product-guide-rose;
+      }
+    }
+    &--next {
+      opacity: 0.5;
+      &:hover {
+        cursor: default;
+      }
+      &.active {
+        opacity: 1;
+        &:hover {
+          cursor: pointer;
+          background-color: $product-guide-white;
+          color: $product-guide-rose;
+        }
+      }
+    }
+  }
+  &__navigation {
+    @include z('modal_control');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+    &--warning {
+      width: 200px;
+      margin-top: 10px;
+      text-align: center;
+      display: inline-block;
+    }
+  }
+  &__back {
+    @include text-h6;
+    color: $product-guide-white;
+    text-decoration: underline;
+    user-select: none;
+    display: none;
+    margin-top: 10px;
+    @include break('width', $break-small) {
+      margin-top: 20px;
+    }
+    @include orientation('landscape') {
+      margin-top: 10px;
+      @include break('height', $break-small) {
+        margin-top: 20px;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__recommendations {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    @include orientation('landscape') {
+      height: 360px;
+      max-width: none;
+      flex-direction: row;
+      margin: 0;
+    }
+    & .pre-loader {
+      align-self: center;
+    }
+  }
+  &__sponsor {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 180px;
+    bottom: -50px;
+    left: -50px;
+    @include break('width', $break-small) {
+      height: 230px;
+      width: 230px;
+      bottom: -50px;
+      left: -50px;
+    }
+    @include orientation('landscape') {
+      @include break('height', 540) {
+        height: 300px;
+        width: 300px;
+        bottom: -80px;
+        left: -60px;
+      }
+    }
+    &--enclosure {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      animation: none;
+    }
+    &--container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0 0 25px 25px;
+    }
+    &--sponsor_relationship {
+      color: $product-guide-white;
+    }
+    &--sponsor_logo {
+      margin: 0 5px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 30px;
+      width: 70px;
+      @include orientation('landscape') {
+        height: 50px;
+        width: 100px;
+      }
+    }
+  }
+  &__share {
+    @include z('modal_control');
+    height: 47px;
+    color: $product-guide-white;
+    width: auto;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 0 20px;
+    flex-direction: column;
+    bottom: 36px;
+    right: 3px;
+    @include orientation('landscape') {
+      bottom: 40px;
+      right: 40px;
+      flex-direction: row;
+    }
+    & > span {
+      @include text-h5;
+      height: 20px;
+      @include orientation('landscape') {
+        height: 9px;
+      }
+    }
+    & > ul {
+      list-style: none;
+      padding: 0;
+      display: inline-flex;
+      height: 20px;
+      margin: 0;
+      & > li {
+        margin: 0 5px;
+        @include orientation('landscape') {
+          margin: 0 0 0 10px;
+        }
+        font-size: 16px;
+        & a {
+          text-decoration: none;
+          color: $product-guide-white;
+        }
+      }
+    }
+  }
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity;
+    transition-delay: 0;
+    & .product-guide-quiz__content {
+      opacity: 1;
+      transition: opacity 1s;
+      transition-delay: .333s;
+    }
+    & .product-guide-quiz__background {
+      transform: translateX(0);
+      transition: transform .333s;
+      transition-delay: 0;
+    }
+    & .product-guide-quiz__sponsor--enclosure {
+      animation: rotate 45s linear infinite;
+    }
+  }
+  &.loading,
+  &.loading * {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,44 @@
+.trends-2020-bg-texture {
+  position:fixed !important;
+  z-index: 0;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100vh;
+  transition: opacity 20ms ease-in-out;
+  background-color: $maroon;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  opacity:0.2;
+  /*&:not(.image-bg-loaded){
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }*/
+  @media (max-width: break($m, false)) {
+    display:none!important;
+  }
+  body.ie & {
+    display:none!important;
+  }
+  &:after {
+    display:none !important;
+  }
+}
+
+.trends-2020-bg-texture__low-res {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  transition: 2s;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  .image-bg-loaded & {
+    opacity:0;
+  }
+}

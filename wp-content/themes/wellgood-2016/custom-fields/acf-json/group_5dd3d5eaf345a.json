@@ -1,0 +1,419 @@
+{
+    "key": "group_5dd3d5eaf345a",
+    "title": "Trends Hub 2020",
+    "fields": [
+        {
+            "key": "field_5dd3d63a0b695",
+            "label": "",
+            "name": "sections",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5dd3d71f7f1c2": {
+                    "key": "layout_5dd3d71f7f1c2",
+                    "name": "trends_lookback",
+                    "label": "Trends Lookback",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dd3dce566204",
+                            "label": "",
+                            "name": "visible",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 1,
+                            "ui_on_text": "Visible",
+                            "ui_off_text": "Not Visible"
+                        },
+                        {
+                            "key": "field_5dd3d7367f1c3",
+                            "label": "",
+                            "name": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5dd223f9ba97c"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5dd3d88a19b96": {
+                    "key": "layout_5dd3d88a19b96",
+                    "name": "trends_past_decade",
+                    "label": "Trends from the past decade",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dd3dcfb66205",
+                            "label": "",
+                            "name": "visible",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 1,
+                            "ui_on_text": "Visible",
+                            "ui_off_text": "Not Visible"
+                        },
+                        {
+                            "key": "field_5dd67ca5aa4d8",
+                            "label": "",
+                            "name": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5dd67bb940953"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5dd3d64051f81": {
+                    "key": "layout_5dd3d64051f81",
+                    "name": "trends_2020",
+                    "label": "2020 Trends",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dd3dcb466203",
+                            "label": "",
+                            "name": "visible",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Visible",
+                            "ui_off_text": "Not Visible"
+                        },
+                        {
+                            "key": "field_5dd3e2ecec49c",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "<i>Aggregate articles below.<\/i><br>\r\n<i>An extra Ad will be placed each 4 articles.<\/i>",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_5dd3d6910b696",
+                            "label": "",
+                            "name": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5dd223f9ba97c"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5dd674270a466": {
+                    "key": "layout_5dd674270a466",
+                    "name": "sponsored_article",
+                    "label": "Sponsored Article",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dd7f99c7cc44",
+                            "label": "",
+                            "name": "visible",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 1,
+                            "ui_on_text": "Visible",
+                            "ui_off_text": "Not Visible"
+                        },
+                        {
+                            "key": "field_5dd674270a469",
+                            "label": "",
+                            "name": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5dd3e97d4472e",
+                                "field_5dd3e97d44738",
+                                "field_5dd3e97d4e3bb"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5dd3eb46fb306": {
+                    "key": "layout_5dd3eb46fb306",
+                    "name": "headline",
+                    "label": "Headline",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dd3eb46fb307",
+                            "label": "",
+                            "name": "visible",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 1,
+                            "ui_on_text": "Visible",
+                            "ui_off_text": "Not Visible"
+                        },
+                        {
+                            "key": "field_5dd3eb46fb308",
+                            "label": "",
+                            "name": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5dd3ea0644153"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5dd3d7cbb3fd6": {
+                    "key": "layout_5dd3d7cbb3fd6",
+                    "name": "game_changers",
+                    "label": "Game Changers",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dd3dc9266202",
+                            "label": "",
+                            "name": "visible",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "Visible",
+                            "ui_off_text": "Not Visible"
+                        },
+                        {
+                            "key": "field_5dd67a46d6245",
+                            "label": "",
+                            "name": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5dd678f077344",
+                                "field_5de125378d89d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "1"
+                },
+                "layout_5dd3d8c719b97": {
+                    "key": "layout_5dd3d8c719b97",
+                    "name": "advertisement",
+                    "label": "Advertisement",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dd3de36f7cb1",
+                            "label": "",
+                            "name": "visible",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 1,
+                            "ui_on_text": "Visible",
+                            "ui_off_text": "Not visible"
+                        },
+                        {
+                            "key": "field_5dd3de0f246f8",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5dd3de36f7cb1",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "This is a placeholder text. An Ad will be placed at this position.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Section",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/page-2020-hub.php"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1578515231
+}

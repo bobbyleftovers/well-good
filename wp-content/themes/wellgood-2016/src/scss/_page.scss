@@ -1,0 +1,42 @@
+.page__content {
+	@media (min-width: break($m)) {
+		margin: 35px auto 70px;
+	}
+}
+.page__content,
+.page__footer {
+	@include max-width('none');
+	@media (min-width: break($m)) {
+		@include max-width(($m - ($edge-gutter-desktop * 2)));
+	}
+}
+.page__content {
+	margin-top: 70px;
+}
+
+.page__link,
+.page__main .page__link {
+	border: none !important;
+}
+
+.page__main {
+	@extend .post__main;
+	margin-left: 0;
+	&--no-title {
+		margin-top: 0;
+	}
+}
+
+h1.page__title {
+	margin: 0 auto;
+	text-align: center;
+
+	&.big {
+		@extend %page-title,
+			%page-title--extra-large;
+	}
+}
+
+.page-template-page-fullscreen .page__main {
+	max-width: none;
+}

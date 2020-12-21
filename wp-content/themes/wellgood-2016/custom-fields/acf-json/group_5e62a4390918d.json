@@ -1,0 +1,294 @@
+{
+    "key": "group_5e62a4390918d",
+    "title": "Franchise Options",
+    "fields": [
+        {
+            "key": "field_5ef38b3d39741",
+            "label": "Franchise Type",
+            "name": "franchise_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "editorial": "Editorial",
+                "branded": "Branded"
+            },
+            "default_value": "editorial",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e90d2071793d",
+            "label": "Hide Franchise",
+            "name": "override_franchise_display",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ef38b3d39741",
+                        "operator": "==",
+                        "value": "editorial"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Hide",
+            "ui_off_text": "Show"
+        },
+        {
+            "key": "field_5e62a523e2a26",
+            "label": "Franchise Logo",
+            "name": "override_franchise_logo",
+            "type": "image",
+            "instructions": "Franchise logos should be 500px x 450px",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ef38b3d39741",
+                        "operator": "==",
+                        "value": "editorial"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e62a520e2a25",
+            "label": "Franchise Description",
+            "name": "override_franchise_description",
+            "type": "textarea",
+            "instructions": "Max 500 characters",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ef38b3d39741",
+                        "operator": "==",
+                        "value": "editorial"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 500,
+            "rows": 6,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e62a527e2a27",
+            "label": "See More Link",
+            "name": "override_franchise_see_more_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ef38b3d39741",
+                        "operator": "==",
+                        "value": "editorial"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_5e62bc216d8dd",
+            "label": "Sponsor",
+            "name": "override_franchise_sponsor",
+            "type": "wysiwyg",
+            "instructions": "Sponsorship text below Franchise logo. (ex. \"Presented by Company\")",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ef38b3d39741",
+                        "operator": "==",
+                        "value": "editorial"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5ef3b96ec3fe0",
+            "label": "Branded Franchise Logo",
+            "name": "branded_franchise_logo",
+            "type": "image",
+            "instructions": "Franchise logos should be 500px x 450px",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ef38b3d39741",
+                        "operator": "==",
+                        "value": "branded"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5ef3b9c3c3fe1",
+            "label": "Branded Franchise Description",
+            "name": "branded_franchise_description",
+            "type": "textarea",
+            "instructions": "Max 250 characters",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ef38b3d39741",
+                        "operator": "==",
+                        "value": "branded"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 250,
+            "rows": 6,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5ef3b9c5c3fe2",
+            "label": "See More Link",
+            "name": "branded_franchise_see_more_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ef38b3d39741",
+                        "operator": "==",
+                        "value": "branded"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_5ef3b9c8c3fe3",
+            "label": "Sponsor",
+            "name": "branded_franchise_sponsor",
+            "type": "wysiwyg",
+            "instructions": "Sponsorship text below Franchise logo. (ex. \"Presented by Company\")",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ef38b3d39741",
+                        "operator": "==",
+                        "value": "branded"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1594193131
+}

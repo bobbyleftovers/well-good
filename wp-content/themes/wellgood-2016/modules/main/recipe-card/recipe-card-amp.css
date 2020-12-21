@@ -1,0 +1,61 @@
+/** Recipe Template **/
+.recipe-ingredient__image-wrap,
+.recipe-ingredient__sponsor-notice {
+  display: none;
+}
+
+.recipe-details__list {
+  list-style: none;
+  display: flex;
+  margin: 35px 0;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Use higher specificity to override margin-left */
+.recipe-details__main>.recipe-details__list {
+  margin-left: 0;
+}
+
+.recipe-details__list-item {
+  text-align: center;
+  width: 50%;
+  margin: 13px 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.recipe-detail__title {
+  font-weight: 700;
+}
+
+.recipe-detail__value {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.recipe-dietary {
+  width: 40px;
+}
+
+.recipe-extras__wrap {
+  list-style: none;
+  padding: 0;
+}
+
+/* Increased specificty to override margin */
+.recipe-extras>.recipe-extras__wrap {
+  margin-left: 0;
+}
+
+.recipe-extra__link>.recipe-extra__icon {
+  width: 35px;
+  margin: 7px 6px 0 0;
+}
+
+.recipe-extra__link {
+  display: flex;
+  align-items: flex-start;
+}

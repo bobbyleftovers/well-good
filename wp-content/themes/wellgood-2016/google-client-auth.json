@@ -1,0 +1,10 @@
+{
+  "web": {
+    "client_id": "221619757955-auhrf24lbkbs01mtlm9ag5nnkqsb5m18.apps.googleusercontent.com",
+    "project_id": "lofty-sonar-248517",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "TwBfCo_QkWT5A88qn-UdwvZf"
+  }
+}

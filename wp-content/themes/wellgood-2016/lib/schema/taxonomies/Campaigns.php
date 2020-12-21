@@ -1,0 +1,35 @@
+<?php
+
+namespace WG\Schema\Taxonomies;
+
+use WG\Schema\Taxonomies\Custom_Taxonomy;
+
+class Campaigns extends Custom_Taxonomy { 
+
+	protected $post_types = array('post', 'page', 'recipe');
+
+	protected $labels = array(
+		'name' => 'Campaigns',
+		'singular_name' => 'Campaigns',
+		'search_items' =>   'Search Campaigns',
+		'all_items' => 'All Campaigns',
+		'parent_item' => 'Parent Campaign',
+		'parent_item_colon' => 'Parent Campaign:',
+		'edit_item' => 'Edit Campaign',
+		'update_item' => 'Update Campaign',
+		'add_new_item' => 'Add New Campaign',
+		'new_item_name' => 'New Campaign',
+		'menu_name' => 'Campaigns',
+		'back_to_items' => '← Back to Campaigns'
+);
+
+  protected $args = array(
+		'hierarchical' => false,
+      'show_ui' => true,
+      'show_admin_column' => false,
+      'show_in_rest' => true,
+      'query_var' => true,
+      'rewrite' => array( 'slug' => 'campaigns')
+  );
+
+}
